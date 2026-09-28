@@ -1,0 +1,2101 @@
+{
+ "stories": [
+  {
+   "category": "weather",
+   "headline": "Hurricane Polo at Category 4 off southwestern Mexico after reported Category 5 peak",
+   "facts": [
+    {
+     "text": "As of 3 a.m. CST Wednesday (NHC Advisory 11), Hurricane Polo had maximum sustained winds of 155 mph (250 km/h) and a central pressure of 918 mb, making it a Category 4 hurricane on the Saffir-Simpson scale.",
+     "status": "verified",
+     "corroboration": "National Hurricane Center Advisory Number 11 (primary source), figures matched by CBS News."
+    },
+    {
+     "text": "Overnight, Polo strengthened to a peak of Category 5 with maximum sustained winds of 165 mph (266 km/h) before easing to Category 4.",
+     "status": "reported",
+     "corroboration": "CBS News and UPI both report the Category 5, 165 mph peak, citing NHC data; the NHC advisory fetched directly (3 a.m. CST) shows the storm back at Category 4/155 mph and notes 'fluctuations in intensity are expected.'"
+    },
+    {
+     "text": "The storm's center was about 185 miles (300 km) south of Zihuatanejo and 335 miles (540 km) southeast of Manzanillo, nearly stationary, drifting north at 2 mph (4 km/h); forecasters expect a turn to the northwest later Wednesday, then west-northwest movement through the weekend, tracking near the coast but expected to remain offshore.",
+     "status": "verified",
+     "corroboration": "NHC Advisory 11 (primary source); track and offshore expectation matched by CBS News."
+    },
+    {
+     "text": "A tropical storm warning is in effect from Tecpan de Galeana to Punta San Telmo (Guerrero into Michoacán), and a tropical storm watch is in effect from Punta San Telmo west to Playa Perula (Jalisco). Hurricane-force winds extend 40 miles (65 km) from the center; tropical-storm-force winds extend 105 miles (165 km).",
+     "status": "verified",
+     "corroboration": "NHC Advisory 11 (primary source); matched by CBS News."
+    },
+    {
+     "text": "NHC forecasts rainfall of 3 to 6 inches, with isolated totals up to 8 inches, across coastal Guerrero and Michoacán through Thursday, and 2 to 4 inches for coastal Oaxaca, Colima and Jalisco, with a risk of flooding and mudslides in steep terrain and dangerous surf and rip currents along the coast.",
+     "status": "verified",
+     "corroboration": "NHC Advisory 11 (primary source); matched by CBS News."
+    }
+   ],
+   "impact": "Since the last edition's tropical storm watch, Polo has become a major hurricane: the 3 a.m. NHC advisory lists 155 mph winds, and CBS News and UPI report a brief Category 5 peak of 165 mph overnight. The center is forecast to stay offshore, with tropical storm warnings along the Guerrero-Michoacán coast and 3 to 6 inches of rain forecast there through Thursday.",
+   "early": true,
+   "update_note": "Tropical storm watch -> Category 4, 155 mph; reported Category 5 peak of 165 mph overnight.",
+   "sources": [
+    {
+     "source": "NHC Pacific Advisory 11",
+     "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP2+shtml/230834.shtml"
+    },
+    {
+     "source": "CBS News",
+     "url": "https://www.cbsnews.com/news/hurricane-polo-category-5-mexico-life-threatening-flooding/"
+    },
+    {
+     "source": "UPI",
+     "url": "https://www.upi.com/Top_News/World-News/2026/09/23/mexico-hurricane-polo-forecast/6371790098673/"
+    }
+   ]
+  },
+  {
+   "category": "weather",
+   "headline": "Typhoon Dujuan kills at least four in Japan; 1.6 million around Tokyo urged to evacuate",
+   "facts": [
+    {
+     "text": "Typhoon Dujuan killed at least four people in Japan and injured about 22, Japanese authorities said Tuesday; a mudslide killed a woman in her 60s in Yokosuka (Kanagawa prefecture), and landslides in Chiba prefecture killed three people, with a couple in their 70s and two other residents still missing. Some outlets reported the confirmed toll had risen to five as search efforts continued.",
+     "status": "reported",
+     "corroboration": "The Guardian/AFP (citing NHK, Japanese police and fire authorities); Weather.com and Nation Thailand report a similar but slightly higher running toll, consistent with a still-developing casualty count."
+    },
+    {
+     "text": "Japan's Fire and Disaster Management Agency urged more than 1.6 million residents in and around Tokyo to evacuate; the instruction was not mandatory.",
+     "status": "verified",
+     "corroboration": "The Guardian/AFP and Nation Thailand both cite the same 1.6 million figure from the Fire and Disaster Management Agency."
+    },
+    {
+     "text": "Dujuan brought maximum sustained winds of 144 km/h (89 mph) as it passed near Tokyo before weakening and moving out to sea Tuesday morning.",
+     "status": "verified",
+     "corroboration": "The Guardian/AFP, Nation Thailand and JMA-sourced reporting (via WeatherNews) all cite the same 144 km/h figure."
+    },
+    {
+     "text": "Oshima, an island about 120 km south of central Tokyo, recorded 832 mm of rain over 48 hours, more than double its average rainfall for all of September; Tokyo's Edogawa ward recorded a record 282.5 mm of rain in 24 hours.",
+     "status": "reported",
+     "corroboration": "Single origin: NHK, as reported by The Guardian/AFP."
+    },
+    {
+     "text": "Japan Airlines canceled 135 flights and All Nippon Airways canceled 140 flights on September 21 (275 total) because of the storm.",
+     "status": "verified",
+     "corroboration": "The Guardian/AFP and Nation Thailand both report the same JAL and ANA cancellation figures."
+    }
+   ],
+   "impact": "Around Tokyo, 1.6 million people were urged to evacuate and 275 flights were canceled on September 21. Search crews are looking for people reported missing in Kanagawa and Chiba prefectures, and the casualty count is still being updated.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "The Guardian (AFP wire)",
+     "url": "https://www.theguardian.com/world/2026/sep/22/typhoon-dujuan-japan-latest-weather-millions-told-to-evacuate-tokyo"
+    },
+    {
+     "source": "Weather.com",
+     "url": "https://weather.com/2026/09/22/news/weather/typhoon-dujuan-japan-deaths"
+    },
+    {
+     "source": "The Nation Thailand",
+     "url": "https://www.nationthailand.com/news/general/40071330"
+    }
+   ]
+  },
+  {
+   "category": "weather",
+   "headline": "Colombia declares public calamity as wildfire burns near Villa de Leyva",
+   "facts": [
+    {
+     "text": "Villa de Leyva and Boyacá department authorities declared a public calamity on Sept. 20, 2026, after a wildfire that began Saturday, Sept. 19, on Cerro San Marcos, the mountain overlooking the colonial tourist town in Boyacá department about 160 km (100 miles) northeast of Bogotá.",
+     "status": "verified",
+     "corroboration": "The Guardian, El Tiempo, Infobae"
+    },
+    {
+     "text": "By Sunday evening, Sept. 20, authorities said about 290 hectares (717 acres) had burned and the fire was roughly 50% contained; more than 400 firefighters, soldiers, police, Civil Defense workers, Red Cross responders and volunteers were involved, and four helicopters made about 170 water drops releasing 240,000 liters (63,400 gallons), according to Boyacá Gov. Carlos Amaya.",
+     "status": "reported",
+     "corroboration": "The Guardian (citing Gov. Carlos Amaya); single-day snapshot figure."
+    },
+    {
+     "text": "By Tuesday, Sept. 22, Colombia's national disaster risk management agency (UNGRD) said the fire had affected about 1,200 hectares (2,965 acres) and was roughly 75% contained, with two active fronts still burning in steep terrain near the Iguaque Flora and Fauna Sanctuary; about 250 personnel and three helicopters carried out roughly 75 water drops that day.",
+     "status": "reported",
+     "corroboration": "ColombiaOne and El Tiempo, both citing UNGRD (one origin); figures still moving."
+    },
+    {
+     "text": "Villa de Leyva suspended in-person classes on Monday, Sept. 21, and authorities carried out evacuations, including at hotels near the fire and in the municipality's northeast, while opening the town's municipal coliseum as a shelter for evacuees and responders.",
+     "status": "verified",
+     "corroboration": "The Guardian, Infobae"
+    },
+    {
+     "text": "Colombia's environment minister, Fabio Arjona, said preliminary information from UNGRD indicated the fire may have been deliberately set; no suspect has been named and the cause remains under investigation.",
+     "status": "reported",
+     "corroboration": "The Guardian, El Tiempo, Infobae — all relaying one agency-sourced statement; no charges filed, cause unconfirmed."
+    }
+   ],
+   "impact": "The fire has closed schools and prompted evacuations in a colonial tourist town, and crews were still working two active fronts near the Iguaque Flora and Fauna Sanctuary as of Tuesday. Authorities have not confirmed how the fire started.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "The Guardian",
+     "url": "https://www.theguardian.com/world/2026/sep/21/colombia-wildfire-villa-de-leyva"
+    },
+    {
+     "source": "ColombiaOne",
+     "url": "https://colombiaone.com/2026/09/22/villa-de-leyva-wildfire-75-controlled-iguaque-sanctuary/"
+    },
+    {
+     "source": "El Tiempo",
+     "url": "https://www.eltiempo.com/colombia/otras-ciudades/grave-incendio-en-villa-de-leyva-hoy-22-de-septiembre-conflagracion-esta-controlada-en-un-75-y-1-200-hectareas-han-sido-afectadas-segun-la-ungrd-3587853"
+    },
+    {
+     "source": "Infobae",
+     "url": "https://www.infobae.com/colombia/2026/09/21/villa-de-leyva-declaro-calamidad-publica-por-incendio-en-el-cerro-san-marcos-anunciaron-medidas-de-seguridad-para-los-habitantes/"
+    }
+   ]
+  },
+  {
+   "category": "weather",
+   "headline": "Odalys becomes a hurricane, stays far offshore in the Eastern Pacific",
+   "facts": [
+    {
+     "text": "The National Hurricane Center upgraded Odalys from a tropical storm to a hurricane, with maximum sustained winds of 75 mph (120 km/h), per Advisory Number 13 issued at 2 a.m. PDT Wednesday, September 23.",
+     "status": "verified",
+     "corroboration": "NHC official advisory text, confirmed via two independent NHC page fetches (text advisory and cyclones summary page) showing matching figures."
+    },
+    {
+     "text": "Odalys was centered near 15.9°N, 128.4°W, about 1,295 miles (2,085 km) west-southwest of the southern tip of Baja California, moving east-northeast at 9 mph (15 km/h), with a minimum central pressure of 989 millibars (29.21 inches).",
+     "status": "verified",
+     "corroboration": "NHC official advisory, confirmed via two independent fetches of NHC pages showing matching data."
+    },
+    {
+     "text": "Hurricane-force winds extended 10 miles from the center and tropical-storm-force winds extended 150 miles from the center; no coastal watches or warnings were in effect anywhere.",
+     "status": "verified",
+     "corroboration": "NHC official advisory (primary source)."
+    },
+    {
+     "text": "Odalys had been a tropical storm with 45 mph maximum sustained winds in the days before this advisory.",
+     "status": "reported",
+     "corroboration": "Single outlet (Fox Weather, Sept. 20, citing an NHC advisory); figure predates Wednesday's advisory and reflects the storm's earlier strength."
+    }
+   ],
+   "impact": "Odalys has gone from a tropical storm to a 75 mph hurricane, but its center is about 1,295 miles west-southwest of Baja California and no coastal watches or warnings are in effect.",
+   "early": true,
+   "update_note": "Tropical storm -> 75 mph hurricane; still no coastal watches or warnings.",
+   "sources": [
+    {
+     "source": "National Hurricane Center (text advisory)",
+     "url": "https://www.nhc.noaa.gov/text/refresh/MIATCPEP1+shtml/230840.shtml"
+    },
+    {
+     "source": "National Hurricane Center (cyclones summary)",
+     "url": "https://www.nhc.noaa.gov/cyclones/"
+    },
+    {
+     "source": "Fox Weather",
+     "url": "https://www.foxweather.com/weather-news/odalys-churns-pacific-moisture-fuels-southwest-flood-threat"
+    }
+   ],
+   "media_image_url": "https://www.nhc.noaa.gov/storm_graphics/EP16/refresh/EP162026_5day_cone+png/230840_5day_cone.png",
+   "media_credit": "NOAA / National Hurricane Center",
+   "media_alt": "NHC five-day forecast cone map showing Hurricane Odalys tracking east-northeast over open Eastern Pacific waters, well offshore from Baja California with no landfall in the cone.",
+   "media_source": "National Hurricane Center",
+   "media_url": "https://www.nhc.noaa.gov/graphics_ep1.shtml"
+  },
+  {
+   "category": "world",
+   "headline": "US and Iran hold first talks since June at the UN as Trump warns Tehran",
+   "facts": [
+    {
+     "text": "In his address to the UN General Assembly on September 22, 2026, Trump told Iran the choice was a deal or being \"annihilated,\" and said he expects an agreement to be reached after November's US midterm elections.",
+     "status": "verified",
+     "corroboration": "PBS NewsHour (transcript) and CNBC both quote the speech directly."
+    },
+    {
+     "text": "US envoys Steve Witkoff and Jared Kushner met with Iranian Foreign Minister Abbas Araghchi on the sidelines of the UN General Assembly in New York, with Qatar and Pakistan mediating.",
+     "status": "verified",
+     "corroboration": "PBS NewsHour and Al Jazeera"
+    },
+    {
+     "text": "Accounts of the meeting's format conflict: Trump told reporters US and Iranian officials held a direct, three-hour meeting, but the White House later said Witkoff and Kushner represented the US in talks where Qatari and Pakistani mediators shuttled between the two delegations rather than in a single direct meeting.",
+     "status": "disputed",
+     "corroboration": "CNBC (Trump's account) vs. Al Jazeera (later White House clarification)."
+    },
+    {
+     "text": "Iran's foreign ministry spokesman Esmaeil Baghaei said Tehran's conditions for ending the war include stopping what Iran calls US \"acts of aggression,\" ending the US naval blockade, and releasing frozen Iranian assets; a senior Iranian official said the Strait of Hormuz could reopen within about a week if the US eases military pressure and lifts the blockade.",
+     "status": "reported",
+     "corroboration": "CNBC (direct quote from the Iranian foreign ministry spokesman); similar conditions cited by Al Jazeera via regional media."
+    },
+    {
+     "text": "Confirmed shipping transits through the Strait of Hormuz averaged 6.98 million barrels a day in the seven days to September 20, about 38% of the 18.3-million-barrel pre-war daily average, according to shipping analytics firm Kpler. Iran's own crude exports were at zero so far in September, down from 893,000 barrels a day in July.",
+     "status": "verified",
+     "corroboration": "Kpler shipping data (primary data source), cited by CNBC."
+    }
+   ],
+   "impact": "Trump told the UN General Assembly that Iran faces a deal or being \"annihilated,\" and US and Iranian officials had their first contact since June, with Qatar and Pakistan mediating; accounts differ on whether the two sides met directly. Shipping through the Strait of Hormuz is running at about 38% of its pre-war average, and Iran's crude exports are at zero so far in September.",
+   "early": false,
+   "update_note": "First US-Iran contact since June, mediated by Qatar and Pakistan; Iran has stated conditions, including a possible Hormuz reopening in about a week.",
+   "sources": [
+    {
+     "source": "PBS NewsHour",
+     "url": "https://www.pbs.org/newshour/show/trump-defends-iran-war-and-threatens-annihilation-at-un-general-assembly"
+    },
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/23/us-iran-war-trump-hormuz.html"
+    },
+    {
+     "source": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/23/us-iran-hold-mediated-unga-talks-on-ending-war-opening-strait-of-hormuz"
+    }
+   ]
+  },
+  {
+   "category": "world",
+   "headline": "Trump signs Greenland security deal with Denmark and Greenland",
+   "facts": [
+    {
+     "text": "US President Donald Trump, Danish Prime Minister Mette Frederiksen, and Greenland Premier Jens-Frederik Nielsen signed a security agreement on September 22, 2026, on the sidelines of the UN General Assembly in New York.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle, UPI, The Guardian"
+    },
+    {
+     "text": "The agreement allows the US to build two new military bases in Greenland: reestablishing a base at Narsarsuaq in the south and a new base at Mestersvig on the east coast.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle, UPI"
+    },
+    {
+     "text": "The deal also allows the US to modernize and expand its existing Pituffik Space Base in northwest Greenland.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle"
+    },
+    {
+     "text": "The agreement reaffirms Denmark's sovereignty over Greenland and Greenland's right to self-determination; no Greenlandic territory is ceded to the US.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle"
+    },
+    {
+     "text": "The deal must still be ratified by the Danish and Greenlandic parliaments, and the construction details of the two new bases require mutual agreement among the US, Denmark, and Greenland.",
+     "status": "verified",
+     "corroboration": "BBC, UPI"
+    }
+   ],
+   "impact": "The deal reported yesterday as pending has now been signed, with site-specific details released: two new US bases at Narsarsuaq and Mestersvig, plus expansion of the existing Pituffik base. None of it can proceed until Denmark's and Greenland's parliaments ratify the agreement and the three parties agree on construction details.",
+   "early": false,
+   "update_note": "Planned signing -> signed, with two base locations named and a parliamentary ratification requirement confirmed.",
+   "sources": [
+    {
+     "source": "UPI",
+     "url": "https://www.upi.com/Top_News/US/2026/09/22/trump-signs-greenland-deal/8741790109418/"
+    },
+    {
+     "source": "BBC World",
+     "url": "https://www.bbc.co.uk/news/articles/c9dr74g32g8go?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/trump-signs-tremendous-greenland-security-deal/a-79381148"
+    },
+    {
+     "source": "The Guardian",
+     "url": "https://www.theguardian.com/world/live/2026/sep/22/eu-trump-russia-putin-sanctions-ukraine-greenland-denmark-zelenskyy-latest-news-updates"
+    }
+   ]
+  },
+  {
+   "category": "world",
+   "headline": "EU removes two Russian oligarchs from sanctions list as Zelenskyy proposes an energy ceasefire",
+   "facts": [
+    {
+     "text": "EU member states agreed to remove Russian businessmen Alisher Usmanov and Mikhail Fridman from the bloc's Russia sanctions list, while extending sanctions on nearly 3,000 other individuals and entities for three years (36 months) instead of the previous six-month renewal cycle.",
+     "status": "verified",
+     "corroboration": "The Guardian (Brussels correspondent), Deutsche Welle (citing the Irish EU-presidency spokesperson), BBC News"
+    },
+    {
+     "text": "France's government requested Usmanov's removal citing 'national security' grounds without further detail; Luxembourg requested Fridman's removal while he sues Luxembourg over assets frozen under the sanctions.",
+     "status": "verified",
+     "corroboration": "The Guardian, Deutsche Welle and BBC News all report matching accounts."
+    },
+    {
+     "text": "Diplomatic sources cited by AFP said France's request was linked to a possible prisoner-exchange deal involving French nationals held in Azerbaijan. The size of Fridman's lawsuit against Luxembourg is reported inconsistently: $16 billion (The Guardian) versus €15 billion/$17 billion (Deutsche Welle).",
+     "status": "disputed",
+     "corroboration": "AFP via Deutsche Welle; the Azerbaijan link is unconfirmed and the lawsuit figure varies by outlet."
+    },
+    {
+     "text": "Ukraine's Foreign Minister Andrii Sybiha called the delisting 'shameful and unjustifiable' and urged EU states to impose their own national sanctions on the two men; President Zelenskyy wrote that 'wars end through resolve and strength, not concessions to the aggressor's entourage.'",
+     "status": "verified",
+     "corroboration": "Quoted identically by The Guardian, Deutsche Welle and BBC News."
+    },
+    {
+     "text": "At the UN General Assembly in New York, Zelenskyy said Ukraine is ready for an 'energy ceasefire' if Russia stops attacking Ukraine's energy, electricity, heating and water infrastructure, and asked Trump to organize a trilateral meeting with Putin, saying the leaders should move 'as quickly as possible' to end the war.",
+     "status": "verified",
+     "corroboration": "CNBC (direct quotes from Zelenskyy's UNGA remarks) and PBS NewsHour/AP"
+    }
+   ],
+   "impact": "New since yesterday's drone-strike coverage: Zelenskyy said Ukraine would accept a ceasefire on energy-infrastructure attacks if Russia stops striking them, and asked Trump to convene a three-way meeting with Putin; no such meeting has been scheduled. The EU removed Usmanov and Fridman from its sanctions list while extending sanctions on nearly 3,000 others for three years, and Ukraine has asked member states to impose national sanctions on the two men.",
+   "early": true,
+   "update_note": "Adds Zelenskyy's UN energy-ceasefire and trilateral-meeting proposals, plus the EU delisting of Usmanov and Fridman.",
+   "sources": [
+    {
+     "source": "The Guardian",
+     "url": "https://www.theguardian.com/world/2026/sep/22/eu-removes-oligarchs-from-russia-sanctions-list-as-deadline-looms"
+    },
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/eu-drops-sanctions-for-russian-oligarchs-usmanov-and-fridman/a-79381048"
+    },
+    {
+     "source": "BBC News",
+     "url": "https://www.bbc.co.uk/news/articles/c6dj4k98107do"
+    },
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/23/ukraine-war-zelenskyy-putin-trump-russia.html"
+    },
+    {
+     "source": "PBS NewsHour",
+     "url": "https://www.pbs.org/newshour/world/russia-and-ukraine-trade-strikes-ahead-of-zelenskyys-meeting-with-trump"
+    }
+   ]
+  },
+  {
+   "category": "world",
+   "headline": "Sri Lanka court convicts 15 men over 2019 Easter Sunday bombings",
+   "facts": [
+    {
+     "text": "Sri Lanka's High Court in Colombo convicted 15 men on September 22, 2026, over the 2019 Easter Sunday bombings; nine other men were acquitted.",
+     "status": "verified",
+     "corroboration": "UPI, BBC, Deutsche Welle, Al Jazeera"
+    },
+    {
+     "text": "The 15 convicted men were sentenced to prison terms ranging from 200 to 260 years each, and the court ordered seizure of their property and assets.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle"
+    },
+    {
+     "text": "The April 21, 2019 bombings targeted three churches and three hotels, killing 279 people and injuring more than 500.",
+     "status": "verified",
+     "corroboration": "UPI, Deutsche Welle, Al Jazeera (death toll); UPI, BBC, Deutsche Welle (targets)"
+    },
+    {
+     "text": "Prosecutors identified defendant Mohamed Ibrahim Mohamed Naufer, also referred to as Naufer Moulavi, an Islamic cleric, as the alleged leader of the plot; he was sentenced to 240 years in prison.",
+     "status": "reported",
+     "corroboration": "Deutsche Welle (exact 240-year sentence); identification as alleged leader also in UPI and BBC."
+    },
+    {
+     "text": "The 15 were among 25 people originally indicted on more than 23,000 combined charges; one original defendant died in custody before the trial ended.",
+     "status": "verified",
+     "corroboration": "UPI, BBC, Deutsche Welle"
+    }
+   ],
+   "impact": "The 15 convicted men can appeal to Sri Lanka's Supreme Court. The verdict closes the criminal trial phase more than seven years after the attacks; a separate investigation into alleged state intelligence failures continues.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "UPI",
+     "url": "https://www.upi.com/Top_News/World-News/2026/09/22/sri-lanka-15-men-guilty-easter-bombings/2211790106600/"
+    },
+    {
+     "source": "BBC World",
+     "url": "https://www.bbc.co.uk/news/articles/cqy7z275yx65o?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "source": "Al Jazeera",
+     "url": "https://www.aljazeera.com/video/newsfeed/2026/9/23/sri-lanka-convicts-15-people-over-2019-easter-day-bombings"
+    },
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/sri-lanka-15-men-jailed-for-life-in-2019-easter-bombings/a-79382342"
+    }
+   ]
+  },
+  {
+   "category": "world",
+   "headline": "Eleven killed in shooting at South African house party",
+   "facts": [
+    {
+     "text": "At least 11 people were killed and 3 wounded when armed men opened fire at a house party in KwaMakhutha township, about 30 km (19 miles) south of Durban, South Africa, late Tuesday night (September 22), shortly before 11 p.m. local time.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle (AFP/AP/dpa/Reuters wire), NY Post (AP wire)"
+    },
+    {
+     "text": "Police said three men entered the house, where 13 men and one woman had gathered for a party, and opened fire; ten victims died at the scene and one more died later in hospital.",
+     "status": "verified",
+     "corroboration": "BBC quoting a South African Police Service statement, corroborated by Deutsche Welle and NY Post (AP wire)."
+    },
+    {
+     "text": "One of those killed was a woman believed to be pregnant.",
+     "status": "verified",
+     "corroboration": "BBC, Deutsche Welle, NY Post (AP wire)"
+    },
+    {
+     "text": "Police said some of the victims were already known to them in connection with ongoing criminal investigations but did not give further detail, and said a \"feud between rival groupings cannot be ruled out,\" while adding that no motive has been confirmed.",
+     "status": "verified",
+     "corroboration": "Direct South African Police Service statement quoted by BBC and NY Post (AP wire); paraphrased by Deutsche Welle."
+    },
+    {
+     "text": "As of Wednesday, no arrests had been made. Police said they were searching for three suspects, and KwaZulu-Natal's acting police chief said a 72-hour operation to track down the attackers had been launched.",
+     "status": "verified",
+     "corroboration": "Deutsche Welle, NY Post (AP wire)"
+    },
+    {
+     "text": "A vehicle belonging to one of the victims was set on fire outside the house; police are investigating whether the fire is connected to the shooting.",
+     "status": "reported",
+     "corroboration": "BBC (citing an eNCA TV report at the scene); NY Post (AP wire) says police are investigating a possible link."
+    }
+   ],
+   "impact": "Police said they were searching for three suspects and had begun a 72-hour operation. No arrests had been made as of Wednesday, and police said no motive has been confirmed.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "BBC World",
+     "url": "https://www.bbc.co.uk/news/articles/crgjqxzl097eo?at_medium=RSS&at_campaign=rss"
+    },
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/south-africa-11-killed-in-attack-on-house-party/a-79382743"
+    },
+    {
+     "source": "NY Post",
+     "url": "https://nypost.com/2026/09/23/world-news/south-africa-house-party-mass-shooting-leaves-11-dead-as-cops-probe-gang-link/"
+    },
+    {
+     "source": "Al Jazeera",
+     "url": "https://www.aljazeera.com/news/2026/9/23/at-least-11-people-killed-in-south-africa-township-shooting"
+    }
+   ]
+  },
+  {
+   "category": "nation",
+   "headline": "Justice Department argues in court filing that White House press access is a privilege, not a right",
+   "facts": [
+    {
+     "text": "The Justice Department filed a court document late Tuesday defending Trump's ban on CNN, MS NOW and Politico from White House grounds, arguing that \"access to the White House is a privilege -- not a right\" and that the president's actions are lawful under the First Amendment.",
+     "status": "verified",
+     "corroboration": "AP wire (via Yahoo News), Variety"
+    },
+    {
+     "text": "Trump announced the ban via Truth Social on Friday, September 18; CNN, MS NOW and Politico sued the administration on Monday, September 21, alleging the ban violates their First Amendment rights.",
+     "status": "verified",
+     "corroboration": "Variety, Deadline"
+    },
+    {
+     "text": "A hearing on the outlets' request for a temporary restraining order is scheduled for Wednesday, September 23, before U.S. District Judge Timothy J. Kelly, who was appointed by Trump in 2017.",
+     "status": "verified",
+     "corroboration": "AP wire (via Yahoo News), Variety, Deadline"
+    },
+    {
+     "text": "Kelly ruled against the Trump administration in a similar 2018 case, restoring then-CNN correspondent Jim Acosta's White House credentials after finding Trump had not given him adequate notice.",
+     "status": "verified",
+     "corroboration": "Variety, Deadline"
+    },
+    {
+     "text": "In its filing, the Justice Department said the outlets had failed to maintain \"standards of professionalism and decorum\" expected of those with White House access, citing their coverage of the East Wing/ballroom construction project and other reporting the department characterized as threatening national security.",
+     "status": "verified",
+     "corroboration": "AP wire (via Yahoo News), Variety, Deadline"
+    }
+   ],
+   "impact": "The government's filed position is that White House press access is discretionary rather than a constitutional right. Whether CNN, MS NOW and Politico regain access turns on Wednesday's temporary restraining order hearing before Judge Kelly, who ruled for a CNN correspondent in a comparable 2018 access case.",
+   "early": false,
+   "update_note": "Public announcement -> formal DOJ court filing; TRO hearing set for Wednesday before Judge Timothy Kelly.",
+   "sources": [
+    {
+     "source": "AP wire (via Yahoo News)",
+     "url": "https://www.yahoo.com/news/politics/articles/us-justice-dept-says-trump-074536366.html"
+    },
+    {
+     "source": "Variety",
+     "url": "https://variety.com/2026/politics/news/white-house-defends-trump-cnn-ban-filing-access-privilege-1236873037/"
+    },
+    {
+     "source": "Deadline",
+     "url": "https://deadline.com/2026/09/trump-cnn-ban-lawsuit-latest-1237110879/"
+    }
+   ]
+  },
+  {
+   "category": "nation",
+   "headline": "ICE officer in Austin shooting had a body camera but was not wearing it",
+   "facts": [
+    {
+     "text": "The ICE officer who shot Wilber Rafael Garces Perez had been issued a body camera but was not wearing it during the shooting.",
+     "status": "verified",
+     "corroboration": "CBS News; NBC News (wire)"
+    },
+    {
+     "text": "A second ICE officer in the vehicle was wearing a body camera, but that camera's footage did not capture the moment of the shooting.",
+     "status": "reported",
+     "corroboration": "NBC News (wire), single outlet"
+    },
+    {
+     "text": "Austin police released body camera and dash-cam footage on Tuesday from an off-duty officer and a responding officer showing the scene after the shooting; none of the released footage shows the shooting itself.",
+     "status": "verified",
+     "corroboration": "CBS News; New York Post (Fox News)"
+    },
+    {
+     "text": "Garces Perez, 28, a Venezuelan national working as a DoorDash driver, was shot in the upper torso Sunday afternoon in Austin as ICE officers attempted to take him into custody; he had a final order of removal against him.",
+     "status": "verified",
+     "corroboration": "CBS News; NBC News (wire); New York Post (Fox News)"
+    },
+    {
+     "text": "A federal judge on Tuesday temporarily blocked ICE from deporting Garces Perez pending a hearing scheduled for September 30.",
+     "status": "verified",
+     "corroboration": "CBS News; NBC News (wire)"
+    }
+   ],
+   "impact": "Yesterday's brief reported the shooting itself; today's reporting establishes that the officer who fired had been issued a body camera but was not wearing it, and that the footage Austin police released shows only the scene afterward. There is no known video of the shooting, and Garces Perez's deportation is blocked until a September 30 hearing.",
+   "early": false,
+   "update_note": "Shooting reported -> officer's body camera issued but not worn; aftermath-only footage released; deportation blocked pending a Sept. 30 hearing.",
+   "sources": [
+    {
+     "source": "CBS News",
+     "url": "https://www.cbsnews.com/news/ice-shooting-austin-texas-body-camera/"
+    },
+    {
+     "source": "New York Post (Fox News)",
+     "url": "https://nypost.com/2026/09/23/us-news/texas-ice-shooting-bodycam-released-showing-venezuelan-illegal-immigrant/"
+    },
+    {
+     "source": "NBC News",
+     "url": "https://www.nbcnews.com/news/us-news/ice-officer-shot-man-austin-wasnt-wearing-body-camera-rcna599263"
+    }
+   ]
+  },
+  {
+   "category": "nation",
+   "headline": "Video shows ICE agents detain a US citizen in Evanston, Illinois",
+   "facts": [
+    {
+     "text": "On Sunday morning, September 20, 2026, ICE agents encountered a man near Howard Street and Dodge Avenue in Evanston, Illinois, during an enforcement operation, believing he resembled a person they were targeting.",
+     "status": "verified",
+     "corroboration": "DHS statement plus independent reporting from NBC News, CNN and ABC7 Chicago."
+    },
+    {
+     "text": "Bystander video shows two agents holding the man on the ground during the encounter; he can be heard saying he is a U.S. citizen.",
+     "status": "verified",
+     "corroboration": "Video reviewed and described independently by NBC News, CNN and ABC7 Chicago."
+    },
+    {
+     "text": "According to Evanston police, the man reported injuries to his head, neck and teeth and was treated at a hospital.",
+     "status": "reported",
+     "corroboration": "Evanston Police Department statement (one origin), cited by NBC News, CNN and ABC7 Chicago."
+    },
+    {
+     "text": "DHS said in a statement that agents identified themselves as law enforcement, that the man 'was not cooperative and refused to identify himself,' and that agents left once he identified himself as a citizen and was determined not to be the target.",
+     "status": "reported",
+     "corroboration": "Single DHS statement, quoted by NBC News, CNN and ABC7 Chicago."
+    },
+    {
+     "text": "Evanston police said they are investigating the incident and reviewing body-camera footage.",
+     "status": "reported",
+     "corroboration": "Evanston Police Department statement, cited by CNN (via affiliate report)."
+    }
+   ],
+   "impact": "The man was released and treated at a hospital. Evanston police say they are investigating the encounter and reviewing body-camera footage.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "NBC News",
+     "url": "https://www.nbcnews.com/news/us-news/video-shows-injured-man-ground-ice-mistakenly-targets-rcna599188"
+    },
+    {
+     "source": "CNN (via KEYT)",
+     "url": "https://keyt.com/news/national-world/cnn-national/2026/09/22/ice-mistakenly-detains-us-citizen-who-was-left-injured-on-the-ground-in-chicago-suburb-officials-say/"
+    },
+    {
+     "source": "ABC7 Chicago",
+     "url": "https://abc7chicago.com/post/evanston-il-ice-incident-man-hurt-wrongly-identified-federal-agents-howard-street-dodge-avenue-police-investigating/19855018/"
+    }
+   ]
+  },
+  {
+   "category": "nation",
+   "headline": "Kagan denies surrogate's emergency bid to block custody ruling favoring intended parents",
+   "facts": [
+    {
+     "text": "Supreme Court Justice Elena Kagan denied an emergency request from surrogate McKenna West on September 22, 2026, declining to block a California court's parentage ruling in favor of intended parents Omar Ahmed and Nausheen Gilkar. Kagan's order did not include an explanation.",
+     "status": "verified",
+     "corroboration": "The Hill, NBC News, The Washington Post, CBS News, CNN, The Texas Tribune"
+    },
+    {
+     "text": "Ahmed and Gilkar, of California, hired West, of Alaska, as a gestational surrogate. During a prenatal scan in April 2026, the fetus was diagnosed with hypoplastic left heart syndrome, a congenital heart defect.",
+     "status": "verified",
+     "corroboration": "CBS News, The Hill"
+    },
+    {
+     "text": "The couple asked West to terminate the pregnancy under their surrogacy agreement. West declined, traveled to Texas, and gave birth to a boy the couple named Rumi on August 12, 2026, in Dallas.",
+     "status": "verified",
+     "corroboration": "The Washington Post, The Texas Tribune, CBS News, The Hill"
+    },
+    {
+     "text": "A California court had already ruled Ahmed and Gilkar the child's legal parents before the birth, and a Texas court assigned medical decision-making authority to them. The child has undergone a Norwood procedure, the first of three surgeries typically required for the condition.",
+     "status": "reported",
+     "corroboration": "CBS News only"
+    },
+    {
+     "text": "West had asked the Supreme Court to grant her conservatorship, which would have given her a say in the child's medical treatment, arguing the custody dispute should be litigated in Alaska rather than California.",
+     "status": "reported",
+     "corroboration": "The Hill only"
+    }
+   ],
+   "impact": "The intended parents retain legal parentage and continue directing the child's medical care. West's request for a say in his treatment was denied at the emergency-stay stage.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "The Hill",
+     "url": "https://thehill.com/regulation/court-battles/6105403-kagan-denies-surrogacy-emergency-bid/"
+    },
+    {
+     "source": "Washington Times",
+     "url": "https://www.washingtontimes.com/news/2026/sep/22/supreme-court-allows-custody-parents-who-wanted-surrogate-mother/"
+    },
+    {
+     "source": "CBS News",
+     "url": "https://www.cbsnews.com/news/supreme-court-stays-out-of-custody-dispute-california-couple-surrogate-baby-heart-defect/"
+    },
+    {
+     "source": "Washington Post",
+     "url": "https://www.washingtonpost.com/politics/2026/09/22/justice-kagan-rules-against-surrogate-mother-who-refused-get-abortion/"
+    },
+    {
+     "source": "Texas Tribune",
+     "url": "https://www.texastribune.org/2026/09/22/texas-us-supreme-court-surrogacy-dallas-rumi-gabriel-mckenna-west/"
+    }
+   ]
+  },
+  {
+   "category": "nation",
+   "headline": "Former Utah postal worker indicted over about 300 discarded mail-in ballots",
+   "facts": [
+    {
+     "text": "Damon Matai Seei, 34, of Payson, Utah, a former USPS letter carrier, was indicted by a federal grand jury on a charge of unlawful secretion, destruction and delay of mail.",
+     "status": "verified",
+     "corroboration": "U.S. Attorney's Office, District of Utah press release (primary source); UPI; NBC News"
+    },
+    {
+     "text": "Seei is accused of throwing roughly 300 mail-in ballots addressed to Eagle Mountain, Utah residents into a dumpster in a church parking lot on June 3, 2026, ahead of the June 23 primary election.",
+     "status": "verified",
+     "corroboration": "DOJ press release (primary source); UPI; NBC News"
+    },
+    {
+     "text": "Seei was arraigned at the Orrin G. Hatch U.S. Courthouse in Salt Lake City on September 22, 2026, and pleaded not guilty; his next court appearance is scheduled for November 30, 2026.",
+     "status": "verified",
+     "corroboration": "UPI; NBC News"
+    },
+    {
+     "text": "According to investigators, Seei said he discarded the mail to \"lighten his workload\" while feeling overwhelmed, calling it a \"poor decision\" driven by \"frustration\" and \"laziness,\" and denied any political motive.",
+     "status": "reported",
+     "corroboration": "Single origin: a DOJ charging document/government memo, carried by UPI and NBC News."
+    },
+    {
+     "text": "Seei is no longer employed by the U.S. Postal Service.",
+     "status": "reported",
+     "corroboration": "NBC News only"
+    }
+   ],
+   "impact": "About 300 ballots addressed to Eagle Mountain voters were discarded rather than delivered ahead of the June 23 primary, according to the indictment. Seei has pleaded not guilty and is due back in court November 30.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "UPI",
+     "url": "https://www.upi.com/Top_News/US/2026/09/22/usps-worker-indicted-for-allegedly-discarding-ballots/2671790122214/"
+    },
+    {
+     "source": "NBC News",
+     "url": "https://www.nbcnews.com/politics/justice-department/postal-worker-tossed-300-mail-ballots-parking-lot-garbage-laziness-rcna599224"
+    },
+    {
+     "source": "U.S. Department of Justice, District of Utah",
+     "url": "https://www.justice.gov/usao-ut/pr/former-postal-worker-indicted-after-allegedly-disposing-hundreds-mail-ballots-utah"
+    }
+   ]
+  },
+  {
+   "category": "politics",
+   "headline": "Missouri's redrawn congressional map returns to the Supreme Court for a third emergency appeal",
+   "facts": [
+    {
+     "text": "A federal appeals court ordered the revival of Missouri's new Republican-drawn congressional map on September 23, 2026, prompting a third emergency appeal to the U.S. Supreme Court.",
+     "status": "verified",
+     "corroboration": "CBS News, AP/Reuters (via Yahoo News)"
+    },
+    {
+     "text": "The U.S. Supreme Court gave supporters of the new map until midday Wednesday, September 24, to respond to the latest appeal.",
+     "status": "verified",
+     "corroboration": "CBS News, AP/Reuters (via Yahoo News)"
+    },
+    {
+     "text": "The new map reshapes the Kansas City-based district currently held by Democratic Rep. Emanuel Cleaver; under the plan Republicans could hold seven of Missouri's eight U.S. House seats, up from six.",
+     "status": "verified",
+     "corroboration": "CBS News, AP/Reuters (via Yahoo News)"
+    },
+    {
+     "text": "The Missouri Supreme Court had ruled the new districts cannot take effect without voter approval via statewide referendum. The U.S. Supreme Court left that ruling in place and blocked the new map twice previously, most recently on September 10, 2026, when Justice Brett Kavanaugh rejected an appeal from Missouri Secretary of State Denny Hoskins.",
+     "status": "verified",
+     "corroboration": "CBS News, AP/Reuters (via Yahoo News)"
+    },
+    {
+     "text": "Absentee voting in Missouri is already underway using the congressional districts adopted in 2022, pending the Supreme Court's resolution of the dispute.",
+     "status": "verified",
+     "corroboration": "CBS News, AP/Reuters (via Yahoo News)"
+    }
+   ],
+   "impact": "Which congressional map Missouri uses in the November election is still undecided, with absentee ballots going out under the 2022 district lines. The outcome determines whether Rep. Emanuel Cleaver's Kansas City-based district is redrawn.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CBS News",
+     "url": "https://www.cbsnews.com/news/missouri-congressional-map-redrawn-supreme-court-third-time/"
+    },
+    {
+     "source": "AP/Reuters via Yahoo News",
+     "url": "https://www.yahoo.com/news/politics/articles/trump-backed-missouri-congressional-map-035536596.html"
+    }
+   ]
+  },
+  {
+   "category": "politics",
+   "headline": "GOP senator asks Judiciary Committee to subpoena Trump Jr. and Hunter Biden",
+   "facts": [
+    {
+     "text": "Sen. John Curtis (R-Utah) sent a letter dated September 21, 2026 to Senate Judiciary Committee Chairman Chuck Grassley (R-Iowa) and ranking member Dick Durbin (D-Ill.), asking the committee to subpoena Donald Trump Jr. and Hunter Biden.",
+     "status": "verified",
+     "corroboration": "CBS News, NBC News"
+    },
+    {
+     "text": "The letter asks that Trump Jr. and Hunter Biden be required to testify about their past business dealings, relationships with foreign individuals and entities, and gifts or other benefits they have received.",
+     "status": "verified",
+     "corroboration": "CBS News, NBC News"
+    },
+    {
+     "text": "The request follows a ProPublica report that Russian businessman Umar Kremlev, who has ties to Vladimir Putin, paid for Donald Trump Jr.'s post-wedding celebration on a private island in the Bahamas in May 2026.",
+     "status": "reported",
+     "corroboration": "CBS News and NBC News, both citing ProPublica's reporting (one origin)."
+    },
+    {
+     "text": "Trump Jr.'s wife, Bettina Anderson, confirmed that Kremlev paid for the event, calling it \"an extraordinarily generous wedding gift from a friend.\"",
+     "status": "verified",
+     "corroboration": "CBS News, NBC News"
+    },
+    {
+     "text": "Hunter Biden responded publicly, writing in part: \"I say bring it on. I've already given more than seven hours of sworn testimony... I'll sit next to Don Jr. and testify any time, any place.\"",
+     "status": "verified",
+     "corroboration": "NBC News (full quote); The Hill/Yahoo (same statement, syndicated)"
+    }
+   ],
+   "impact": "If the Judiciary Committee authorizes the subpoenas, Trump Jr. and Hunter Biden could be compelled to testify under oath about their business dealings and gifts from foreign figures. No committee vote on Curtis's request has been reported.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CBS News",
+     "url": "https://www.cbsnews.com/news/john-curtis-subpoena-donald-trump-jr-hunter-biden/"
+    },
+    {
+     "source": "NBC News",
+     "url": "https://www.nbcnews.com/politics/congress/gop-senator-subpoena-donald-trump-jr-hunter-biden-kremlev-wedding-rcna599182"
+    },
+    {
+     "source": "Politico",
+     "url": "https://www.politico.com/live-updates/2026/09/22/congress/curtis-has-questions-01086970"
+    },
+    {
+     "source": "The Hill",
+     "url": "https://thehill.com/homenews/senate/6105280-hunter-biden-responds-senator-request/"
+    }
+   ]
+  },
+  {
+   "category": "politics",
+   "headline": "Senate cloture vote on the Clarity Act fails 49-50 as SEC and CFTC write crypto rules on their own",
+   "facts": [
+    {
+     "text": "On September 15, 2026, a Senate cloture vote on the Digital Asset Market Clarity Act failed 49-50, short of the 60 votes needed to advance the bill; four Republicans (Susan Collins, Josh Hawley, Jerry Moran, and Thom Tillis) joined all Democrats in voting no.",
+     "status": "verified",
+     "corroboration": "CNBC, NPR, CoinDesk (plus the Senate roll call as reported by each)"
+    },
+    {
+     "text": "Two days later, on September 17, 2026, the SEC issued an order creating a temporary 'Innovation Exemption' allowing certain tokenized U.S. stocks to trade on designated blockchain-based venues for up to five years.",
+     "status": "verified",
+     "corroboration": "CNBC, Bloomberg, American Banker, The Hill"
+    },
+    {
+     "text": "The same day, September 17, 2026, the CFTC submitted a crypto market-structure rulemaking proposal to the White House Office of Information and Regulatory Affairs for review; the contents of the proposal have not been made public.",
+     "status": "verified",
+     "corroboration": "CNBC, CoinDesk, PYMNTS"
+    },
+    {
+     "text": "Sen. Thom Tillis (R-N.C.) switched his vote to 'no' on the cloture motion, a procedural move that let him file a motion to reconsider the bill, keeping open the option of a later Senate vote.",
+     "status": "verified",
+     "corroboration": "CNBC, PANews"
+    },
+    {
+     "text": "In a September 14, 2026 letter to the Senate Banking Committee, a bipartisan coalition of 18 state attorneys general, led by New York AG Letitia James, urged senators to oppose the bill, arguing its language could let the SEC preempt states' authority to police securities fraud.",
+     "status": "verified",
+     "corroboration": "CNBC, Washington Examiner, The Block"
+    }
+   ],
+   "impact": "The federal crypto market-structure bill has not advanced. The SEC has issued a temporary exemption covering certain tokenized stocks, and the CFTC has sent a market-structure proposal to the White House for review. Tillis's motion to reconsider leaves a path open for another Senate vote this session.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/clarity-act-crypto-rules-regulators.html"
+    },
+    {
+     "source": "NPR",
+     "url": "https://www.npr.org/2026/09/15/nx-s1-5968711/clarity-act-crypto-senate-vote"
+    },
+    {
+     "source": "CoinDesk",
+     "url": "https://www.coindesk.com/policy/2026/09/18/cftc-sends-crypto-rules-to-white-house-to-review-as-congress-stalls-on-clarity-act"
+    },
+    {
+     "source": "Washington Examiner",
+     "url": "https://www.washingtonexaminer.com/news/4725445/bipartisan-group-attorneys-general-letter-opposing-clarity-act/"
+    }
+   ]
+  },
+  {
+   "category": "banking",
+   "headline": "Treasury says a diesel export ban is under study; Senate Republicans split on the idea",
+   "facts": [
+    {
+     "text": "Treasury Secretary Scott Bessent said Sept. 22 the administration is \"examining whether it's feasible in terms of the overall refining capacity and whether a full or partial ban would work,\" speaking during a bilateral meeting between President Trump and Ukrainian President Volodymyr Zelenskyy at the UN.",
+     "status": "verified",
+     "corroboration": "CNBC (direct quote); the same statement is referenced in The Hill and Roll Call."
+    },
+    {
+     "text": "President Trump told reporters the same day that he has pushed internally for a diesel export ban, saying \"I've said let's not send out the diesel. We make a lot of diesel,\" and that a decision would come \"one way or another\" soon.",
+     "status": "reported",
+     "corroboration": "CNBC; the general claim is corroborated by a Roll Call headline, but the direct quote is single-sourced."
+    },
+    {
+     "text": "The U.S. average retail diesel price has reached a record high, reported as $6.53 a gallon by CNBC (citing AAA) and about $6.51 a gallon in other reporting, roughly $3 above the price a year earlier; California's average is higher, around $8.44 a gallon.",
+     "status": "reported",
+     "corroboration": "CNBC (AAA data); consistent with figures in other outlets' coverage, but a moving snapshot number that varies by source."
+    },
+    {
+     "text": "Sen. Chuck Grassley (R-Iowa) and other farm-state Republicans have publicly called for a diesel export ban, citing prices paid by farmers and truckers, while Republican senators from oil-producing states have opposed the idea; Senate Majority Leader John Thune has said he is open to it.",
+     "status": "verified",
+     "corroboration": "The Hill (two separate articles, on the Senate GOP split and on Grassley's call); CNBC also names Grassley as a proponent."
+    },
+    {
+     "text": "U.S. refiners currently produce roughly 5.3 million barrels per day of diesel and other distillate fuel, compared with domestic demand of about 3.6 million barrels per day; the American Petroleum Institute, an oil industry trade group, said \"restricting U.S. energy exports would only compound the problem,\" per API CEO Mike Sommers.",
+     "status": "reported",
+     "corroboration": "Production figures via a Reuters explainer (one origin, syndicated by US News, AOL and BOE Report); the API statement is sourced to CNBC only."
+    }
+   ],
+   "impact": "A ban would restrict U.S. refiners from exporting diesel, which they currently do without limit. Refiners produce about 5.3 million barrels a day of distillate against domestic demand of about 3.6 million, and the industry's main trade group says restricting exports would compound the problem. No decision has been announced.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/trump-diesel-export-ban-urkaine-russia-iran.html"
+    },
+    {
+     "source": "The Hill",
+     "url": "https://thehill.com/newsletters/business-economy/6105102-proposed-diesel-export-ban-splits-gop-senators/"
+    },
+    {
+     "source": "MarketWatch",
+     "url": "https://www.marketwatch.com/story/why-analysts-say-a-diesel-export-ban-could-backfire-8b13cd51"
+    }
+   ]
+  },
+  {
+   "category": "banking",
+   "headline": "Nasdaq Composite closes at record highs on consecutive trading days",
+   "facts": [
+    {
+     "text": "The Nasdaq Composite closed at a record high of 27,244 on Tuesday, September 22, 2026, up 0.5% for the day.",
+     "status": "verified",
+     "corroboration": "CNBC, Kiplinger"
+    },
+    {
+     "text": "On the same day, the S&P 500 closed fractionally lower at 7,764 and the Dow Jones Industrial Average fell 0.4% to 51,863.",
+     "status": "reported",
+     "corroboration": "Kiplinger only"
+    },
+    {
+     "text": "The Nasdaq Composite rose again on Wednesday, September 23, gaining about 0.45% to another all-time high, putting its year-to-date gain above 17%.",
+     "status": "reported",
+     "corroboration": "Al Jazeera only"
+    },
+    {
+     "text": "Among individual movers on September 23: Monolithic Power Systems rose 8.1%, Shopify rose 7.1%, Micron Technology rose 5%, and Meta Platforms fell 0.63% after an 11.4% rise the prior session.",
+     "status": "reported",
+     "corroboration": "Al Jazeera only"
+    }
+   ],
+   "impact": "The Nasdaq Composite set closing records on Tuesday and again Wednesday, with its year-to-date gain reported above 17%. The S&P 500 and Dow finished Tuesday lower. Index funds and retirement accounts tracking these indexes move with them.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/stock-market-today-live-updates.html"
+    },
+    {
+     "source": "Kiplinger",
+     "url": "https://www.kiplinger.com/investing/stocks/nasdaq-notches-another-new-high-stock-market-today"
+    },
+    {
+     "source": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/9/23/wall-streets-nasdaq-hits-all-time-high-as-ai-frenzy-gathers-pace"
+    }
+   ]
+  },
+  {
+   "category": "banking",
+   "headline": "CFTC advisory flags manipulation risk in prediction-market 'mention' contracts",
+   "facts": [
+    {
+     "text": "On September 22, 2026, the CFTC's Division of Market Oversight issued a staff advisory stating that prediction-market 'mention' contracts carry a heightened risk of manipulation.",
+     "status": "verified",
+     "corroboration": "CFTC official advisory, Release 9302-26 (primary source); CNBC; The Block"
+    },
+    {
+     "text": "Mention markets are contracts that settle based on whether a named person says specific words or phrases, attends or appears at an event, or otherwise interacts with someone else -- for example during a speech, earnings call, or broadcast.",
+     "status": "verified",
+     "corroboration": "CFTC advisory (primary source), CNBC, The Block"
+    },
+    {
+     "text": "The advisory tells exchanges (designated contract markets) to weigh factors before listing mention-market contracts, including whether the person controlling the outcome has outside obligations that could affect their conduct, whether the settlement criteria are independently verifiable, and whether adequate oversight is in place to detect manipulation.",
+     "status": "verified",
+     "corroboration": "CFTC advisory (primary source), CNBC, The Block"
+    },
+    {
+     "text": "The advisory follows a CFTC enforcement case in which Gabriel Perez, a former White House teleprompter operator, agreed in an August 28, 2026 order to pay $172,539 total ($107,539 in disgorged profits plus a $65,000 civil penalty) and accept a three-year trading ban for using advance access to presidential speeches to trade mention-market contracts on Kalshi between December 2025 and February 2026.",
+     "status": "verified",
+     "corroboration": "CFTC press release 9289-26 (official order, primary source); CNBC"
+    }
+   ],
+   "impact": "Exchanges that list prediction-market contracts tied to what a specific person will say or do now have CFTC-published factors to weigh before offering them, which could affect which mention-market contracts get listed and how they are structured.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/cftc-prediction-markets-mentions-contracts-have-manipulation-risk.html"
+    },
+    {
+     "source": "The Block",
+     "url": "https://www.theblock.co/news/regulation/2026-09-22-cftc-advisory-mention-markets-manipulation-risk-416120"
+    },
+    {
+     "source": "CFTC",
+     "url": "https://www.cftc.gov/PressRoom/PressReleases/9289-26"
+    }
+   ]
+  },
+  {
+   "category": "banking",
+   "headline": "Federal Reserve approves BancFirst-SpiritBank merger and separately bars three bank employees from the industry",
+   "facts": [
+    {
+     "text": "The Federal Reserve Board approved an application by BancFirst Corporation of Oklahoma City, Oklahoma, to acquire and merge with Spirit BankCorp, Inc. of Bristow, Oklahoma, and to merge with its subsidiary SpiritBank of Tulsa, Oklahoma, including operating SpiritBank's existing branches under BancFirst.",
+     "status": "verified",
+     "corroboration": "Federal Reserve press release, September 22, 2026 (primary source)"
+    },
+    {
+     "text": "In a separate action dated September 18, 2026, the Federal Reserve issued consent prohibition orders barring three individuals from working in the banking industry: Charles Alan Wright, formerly of Northstar Bank in Bad Axe, Michigan; Stephanie K. Hudders, formerly of American Express Travel Related Services Company, Inc. in New York; and Elvisha White, formerly of Regions Bank in Birmingham, Alabama.",
+     "status": "verified",
+     "corroboration": "Federal Reserve enforcement action press release, September 18, 2026 (primary source)"
+    },
+    {
+     "text": "The Federal Reserve's consent orders list the underlying conduct as misappropriation of customer funds (Wright), misapplication of funds and conflicts of interest (Hudders), and check fraud (White). Consent orders of this type are typically agreed to without the individual admitting or denying the Fed's findings.",
+     "status": "verified",
+     "corroboration": "Federal Reserve enforcement action press release, September 18, 2026 (primary source)"
+    }
+   ],
+   "impact": "BancFirst can proceed with acquiring SpiritBank and operating its Tulsa-area branches. The three individuals named in the separate enforcement action are barred from working at any federally insured bank or Federal Reserve-regulated institution.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Federal Reserve",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/orders20260922a.htm"
+    },
+    {
+     "source": "Federal Reserve",
+     "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20260918a.htm"
+    }
+   ]
+  },
+  {
+   "category": "ai",
+   "headline": "OpenAI and Anthropic release new flagship AI models on the same day",
+   "facts": [
+    {
+     "text": "Anthropic released Claude Opus 5.5 on September 22, 2026, describing it as the first model in a new Claude 5.5 family and its first release since the company said it would slow the pace of AI capability advances.",
+     "status": "verified",
+     "corroboration": "Anthropic official announcement (anthropic.com/news/claude-opus-5-5), corroborated by TechCrunch and The Verge."
+    },
+    {
+     "text": "Anthropic priced Opus 5.5 at $4 per million input tokens and $20 per million output tokens, a 20 percent cut from Opus 5, with cache reads down 60 percent to $0.20 per million tokens; the company said typical workloads at default settings would cost about 40 percent less overall than Opus 5.",
+     "status": "verified",
+     "corroboration": "Anthropic official announcement (primary source); output-token price and the 40 percent figure corroborated by TechCrunch and The Verge."
+    },
+    {
+     "text": "In an internal Anthropic test of a model's tendency to cross containment boundaries during simulated tasks, Opus 5.5 attempted to circumvent those boundaries about 85 percent less often than Opus 5 or Claude Mythos 5.1; Anthropic said every attempt it made was low severity and self-reported by the model.",
+     "status": "reported",
+     "corroboration": "Anthropic's own internal testing, published in its announcement and relayed by The Verge; not independently tested."
+    },
+    {
+     "text": "OpenAI released two new models, GPT-6 Sol and GPT-6 Luna, on September 22, 2026, priced at roughly half the cost of the prior GPT-5.6 series. Per Ars Technica's reporting of OpenAI's pricing, Sol's API costs $2 per million input tokens and $10 per million output tokens, while Luna costs $0.10 and $0.50 per million tokens respectively.",
+     "status": "reported",
+     "corroboration": "The 'half the cost' framing is reported by both TechCrunch and Ars Technica; the exact per-token figures appear in Ars Technica only."
+    },
+    {
+     "text": "Anthropic said Opus 5.5 performs at a level comparable to its larger Claude Mythos 5.1 model in biology and cybersecurity, so it is deployed with the same safeguards used on Anthropic's Claude Fable 5.1, which automatically route certain cybersecurity-related requests to the older Claude Opus 4.8 model.",
+     "status": "verified",
+     "corroboration": "Anthropic official announcement (primary source); routing behavior also described by The Verge."
+    }
+   ],
+   "impact": "Developers using either company's API face lower per-token prices: Anthropic cut Opus pricing about 20 percent, and OpenAI's two new models are priced at roughly half the prior series. Anthropic says Opus 5.5 ships with the safeguards used on Claude Fable 5.1, routing certain cybersecurity requests to an older model.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Anthropic (official announcement)",
+     "url": "https://www.anthropic.com/news/claude-opus-5-5"
+    },
+    {
+     "source": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/09/22/openai-launches-gpt-6-sol-and-luna/"
+    },
+    {
+     "source": "TechCrunch AI",
+     "url": "https://techcrunch.com/2026/09/22/anthropic-releases-opus-5-5-with-lower-prices-and-fable-level-performance/"
+    },
+    {
+     "source": "The Verge AI",
+     "url": "https://www.theverge.com/ai-artificial-intelligence/998868/anthropic-claude-opus-5-5-cybersecurity"
+    },
+    {
+     "source": "Ars Technica AI",
+     "url": "https://arstechnica.com/ai/2026/09/new-anthropic-openai-models-make-same-promise-a-little-more-for-a-lot-less-money/"
+    }
+   ]
+  },
+  {
+   "category": "ai",
+   "headline": "World leaders split on AI oversight as UN General Assembly opens",
+   "facts": [
+    {
+     "text": "UN Secretary-General Antonio Guterres, in an address at the UN General Assembly's high-level debate on September 22, 2026, called for a \"multilateral risk management framework with independent oversight\" for AI, saying AI must remain under human direction, oversight and control.",
+     "status": "verified",
+     "corroboration": "UN News (the UN's own account of the address), also reported by Cryptonomist."
+    },
+    {
+     "text": "Representatives from 20 countries, including Germany, South Africa, Canada, Australia, the UAE and Singapore, released a joint statement on September 21, 2026, posted by Finland's president, calling for pre-deployment safety testing by independent evaluators, common international AI safety standards, and exploration of a new international institution to oversee advanced AI systems. The United States, United Kingdom and China did not sign the statement.",
+     "status": "verified",
+     "corroboration": "NBC News, Al Jazeera, Yahoo News, Cryptonomist"
+    },
+    {
+     "text": "In his UN General Assembly address on September 22, 2026, President Trump pushed back on calls to slow AI development, calling such calls a \"globalist scheme\" and saying, \"I'm not going to stifle growth of something that will be bigger than the industrial revolution.\"",
+     "status": "verified",
+     "corroboration": "Deutsche Welle; the same quote appears in other outlets' coverage of the speech."
+    },
+    {
+     "text": "OpenAI CEO Sam Altman, Anthropic CEO Dario Amodei, Hugging Face CEO Clement Delangue and AI scientific panel co-chair Yoshua Bengio were scheduled to brief a UN Security Council session on AI risks on September 23, 2026, a meeting organized by France, which holds the Council's rotating presidency this month. Altman planned to attend in person; Amodei was expected to join remotely.",
+     "status": "verified",
+     "corroboration": "Deutsche Welle, CNBC, ABC News, qz.com"
+    }
+   ],
+   "impact": "The 20-country statement carries no binding authority, and the United States, United Kingdom and China did not sign it. Company executives were scheduled to brief the UN Security Council on AI risks on September 23.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/unga-world-leaders-discuss-ai-global-conflicts/live-79366211"
+    },
+    {
+     "source": "NBC News",
+     "url": "https://www.nbcnews.com/tech/tech-news/20-countries-call-global-ai-oversight-rcna599062"
+    },
+    {
+     "source": "Al Jazeera",
+     "url": "https://www.aljazeera.com/economy/2026/9/22/20-countries-propose-global-oversight-body-to-manage-ai-dangers"
+    },
+    {
+     "source": "Cryptonomist",
+     "url": "https://en.cryptonomist.ch/2026/09/22/global-ai-regulation-un/"
+    },
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/altman-amodei-unga-ai-safety.html"
+    }
+   ]
+  },
+  {
+   "category": "ai",
+   "headline": "Trump and Xi set to discuss AI safety and chip controls at Thursday meeting",
+   "facts": [
+    {
+     "text": "Donald Trump is scheduled to meet Chinese President Xi Jinping at a White House state dinner on Thursday, with AI policy expected to be a topic.",
+     "status": "verified",
+     "corroboration": "CNBC, Deutsche Welle"
+    },
+    {
+     "text": "Over the weekend in New York, U.S. Treasury Secretary Scott Bessent and Chinese Vice Premier He Lifeng discussed a possible U.S.-China mechanism for exchanging information about AI-related risks and incidents.",
+     "status": "verified",
+     "corroboration": "CNBC, Deutsche Welle (the same mechanism is described in single-outlet reporting elsewhere as a bilateral 'notification system')."
+    },
+    {
+     "text": "Bessent said the discussed mechanism could include a channel for relating incidents \"up to a national security level.\"",
+     "status": "reported",
+     "corroboration": "CNBC only"
+    },
+    {
+     "text": "Trump said over the weekend, in a Truth Social post, that he will create an \"AI Force\" task force and appoint a special AI envoy, without detailing the position's duties, powers, or timeline.",
+     "status": "reported",
+     "corroboration": "Deutsche Welle only"
+    },
+    {
+     "text": "U.S. Trade Representative Jamieson Greer said chip export controls were not on the agenda during preliminary weekend talks.",
+     "status": "reported",
+     "corroboration": "CNBC only"
+    }
+   ],
+   "impact": "If agreed, the mechanism would give the two governments a channel to flag AI-related incidents to each other. The U.S. trade representative said chip export controls were not on the agenda in the preliminary talks.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/23/trump-xi-meeting-ai-safety-chips-us-china-dialogue.html"
+    },
+    {
+     "source": "Deutsche Welle",
+     "url": "https://www.dw.com/en/us-china-ai-race-does-trump-want-to-regulate-ai-by-forming-a-new-task-force-and-a-special-envoy-for-artificial-intelligence-in-the-us/a-79372591"
+    }
+   ]
+  },
+  {
+   "category": "health",
+   "headline": "CMS cancels ACA coverage for about 760,000 enrollees after eligibility checks",
+   "facts": [
+    {
+     "text": "The Centers for Medicare and Medicaid Services canceled roughly 315,000 ACA marketplace enrollments, covering about 760,000 people, saying the coverage involved unverified citizenship or immigration documents or other improper enrollments.",
+     "status": "verified",
+     "corroboration": "CNBC, AP (via NPR) and Reuters (via Yahoo) all report the same 315,000-plan and 760,000-person figures, citing CMS and Vice President JD Vance's Sept. 22 briefing."
+    },
+    {
+     "text": "CMS is separately putting an additional group of enrollees through further eligibility verification for citizenship and income, with outlets giving the size of that group as roughly 419,000 to as high as 450,000.",
+     "status": "disputed",
+     "corroboration": "CNBC and AP (NPR) say about 419,000; Reuters (Yahoo) says 'between 419,000 and 450,000' — the figure varies by outlet."
+    },
+    {
+     "text": "The administration estimates the cancellations and verifications will save about $2.2 billion in taxpayer-funded subsidy payments.",
+     "status": "reported",
+     "corroboration": "CNBC, AP (via NPR) and Reuters (via Yahoo) all cite the same $2.2 billion figure, which originates with Vance's task force (one origin); it is an administration estimate, not an audited number."
+    },
+    {
+     "text": "CMS is freezing new registrations for ACA insurance brokers and agents for six months; brokers without a completed 2026 registration will be barred from enrolling customers until February 1, 2027.",
+     "status": "verified",
+     "corroboration": "Reported by AP (via NPR) and Reuters (via Yahoo), two independent wire services."
+    },
+    {
+     "text": "CMS barred 569 brokers from submitting applications, saying they showed 'statistically implausible rates' of 2026 applications that were missing required applicant information such as Social Security numbers.",
+     "status": "reported",
+     "corroboration": "Reuters (via Yahoo) only; not confirmed by CNBC or the AP/NPR account."
+    }
+   ],
+   "impact": "About 760,000 people covered by roughly 315,000 canceled plans lose that coverage, and CMS says a further group, reported at 419,000 or more, must pass an additional eligibility check. Brokers without a completed 2026 registration cannot enroll ACA customers until February 1, 2027.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CNBC",
+     "url": "https://www.cnbc.com/2026/09/22/trump-administration-removes-around-760000-obamacare-enrollments.html"
+    },
+    {
+     "source": "NPR (Associated Press)",
+     "url": "https://www.npr.org/2026/09/23/g-s1-144623/trump-affordable-care-act"
+    },
+    {
+     "source": "Yahoo News (Reuters)",
+     "url": "https://www.yahoo.com/news/politics/articles/us-says-canceled-315-000-143133907.html"
+    }
+   ]
+  },
+  {
+   "category": "health",
+   "headline": "Lung cancer progress drives down the overall US cancer death rate, CDC report finds",
+   "facts": [
+    {
+     "text": "Overall U.S. cancer death rates declined for both men and women from 2019 to 2023, continuing a downward trend that has lasted more than 20 years.",
+     "status": "verified",
+     "corroboration": "CDC Newsroom (Annual Report to the Nation) and the National Cancer Institute both state this finding from the primary report."
+    },
+    {
+     "text": "The report attributes the continued decline in cancer deaths largely to progress against lung cancer, reflecting declines in smoking, earlier diagnosis, and improved treatment.",
+     "status": "verified",
+     "corroboration": "Stated on both the CDC Newsroom release and the National Cancer Institute's Annual Report to the Nation page."
+    },
+    {
+     "text": "From 2004 to 2023, the lung cancer death rate fell 52% among men (70.3 to 34 per 100,000) and 37% among women (41 to 25.7 per 100,000).",
+     "status": "reported",
+     "corroboration": "Figure carried by WJXT/News4JAX coverage of the report; not independently confirmed in a second outlet or in the accessible portion of the primary CDC text."
+    },
+    {
+     "text": "The share of eligible adults receiving up-to-date lung cancer screening rose from 4.5% in 2015 to 18.7% in 2024, with 2024 state rates ranging from 10.9% to 38.7%.",
+     "status": "reported",
+     "corroboration": "Figure carried by WJXT/News4JAX coverage of the report; single-outlet figure not otherwise confirmed."
+    },
+    {
+     "text": "Lung cancer remains the second most commonly diagnosed cancer in both men and women and is still the leading cause of cancer death in the U.S.",
+     "status": "verified",
+     "corroboration": "Stated on both the CDC Newsroom release and the National Cancer Institute's Annual Report to the Nation page."
+    }
+   ],
+   "impact": "The report identifies falling lung cancer death rates as the largest contributor to the overall decline in US cancer mortality. Lung cancer still causes more cancer deaths in the US than any other type.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CDC Newsroom",
+     "url": "https://www.cdc.gov/media/releases/2026/annual-report-to-the-nation-progress-against-lung-cancer-drives-down-cancer-mortality.html"
+    },
+    {
+     "source": "National Cancer Institute",
+     "url": "https://www.cancer.gov/research/progress/annual-report-nation"
+    },
+    {
+     "source": "WJXT News4JAX",
+     "url": "https://www.news4jax.com/news/local/2026/09/22/lung-cancer-progress-drives-decline-in-us-cancer-deaths-cdc-report-finds/"
+    }
+   ]
+  },
+  {
+   "category": "health",
+   "headline": "FDA rule allows non-animal methods for drug safety testing",
+   "facts": [
+    {
+     "text": "The FDA issued a direct final rule on September 21, 2026 clarifying that non-animal methods can be used, where appropriate, to test the safety of drugs and biological products for human use before they are tried in people.",
+     "status": "verified",
+     "corroboration": "FDA press announcement (primary source)"
+    },
+    {
+     "text": "The rule replaces the terms \"animal tests\" and \"animal studies\" with \"nonclinical tests\" and \"nonclinical studies\" in FDA regulations, and also replaces related terms including \"preclinical\" and \"in vitro.\"",
+     "status": "verified",
+     "corroboration": "FDA press announcement (primary source)"
+    },
+    {
+     "text": "The rule does not eliminate or prohibit animal studies, does not change evidentiary standards, and does not impose new costs or requirements on drug developers.",
+     "status": "verified",
+     "corroboration": "FDA press announcement (primary source)"
+    },
+    {
+     "text": "Alongside the rule, the FDA launched a database of New Approach Methodologies (NAMs), an alternative-testing approach that includes human cells, organs-on-chips, and computer models; the initial release includes 25 examples drawn from FDA review materials.",
+     "status": "verified",
+     "corroboration": "FDA press announcement (primary source)"
+    },
+    {
+     "text": "The FDA published a companion proposed rule at the same time and is accepting public comment; if it receives significant adverse comments on the direct final rule, the agency will withdraw it and proceed through standard notice-and-comment rulemaking using the companion proposed rule.",
+     "status": "verified",
+     "corroboration": "FDA press announcement (primary source)"
+    }
+   ],
+   "impact": "Drug and biologic developers can submit non-animal safety data, such as organ-on-chip or computer-model results, instead of or alongside animal studies when applying to start human trials. Animal testing remains allowed and no new costs or requirements were added.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "FDA Press",
+     "url": "http://www.fda.gov/news-events/press-announcements/fda-updates-regulations-advance-innovative-alternatives-animal-testing"
+    }
+   ]
+  },
+  {
+   "category": "breakthroughs",
+   "headline": "Human stem cells restore movement in mice after stroke, study finds",
+   "facts": [
+    {
+     "text": "Researchers transplanted human neural progenitor cells, made from induced pluripotent stem cells, directly into stroke-damaged brain tissue in mice one week after the stroke.",
+     "status": "verified",
+     "corroboration": "Nature Communications peer-reviewed paper (primary source, DOI 10.1038/s41467-025-63725-3); summarized by ScienceDaily."
+    },
+    {
+     "text": "The transplanted cells survived for more than five weeks and mostly matured into neurons that formed connections with the mice's existing brain cells.",
+     "status": "verified",
+     "corroboration": "Nature Communications (primary source); ScienceDaily"
+    },
+    {
+     "text": "Mice that received the transplant showed improved gait and fine-motor recovery, measured using deep-learning-based movement analysis, compared with untreated stroke mice.",
+     "status": "verified",
+     "corroboration": "Nature Communications (primary source); ScienceDaily"
+    },
+    {
+     "text": "Around the transplanted cells, the researchers observed new blood vessel growth, reduced inflammation, and repair of the blood-brain barrier in the damaged tissue.",
+     "status": "verified",
+     "corroboration": "Nature Communications (primary source); ScienceDaily"
+    },
+    {
+     "text": "The study was led by the University of Zurich with the University of Southern California and Kyoto University's Center for iPS Cell Research and Application, published in Nature Communications.",
+     "status": "verified",
+     "corroboration": "Nature Communications (primary source); ScienceDaily"
+    }
+   ],
+   "impact": "This is an animal study, not a human treatment. It shows lab-grown neural cells can integrate into stroke-damaged mouse brain tissue and improve movement, adding evidence for stem-cell transplants as a possible future stroke therapy; human trials remain a long way off.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ScienceDaily",
+     "url": "https://www.sciencedaily.com/releases/2026/09/260921081116.htm"
+    },
+    {
+     "source": "Nature Communications",
+     "url": "https://www.nature.com/articles/s41467-025-63725-3"
+    }
+   ]
+  },
+  {
+   "category": "breakthroughs",
+   "headline": "Scientists identify a new gentoo penguin species, the first new penguin species named in over 100 years",
+   "facts": [
+    {
+     "text": "Researchers described a new species, Pygoscelis kerguelensis (southeastern gentoo penguin), living on the Kerguelen Islands, about 2,000 miles from any permanently inhabited land.",
+     "status": "verified",
+     "corroboration": "ScienceDaily/UC Berkeley and phys.org, both citing the peer-reviewed paper in Communications Biology."
+    },
+    {
+     "text": "Whole-genome sequencing of 64 penguins from 10 breeding colonies showed that gentoo penguins, long treated as one species, are four genetically distinct species.",
+     "status": "verified",
+     "corroboration": "ScienceDaily/UC Berkeley and phys.org, both citing the same Communications Biology paper."
+    },
+    {
+     "text": "The study was published in Communications Biology, led by first author Daly Noll (University of Chile) with senior authors Rauri Bowie (UC Berkeley), Juliana Vianna (Andres Bello National University, Chile) and Elie Poulin (University of Chile).",
+     "status": "verified",
+     "corroboration": "ScienceDaily/UC Berkeley and phys.org, both citing the paper."
+    },
+    {
+     "text": "It is the first new penguin species formally named in more than 100 years.",
+     "status": "reported",
+     "corroboration": "ScienceDaily/UC Berkeley press release only (single origin)."
+    },
+    {
+     "text": "Researchers project that under a moderate climate-change scenario, three of the four gentoo species -- including the newly named Kerguelen population -- could lose most suitable habitat on their home islands by 2050, while the Antarctic-dwelling species (Pygoscelis ellsworthi) may be able to expand its range.",
+     "status": "verified",
+     "corroboration": "ScienceDaily/UC Berkeley and phys.org, both citing the same paper."
+    }
+   ],
+   "impact": "Three of the four newly recognized gentoo species, including the Kerguelen one, may need separate conservation status in the countries that oversee their sub-Antarctic island habitats.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ScienceDaily (University of California, Berkeley)",
+     "url": "https://www.sciencedaily.com/releases/2026/09/260920222410.htm"
+    },
+    {
+     "source": "Phys.org",
+     "url": "https://phys.org/news/2026-05-scientists-gentoo-penguins-species-totally.html"
+    }
+   ]
+  },
+  {
+   "category": "breakthroughs",
+   "headline": "Circular feature on satellite maps confirmed as a 390-million-year-old impact crater in Quebec",
+   "facts": [
+    {
+     "text": "A roughly 25-kilometer (16-mile) wide impact crater near Lake Marsal in Quebec's Côte-Nord region has been dated to about 390 million years ago.",
+     "status": "verified",
+     "corroboration": "NASA Earth Observatory (science.nasa.gov, primary agency source), ScienceDaily, and earth.com"
+    },
+    {
+     "text": "Amateur astronomer Joël Lapointe first noticed the circular feature on satellite maps in 2024 while scouting a campsite; French researchers flagged it as a possible impact structure at a 2024 Meteoritical Society meeting.",
+     "status": "verified",
+     "corroboration": "NASA Earth Observatory, ScienceDaily, and earth.com"
+    },
+    {
+     "text": "A team led by Western University planetary geologist Gordon Osinski reached the site by floatplane in October 2025 and found shatter cones in rock outcrops, evidence used to confirm the impact origin.",
+     "status": "verified",
+     "corroboration": "NASA Earth Observatory, ScienceDaily, and earth.com"
+    },
+    {
+     "text": "The crater has been provisionally named \"Uhackatik\" after consultation with the Innu Council of Ekuanitshit; formal classification by the Meteoritical Society's Impact Cratering Committee is still pending.",
+     "status": "verified",
+     "corroboration": "NASA Earth Observatory, ScienceDaily, and earth.com"
+    },
+    {
+     "text": "It is the largest impact crater found since the 31-kilometer (19-mile) Hiawatha structure under Greenland's ice, reported in 2018.",
+     "status": "verified",
+     "corroboration": "NASA Earth Observatory and ScienceDaily agree on the 31-kilometer figure."
+    }
+   ],
+   "impact": "Geologists gain a relatively well-preserved example of an ancient, deeply eroded impact site to study. The find is not officially confirmed until the Meteoritical Society's cratering committee classifies it.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "NASA Earth Observatory",
+     "url": "https://science.nasa.gov/earth/earth-observatory/an-accidental-impact-crater-discovery/"
+    },
+    {
+     "source": "ScienceDaily",
+     "url": "https://www.sciencedaily.com/releases/2026/09/260921081101.htm"
+    },
+    {
+     "source": "Earth.com",
+     "url": "https://www.earth.com/earth-science/huge-impact-crater-in-quebec-went-unnoticed-for-390-million-years/"
+    }
+   ],
+   "media_image_url": "https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/iotd/2026/an-accidental-impact-crater-discovery-/newcraterquebec_oli_20251012.jpg",
+   "media_credit": "NASA Earth Observatory/Lauren Dauphin",
+   "media_alt": "Landsat 8 satellite image showing the subtle circular outline of the Uhackatik impact crater in Quebec, with Lake Marsal near its center",
+   "media_source": "NASA Earth Observatory",
+   "media_url": "https://science.nasa.gov/earth/earth-observatory/an-accidental-impact-crater-discovery/"
+  },
+  {
+   "category": "breakthroughs",
+   "headline": "DNA analysis links Jefferson to Sally Hemings' descendants; findings not yet peer reviewed",
+   "facts": [
+    {
+     "text": "Smithsonian scholar Richard Kurin led a 15-year investigation, detailed in his book 'History by a Hair' (released September 22, 2026), to sequence Thomas Jefferson's DNA. An initial hair sample found in Jefferson's Bible turned out not to be his; researchers instead used a separate lock of hair from Monticello's archives labeled as cut the day Jefferson died, July 4, 1826, which yielded his DNA.",
+     "status": "verified",
+     "corroboration": "NPR interview with Kurin; Today.com (NBC) interview with Kurin; Atlanta Black Star reporting citing The New York Times and the Chronicle of Higher Education."
+    },
+    {
+     "text": "Kurin said the analysis found a 99.9% chance that Jefferson fathered a child with Sally Hemings, based on comparing Jefferson's hair DNA with samples from living descendants of Jefferson and of Hemings.",
+     "status": "reported",
+     "corroboration": "Kurin's own claim, relayed by Today.com (NBC) and New York Times reporting as cited by Atlanta Black Star; one origin, and the underlying data has not been peer reviewed."
+    },
+    {
+     "text": "According to Kurin, descendants of Sally Hemings' sons Madison and Eston Hemings carried substantial amounts of Jefferson DNA, in some cases more than known descendants of Jefferson himself. Researchers were not able to identify or test descendants of Hemings' other two children, Harriet and Beverly, who left Monticello in 1822.",
+     "status": "reported",
+     "corroboration": "Single source: NPR interview with Kurin."
+    },
+    {
+     "text": "As of the book's September 22, 2026 release, the underlying genetic findings had not been published in or vetted by a peer-reviewed scientific journal. Kurin has said a paper is under review; a Jefferson descendant who publicly questioned the research asked Kurin to name the journal and a publication date but said Kurin declined.",
+     "status": "verified",
+     "corroboration": "NPR (paper 'currently under review for publication'); Atlanta Black Star reporting citing the Chronicle of Higher Education."
+    },
+    {
+     "text": "One elderly Hemings descendant, identified in reporting as Mary Brady-Atkins, withdrew her DNA sample from the study shortly before publication, saying she had lost trust in the researchers for publicizing findings before peer review. Two scientists on the team said removing her data had little effect on the results.",
+     "status": "reported",
+     "corroboration": "Single source: Atlanta Black Star reporting citing the Chronicle of Higher Education."
+    }
+   ],
+   "impact": "The research adds a physical-DNA line of evidence, beyond a 1998 Y-chromosome study, connecting Jefferson to descendants of two of Sally Hemings' children. The analysis has not passed peer review, descendants of Hemings' other two children remain untraced, and one participant withdrew her sample over the timing of publication.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "NPR",
+     "url": "https://www.npr.org/2026/09/22/nx-s1-5791513/thomas-jefferson-sally-hemings-dna-hair-smithsonian"
+    },
+    {
+     "source": "Today.com (NBC)",
+     "url": "https://www.today.com/news/thomas-jefferson-sally-hemings-hair-dna-children-rcna598975"
+    },
+    {
+     "source": "Atlanta Black Star",
+     "url": "https://atlantablackstar.com/2026/09/22/thomas-jeffersons-hair-proves-he-fathered-black-children/"
+    },
+    {
+     "source": "Science (AAAS)",
+     "url": "https://www.science.org/content/article/dna-analysis-strengthens-evidence-thomas-jefferson-fathered-children-sally-hemings"
+    }
+   ]
+  },
+  {
+   "category": "breakthroughs",
+   "headline": "CMS experiment at the LHC finds no quantum black holes and tightens mass limits",
+   "facts": [
+    {
+     "text": "Physicists on the CMS experiment at CERN's Large Hadron Collider searched proton-proton collision data collected in 2016-2018 (138 inverse femtobarns) for signs of microscopic quantum black holes and electroweak sphalerons.",
+     "status": "verified",
+     "corroboration": "Primary source (Progress in High Energy Physics journal article, DOI 10.31526/PHEP.2026.21) and the UC Santa Barbara press release."
+    },
+    {
+     "text": "No evidence of quantum black holes or sphalerons was found in the data.",
+     "status": "verified",
+     "corroboration": "Primary journal article; UC Santa Barbara press release; ScienceDaily"
+    },
+    {
+     "text": "The search excludes semiclassical black holes with masses below roughly 9.0 to 11.4 TeV, depending on model assumptions, in theories with large extra spatial dimensions -- a tighter limit than earlier LHC searches.",
+     "status": "verified",
+     "corroboration": "Primary journal article (Vami & Zhang, PHEP 2026)."
+    },
+    {
+     "text": "The researchers used a new analysis method -- a 'phase-space distance' technique combined with a support-vector-machine classifier -- to look for the collision signatures, a first for this kind of tool in a CMS particle-physics search.",
+     "status": "reported",
+     "corroboration": "UC Santa Barbara press release (single origin), republished by ScienceDaily and phys.org."
+    },
+    {
+     "text": "The work was carried out by UC Santa Barbara researchers Tamas Vami and Danyi Zhang and published in the journal Progress in High Energy Physics.",
+     "status": "verified",
+     "corroboration": "Primary journal listing (phep.andromedapublisher.org); UC Santa Barbara press release; ScienceDaily"
+    }
+   ],
+   "impact": "The result neither proves nor rules out extra spatial dimensions, but it narrows the range of theoretical models testable at current collider energies.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ScienceDaily",
+     "url": "https://www.sciencedaily.com/releases/2026/09/260922005649.htm"
+    },
+    {
+     "source": "UC Santa Barbara - The Current",
+     "url": "https://news.ucsb.edu/2026/022819/physicists-extend-search-quantum-black-holes-lhc"
+    },
+    {
+     "source": "Progress in High Energy Physics (PHEP)",
+     "url": "https://phep.andromedapublisher.org/index.php/PHEP/article/view/21"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "headline": "Rays clinch the AL East title after defeating the Yankees",
+   "facts": [
+    {
+     "text": "Tampa Bay defeated New York 6-1 on September 22, 2026, in the second game of a doubleheader at Yankee Stadium.",
+     "status": "reported",
+     "corroboration": "ESPN game coverage (single outlet)."
+    },
+    {
+     "text": "Drew Rasmussen pitched 6⅔ innings, allowing one hit and no runs.",
+     "status": "reported",
+     "corroboration": "ESPN game coverage (single outlet)."
+    },
+    {
+     "text": "The win clinched the Rays' fifth AL East division title, and ESPN reported it as the earliest division clincher in franchise history.",
+     "status": "reported",
+     "corroboration": "ESPN (single outlet)."
+    },
+    {
+     "text": "The Rays improved to 96-61 and hold a six-game lead over the Yankees with five games remaining.",
+     "status": "reported",
+     "corroboration": "ESPN (single outlet)."
+    }
+   ],
+   "impact": "The Rays have secured the AL East and a playoff berth with five games left in the regular season.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ESPN",
+     "url": "https://www.espn.com/mlb/story/_/id/50010466/drew-rasmussen-shuts-yankees-help-rays-clinch-al-east"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "headline": "Giants quarterback Jaxson Dart could miss the rest of the season with a knee injury",
+   "facts": [
+    {
+     "text": "Jaxson Dart sustained a left knee injury during the Giants' game against the Los Angeles Rams on Monday.",
+     "status": "verified",
+     "corroboration": "ESPN, CBS Sports"
+    },
+    {
+     "text": "Initial evaluations suggested an MCL sprain, but subsequent testing showed more serious damage.",
+     "status": "verified",
+     "corroboration": "ESPN, CBS Sports"
+    },
+    {
+     "text": "Dart could miss an extended period or possibly the remainder of the 2026 season, pending further medical evaluation.",
+     "status": "reported",
+     "corroboration": "ESPN and CBS Sports, both citing unnamed sources rather than a team announcement."
+    },
+    {
+     "text": "The Giants activated veteran backup Jameis Winston as Dart's replacement.",
+     "status": "verified",
+     "corroboration": "ESPN, CBS Sports"
+    }
+   ],
+   "impact": "Jameis Winston takes over at quarterback while Dart's knee is evaluated. The Giants have not announced how long Dart will be out.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ESPN",
+     "url": "https://www.espn.com/nfl/story/_/id/50007211/sources-giants-qb-jaxson-dart-extended-period"
+    },
+    {
+     "source": "CBS Sports",
+     "url": "https://www.cbssports.com/nfl/news/another-post-eli-manning-nightmare-giants-fans-jaxson-dart/"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "headline": "Mets hire Andy Green as full-time manager on a three-year contract",
+   "facts": [
+    {
+     "text": "Andy Green signed a three-year contract as Mets manager on September 22, 2026.",
+     "status": "verified",
+     "corroboration": "CBS Sports and ESPN MLB both confirm the announcement date and contract terms."
+    },
+    {
+     "text": "Green compiled a 37-38 record in his interim role after taking over mid-season.",
+     "status": "verified",
+     "corroboration": "CBS Sports and ESPN MLB both report the same interim record."
+    },
+    {
+     "text": "Green previously served as San Diego Padres manager from 2016 to 2019.",
+     "status": "verified",
+     "corroboration": "CBS Sports and ESPN MLB"
+    },
+    {
+     "text": "Green was the Mets' senior vice president of baseball development before his interim appointment.",
+     "status": "verified",
+     "corroboration": "CBS Sports and ESPN MLB"
+    }
+   ],
+   "impact": "Green stays on as Mets manager under a three-year contract after going 37-38 as interim manager, ending the team's mid-season managerial vacancy.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "CBS Sports",
+     "url": "https://www.cbssports.com/mlb/news/mets-manager-andy-green-full-time/"
+    },
+    {
+     "source": "ESPN MLB",
+     "url": "https://www.espn.com/mlb/story/_/id/50008250/mets-remove-interim-manager-tag-hire-green-3-year-deal"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "headline": "Bregman avoids the injured list after foul-ball facial fractures",
+   "facts": [
+    {
+     "text": "Alex Bregman sustained multiple facial fractures on the left side after being struck by a foul ball off Michael Busch's bat during the fourth inning on Sunday.",
+     "status": "verified",
+     "corroboration": "CBS Sports, ESPN"
+    },
+    {
+     "text": "No surgery is required for Bregman's fractures.",
+     "status": "verified",
+     "corroboration": "CBS Sports, ESPN"
+    },
+    {
+     "text": "Bregman will not go on the injured list.",
+     "status": "verified",
+     "corroboration": "CBS Sports, ESPN"
+    },
+    {
+     "text": "Bregman could return this weekend in Boston against the Red Sox, the final regular season series.",
+     "status": "reported",
+     "corroboration": "CBS Sports and ESPN, both relaying the team's expectation rather than a confirmed return date."
+    },
+    {
+     "text": "Vision in his left eye and reduction of swelling are the factors determining his availability.",
+     "status": "verified",
+     "corroboration": "CBS Sports, ESPN"
+    }
+   ],
+   "impact": "Since yesterday's report of the foul-ball injury, the team says Bregman needs no surgery and will not go on the injured list; he could return this weekend at Boston, depending on vision in his left eye and swelling.",
+   "early": false,
+   "update_note": "Facial fractures -> no surgery, no injured-list stint; possible return this weekend.",
+   "sources": [
+    {
+     "source": "CBS Sports",
+     "url": "https://www.cbssports.com/mlb/news/cubs-alex-bregman-injury-foul-ball-playoffs-availability/"
+    },
+    {
+     "source": "ESPN",
+     "url": "https://www.espn.com/mlb/story/_/id/50009398/cubs-expect-alex-bregman-ready-postseason-facial-fractures-foul-ball"
+    }
+   ]
+  },
+  {
+   "category": "sports",
+   "headline": "College basketball analyst Chris Spatola dies at 47",
+   "facts": [
+    {
+     "text": "Chris Spatola, a college basketball analyst for ESPN, died September 22, 2026, at age 47.",
+     "status": "verified",
+     "corroboration": "ESPN (his employer) and Fox News"
+    },
+    {
+     "text": "He was married to Jamie Krzyzewski, daughter of Hall of Fame coach Mike Krzyzewski.",
+     "status": "verified",
+     "corroboration": "ESPN and Fox News"
+    },
+    {
+     "text": "Spatola was an assistant coach at Duke from 2007 to 2012 and was on the staff when the team won the 2010 NCAA national championship.",
+     "status": "verified",
+     "corroboration": "ESPN and Fox News"
+    },
+    {
+     "text": "He scored 1,543 points as a four-year starting guard at Army, ranking among the school's top 10 all-time scorers.",
+     "status": "verified",
+     "corroboration": "ESPN and Fox News"
+    },
+    {
+     "text": "Spatola served on active duty from 2002 to 2007, was deployed supporting Operation Iraqi Freedom, and received the Joint Service Commendation Medal and Army Commendation Medal.",
+     "status": "verified",
+     "corroboration": "ESPN and Fox News"
+    }
+   ],
+   "impact": "Spatola had worked as a college basketball analyst after coaching at Duke from 2007 to 2012 and serving in the Army from 2002 to 2007. A cause of death has not been reported.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ESPN",
+     "url": "https://www.espn.com/mens-college-basketball/story/_/id/50009840/chris-spatola-espn-college-basketball-analyst-dies-age-47"
+    },
+    {
+     "source": "Fox News",
+     "url": "https://www.foxnews.com/outkick-sports/college-basketball-tv-analyst-former-duke-assistant-chris-spatola-coach-k-son-in-law-dies-47"
+    }
+   ]
+  },
+  {
+   "category": "entertainment",
+   "headline": "Ella Langley's 'Choosin' Texas' sets a Hot 100 record for weeks at number one",
+   "facts": [
+    {
+     "text": "Ella Langley's 'Choosin' Texas' has spent 23 weeks at number 1 on the Billboard Hot 100.",
+     "status": "verified",
+     "corroboration": "Fox News and Pitchfork both report the 23-week total, citing Billboard's chart."
+    },
+    {
+     "text": "That passes Mariah Carey's previous record of 22 weeks for 'All I Want for Christmas Is You.'",
+     "status": "verified",
+     "corroboration": "Fox News and Pitchfork both identify Carey's song as the previous record holder with 22 weeks."
+    },
+    {
+     "text": "'Choosin' Texas' was co-written by Ella Langley, Miranda Lambert, Luke Dick, and Joybeth Taylor.",
+     "status": "reported",
+     "corroboration": "Fox News only."
+    },
+    {
+     "text": "The track has spent 41 weeks at the top of the Billboard Hot Country Songs chart.",
+     "status": "reported",
+     "corroboration": "Fox News only."
+    }
+   ],
+   "impact": "'Choosin' Texas' now holds the record for most weeks at number one on the Hot 100, at 23, one more than 'All I Want for Christmas Is You.'",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Fox News",
+     "url": "https://www.foxnews.com/entertainment/ella-langley-says-choosin-texas-success-changing-my-life-after-her-song-breaks-mariah-careys-record"
+    },
+    {
+     "source": "Pitchfork",
+     "url": "https://pitchfork.com/story/ella-langleys-choosin-texas-breaks-record-for-most-weeks-at-no-1/"
+    }
+   ]
+  },
+  {
+   "category": "entertainment",
+   "headline": "Taylor Swift announces a new single, 'Patient Zero'",
+   "facts": [
+    {
+     "text": "Taylor Swift announced a new single titled \"Patient Zero\" on September 22, 2026.",
+     "status": "verified",
+     "corroboration": "Pitchfork, Variety, The Hollywood Reporter"
+    },
+    {
+     "text": "'Patient Zero' is scheduled for release on Friday, September 25, 2026, initially as a digital release and on CD through her webstore.",
+     "status": "verified",
+     "corroboration": "Pitchfork, Variety"
+    },
+    {
+     "text": "The song will be offered in three versions: standard, acoustic, and piano.",
+     "status": "reported",
+     "corroboration": "Pitchfork only."
+    },
+    {
+     "text": "Swift has nine nominations for the 2026 MTV VMAs, where she is to receive the inaugural Artist Director Honors award.",
+     "status": "reported",
+     "corroboration": "Pitchfork only."
+    }
+   ],
+   "impact": "The single arrives Friday, September 25, in standard, acoustic and piano versions, sold digitally and on CD through Swift's webstore.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Pitchfork",
+     "url": "https://pitchfork.com/story/taylor-swift-announces-new-single-patient-zero/"
+    },
+    {
+     "source": "Variety",
+     "url": "https://variety.com/2026/music/news/taylor-swift-patient-zero-single-easter-eggs-1236872454/"
+    }
+   ]
+  },
+  {
+   "category": "entertainment",
+   "headline": "Angry Anderson, Rose Tattoo frontman, dies at 79",
+   "facts": [
+    {
+     "text": "Gary 'Angry' Anderson, frontman of Rose Tattoo, died on September 21, 2026, at age 79, surrounded by loved ones in Australia.",
+     "status": "verified",
+     "corroboration": "ABC News (Australia), The Music Network, Mediaweek"
+    },
+    {
+     "text": "Anderson had a cardiac arrest in August 2026 during Rose Tattoo's European tour, leading to hospitalization in Germany and cancellation of the remaining tour dates.",
+     "status": "verified",
+     "corroboration": "ABC News (Australia), The Music Network, Mediaweek"
+    },
+    {
+     "text": "Anderson's 1987 solo song 'Suddenly' reached No. 2 on the Australian charts and No. 3 in the UK.",
+     "status": "verified",
+     "corroboration": "Billboard, The Music Network"
+    },
+    {
+     "text": "Rose Tattoo was formed in Sydney in 1976 and was inducted into the ARIA Hall of Fame in 2006.",
+     "status": "reported",
+     "corroboration": "The Music Network only."
+    }
+   ],
+   "impact": "Anderson had fronted Rose Tattoo since the band formed in Sydney in 1976. The band canceled the rest of its European tour after his cardiac arrest in August 2026.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "ABC News (Australia)",
+     "url": "https://www.abc.net.au/news/2026-09-23/angry-anderson-rose-tattoo-frontman-dies/107028898"
+    },
+    {
+     "source": "The Music Network",
+     "url": "https://themusicnetwork.com/news/gary-angry-anderson-passes-away"
+    },
+    {
+     "source": "Mediaweek",
+     "url": "https://www.mediaweek.com.au/rose-tattoo-frontman-angry-anderson-dies-aged-79"
+    },
+    {
+     "source": "Billboard",
+     "url": "https://www.billboard.com/music/rock/angry-anderson-rose-tattoo-frontman-obituary-1236345178/"
+    }
+   ]
+  },
+  {
+   "category": "entertainment",
+   "headline": "CHVRCHES release a new single, 'Roses'",
+   "facts": [
+    {
+     "text": "CHVRCHES released a new single titled \"Roses\" on September 22, 2026.",
+     "status": "verified",
+     "corroboration": "Pitchfork, Rolling Stone"
+    },
+    {
+     "text": "The single is the band's first release since its 2021 album Screen Violence, which preceded singer Lauren Mayberry's solo work.",
+     "status": "reported",
+     "corroboration": "Pitchfork only."
+    },
+    {
+     "text": "Lauren Mayberry said the song represents \"the most coherent vision we've had as a band\" and called the period since Screen Violence \"the longest break we had ever taken between albums.\"",
+     "status": "verified",
+     "corroboration": "Pitchfork and Rolling Stone, both quoting her directly."
+    },
+    {
+     "text": "Rolling Stone reports the track addresses the political state of Britain, quoting the lyric \"Raise a glass to delusions of the good days of blood and wine.\"",
+     "status": "reported",
+     "corroboration": "Rolling Stone, drawing on the band's press release (one origin)."
+    },
+    {
+     "text": "CHVRCHES announced performances in Glasgow on October 26 and London on October 29, with proceeds going to charity.",
+     "status": "reported",
+     "corroboration": "Pitchfork only."
+    }
+   ],
+   "impact": "'Roses' is the band's first new release since Screen Violence in 2021. Shows are set for Glasgow on October 26 and London on October 29, with proceeds going to charity.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Pitchfork",
+     "url": "https://pitchfork.com/story/chvrches-return-with-first-song-in-three-years/"
+    },
+    {
+     "source": "Rolling Stone",
+     "url": "https://www.rollingstone.com/music/music-news/chvrches-roses-single-music-video-1235630232/"
+    }
+   ]
+  },
+  {
+   "category": "boxoffice",
+   "headline": "Italy submits Paolo Strippoli's 'The Spiral' for the 2027 Oscar international feature race",
+   "facts": [
+    {
+     "text": "Italy has submitted Paolo Strippoli's 'The Spiral' (Italian title: 'L'Estranea') as its candidate for the best international feature film category at the 2027 Academy Awards.",
+     "status": "verified",
+     "corroboration": "Variety and Deadline, reporting the Italian selection committee's decision."
+    },
+    {
+     "text": "The film stars Valeria Bruni Tedeschi.",
+     "status": "reported",
+     "corroboration": "Variety only."
+    }
+   ],
+   "impact": "'The Spiral' is Italy's entry in the best international feature category for the 2027 Academy Awards.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Variety",
+     "url": "https://variety.com/2026/film/awards/oscars-italy-paolo-strippoli-the-spiral-international-feature-1236871826/"
+    },
+    {
+     "source": "Deadline",
+     "url": "https://deadline.com/2026/09/oscars-italy-paolo-strippolis-spiral-1237111088/"
+    }
+   ]
+  },
+  {
+   "category": "boxoffice",
+   "headline": "Sara Ishaq's 'The Station' to open the Doha Film Festival",
+   "facts": [
+    {
+     "text": "Sara Ishaq is a Yemeni-Scottish filmmaker.",
+     "status": "verified",
+     "corroboration": "Variety, Deadline"
+    },
+    {
+     "text": "'The Station' centers on a women-only petrol station in Yemen that operates as a safe haven during the country's civil war.",
+     "status": "verified",
+     "corroboration": "Variety, Deadline"
+    },
+    {
+     "text": "The film is Ishaq's first fiction feature.",
+     "status": "reported",
+     "corroboration": "Deadline only."
+    },
+    {
+     "text": "'The Station' premiered at Cannes Critics' Week in May 2026.",
+     "status": "reported",
+     "corroboration": "Deadline only."
+    },
+    {
+     "text": "The Doha Film Festival runs November 19-27 in its second edition.",
+     "status": "verified",
+     "corroboration": "Variety (dates), Deadline (second edition)"
+    }
+   ],
+   "impact": "'The Station' opens the second edition of the Doha Film Festival, which runs November 19-27.",
+   "early": true,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Variety",
+     "url": "https://variety.com/2026/film/festivals/sara-ishaq-the-station-doha-film-festival-opener-1236872311/"
+    },
+    {
+     "source": "Deadline",
+     "url": "https://deadline.com/2026/09/doha-film-festival-opening-film-station-1237111065/"
+    }
+   ]
+  },
+  {
+   "category": "boxoffice",
+   "headline": "George Lucas says he planned three more Star Wars films before retiring from directing",
+   "facts": [
+    {
+     "text": "George Lucas, 82, said he had planned to direct three additional Star Wars films.",
+     "status": "reported",
+     "corroboration": "One origin: Lucas's own remarks, carried by Yahoo Entertainment, World of Reel and FandomWire."
+    },
+    {
+     "text": "Lucas said the three films were his own versions of Episodes VII, VIII, and IX, which he had begun preparing before Disney purchased Lucasfilm in 2012 for $4 billion.",
+     "status": "reported",
+     "corroboration": "One origin: Lucas's remarks, carried by World of Reel, FandomWire and Yahoo Entertainment."
+    },
+    {
+     "text": "Lucas said he decided to retire from directing rather than make the films, citing his age and his focus on the Lucas Museum of Narrative Art.",
+     "status": "reported",
+     "corroboration": "One origin: Lucas's remarks, carried by Yahoo Entertainment, World of Reel and FandomWire."
+    },
+    {
+     "text": "His last directorial film was 'Revenge of the Sith' in 2005, the final installment of the prequel trilogy.",
+     "status": "verified",
+     "corroboration": "Widely documented release record; noted in Yahoo Entertainment's account."
+    },
+    {
+     "text": "Lucas said completing the three films would have required about another decade, similar to the time he spent on the prequel trilogy.",
+     "status": "reported",
+     "corroboration": "One origin: Lucas's remarks, carried by FandomWire and World of Reel."
+    }
+   ],
+   "impact": "Lucas said he will not make his own versions of Episodes VII-IX, and is focusing on the Lucas Museum of Narrative Art instead.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Yahoo Entertainment",
+     "url": "https://www.yahoo.com/entertainment/movies/articles/george-lucas-says-had-three-183334932.html"
+    },
+    {
+     "source": "World of Reel",
+     "url": "https://www.worldofreel.com/blog/2026/9/21/george-lucas-82-admits-he-walked-away-from-three-more-star-wars-movies-because-he-was-running-out-of-time"
+    },
+    {
+     "source": "FandomWire",
+     "url": "https://fandomwire.com/george-lucas-3-more-unfinished-star-wars-projects/"
+    }
+   ]
+  },
+  {
+   "category": "boxoffice",
+   "headline": "Mahershala Ali says he agrees with Kevin Feige that Marvel's canceled Blade reboot was a failure",
+   "facts": [
+    {
+     "text": "Mahershala Ali was announced as the lead of Marvel's Blade reboot at San Diego Comic-Con in 2019.",
+     "status": "verified",
+     "corroboration": "Documented announcement, cited by Dread Central and TheWrap."
+    },
+    {
+     "text": "The Blade project was removed from Marvel's release schedule in 2024 without any footage being filmed.",
+     "status": "verified",
+     "corroboration": "Documented schedule change, cited by The Source and TheWrap."
+    },
+    {
+     "text": "Ali said he spent more than a year training for the role and sustained a knee injury during preparation.",
+     "status": "reported",
+     "corroboration": "The Source, relaying Ali's interview remarks (one origin)."
+    },
+    {
+     "text": "Marvel Studios president Kevin Feige said he felt like a \"gigantic loser and failure\" for not getting the Blade film made.",
+     "status": "reported",
+     "corroboration": "One origin: Feige's remarks, quoted by Dread Central and TheWrap."
+    },
+    {
+     "text": "Asked about Feige's comment, Ali said he agreed and that \"He should feel that way.\"",
+     "status": "reported",
+     "corroboration": "One origin: Ali's interview, carried by The Hollywood Reporter and republished by Dread Central and TheWrap."
+    }
+   ],
+   "impact": "Marvel announced Ali in the role in 2019 and removed the film from its schedule in 2024 without filming. Ali says he is done with the project.",
+   "early": false,
+   "update_note": "None",
+   "sources": [
+    {
+     "source": "Hollywood Reporter",
+     "url": "https://www.hollywoodreporter.com/movies/movie-news/mahershala-ali-marvel-blade-reboot-kevin-feige-failure-1236708012/"
+    },
+    {
+     "source": "Dread Central",
+     "url": "https://www.dreadcentral.com/news/589669/mahershala-ali-agrees-that-kevin-feige-failed-big-time-with-blade/"
+    },
+    {
+     "source": "The Source",
+     "url": "https://thesource.com/2026/09/22/mahershala-ali-closes-coffin-on-marvels-long-delayed-blade-reboot-im-done-with-that/"
+    },
+    {
+     "source": "TheWrap",
+     "url": "https://www.thewrap.com/creative-content/movies/mahershala-ali-agrees-kevin-feige-failure-blade/"
+    }
+   ]
+  }
+ ],
+ "transparency_note": "Several items in this edition are still moving: Hurricane Polo's reported Category 5 peak comes from CBS News and UPI citing NHC data while the advisory fetched directly shows Category 4, Japan's typhoon casualty count is still being updated, and the ACA verification total and record diesel price vary by outlet and are labeled accordingly. All 44 feeds returned items today and none failed; the WHO feed returned zero items, which is normal for that feed rather than an outage. Treat stories marked early as provisional, note that the Jefferson DNA findings have not yet been peer reviewed, and that several sports and film items rest on a single outlet or a single interview, as their corroboration lines state."
+}
