@@ -11,8 +11,8 @@ jobs:
       - name: baseline must be untouched
         run: |
           git fetch origin main --depth=1
-          if ! git diff --quiet origin/main -- baseline/ .github/ check.py lab.css; then
-            echo "baseline/, .github/, check.py or lab.css was changed. Not allowed."; exit 1; fi
+          if ! git diff --quiet origin/main -- baseline/ .github/ check.py serve.py shot.py lab.css; then
+            echo "baseline/, .github/, check.py, serve.py, shot.py or lab.css was changed. Not allowed."; exit 1; fi
         if: github.event_name == 'pull_request'
       - name: run the lab rules
         run: python3 check.py

@@ -2,7 +2,8 @@
 
 A safe copy of [HeresThe.News](https://heresthe.news) for the IS 551 team
 project. The page is one real edition, frozen on Friday 2026-09-25. It never
-updates. You change how it looks. The news stays the same.
+updates. You change how it looks, from small polish to a full redesign. The
+news stays the same.
 
 **Lab site (main):** https://kdavis5111.github.io/htn-ui-lab/
 **Every pull request gets its own preview link,** posted by a bot as a comment.
@@ -24,7 +25,10 @@ your AI must follow, are in [AGENTS.md](AGENTS.md).
 ## Getting started (humans)
 
 1. Accept the invite to this repo. You need to be a collaborator, not a fork.
-2. Install `git` and the GitHub CLI (`gh`), and sign in with `gh auth login`.
+2. Install `git`, Python 3, and the GitHub CLI (`gh`), then sign in with
+   `gh auth login`. On Windows, type `python` wherever these docs say
+   `python3`. If you skip `gh`, you can open pull requests on the GitHub
+   website instead: push your branch and click "Compare & pull request".
 3. Clone it:
 
    ```bash
@@ -34,8 +38,9 @@ your AI must follow, are in [AGENTS.md](AGENTS.md).
 
 4. Open your AI agent (Claude Code, Codex, Cursor, whatever you use) inside
    that folder and paste the starter prompt below.
-5. Look at the page yourself first. Run `python3 -m http.server 8000` and open
-   http://localhost:8000/ . Try it at phone width. Toggle dark and light.
+5. Look at the page yourself first. Run `python3 serve.py`. It opens the page
+   in your browser. Make the window phone-narrow and wide. Your AI will use
+   the same command to show you its changes, and you can refresh as it works.
 
 ## Starter prompt for your AI
 
@@ -48,11 +53,13 @@ read AGENTS.md in the repo root and follow it exactly. Then read README.md.
 Tell me in a few sentences what this repo is, what you are allowed to change,
 and what you must never change. Wait for my go-ahead.
 
-After I say go: create a branch named <myname>/<short-idea> from main, make the
-change, run python3 check.py, show me a before and after (serve the page with
-python3 -m http.server 8000 and screenshot it at 375px wide and at desktop, in
-dark and light), and open a pull request with the template filled in. Do not
-merge. Keep the change small and only about the look.
+After I say go: create a branch named <myname>/<short-idea> from main and make
+the change. Run python3 serve.py in the background and give me the URL so I can
+look at it in my own browser and tell you what I think. When I am happy, run
+python3 check.py, then python3 shot.py for the before and after pictures, and
+open a pull request with the template filled in. Do not merge. Keep the change
+focused and only about the look. Big redesigns are welcome, but split them into
+PRs a reviewer can follow.
 
 My idea: 
 ```
@@ -62,6 +69,8 @@ My idea:
 - One idea, one branch, one PR. Name it `firstname/short-idea`.
 - Variation on someone's open idea? Branch from their branch, name it
   `firstname/short-idea-v2`, and say so in the PR.
+- Before you open a PR, merge `main` into your branch so it is up to date.
+  Most PRs touch `style.css`, so this avoids conflicts later.
 - `main` is the team's proposed version of the real site. A PR merges when the
   check passes, the team agrees it is better, and Kendrick approves. Only
   Kendrick merges.
@@ -77,13 +86,14 @@ My idea:
 | `lab.css` | the green lab banner, leave it |
 | `baseline/` | the untouched starting point, never edit |
 | `check.py` | the rules check, run it before every push |
+| `serve.py` | opens the page in your browser from a local server |
+| `shot.py` | makes before/after screenshots for a PR |
 | `data/` | a real day's data file, read-only, so you can see what fields exist |
 
 ## Review checklist (for whoever looks at a PR)
 
 - Is the news identical? (`check.py` says so, but look.)
-- Does it look right at 375px?
-- Dark and light both fine?
+- Does it look right at phone width?
 - Is it one idea? Could you describe it in one sentence?
 - Would a regular reader notice this as better, or just different?
 
