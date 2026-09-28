@@ -2,7 +2,8 @@
 
 A safe copy of [HeresThe.News](https://heresthe.news) for the IS 551 team
 project. The page is one real edition, frozen on Friday 2026-09-25. It never
-updates. You change how it looks. The news stays the same.
+updates. You change how it looks, from small polish to a full redesign. The
+news stays the same.
 
 **Lab site (main):** https://kdavis5111.github.io/htn-ui-lab/
 **Every pull request gets its own preview link,** posted by a bot as a comment.
@@ -54,8 +55,8 @@ the change. Run python3 serve.py in the background and give me the URL so I can
 look at it in my own browser and tell you what I think. When I am happy, run
 python3 check.py, then python3 shot.py for the before and after pictures, and
 open a pull request with the template filled in. Do not merge. Keep the change
-small and only about the look. Do not add a light theme; the paper is dark by
-design.
+focused and only about the look. Big redesigns are welcome, but split them into
+PRs a reviewer can follow.
 
 My idea: 
 ```

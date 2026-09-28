@@ -9,9 +9,10 @@ This is the **UI Lab** for HeresThe.News (https://heresthe.news), a real, live,
 daily news brief. The lab is a frozen copy of one real edition, Friday
 2026-09-25. Nothing here updates. The news on the page is fixed forever.
 
-Your job: improve how the page **looks and feels**. Colors, spacing, type,
-layout, ordering, motion, mobile behaviour, small interactions. That is the
-whole job.
+Your job: improve how the page **looks and feels**. Anything from small polish
+to a complete redesign: colors, type, spacing, layout, navigation, ordering,
+motion, mobile behaviour, interactions, themes. The news itself is the only
+thing that is off limits.
 
 ## How this feeds the real site
 
@@ -49,8 +50,14 @@ presentation**. Every rule below exists to keep the diff portable.
    (a photo, a summary, a read time, a category the pipeline does not emit),
    do not fake it. Write the idea in the PR description under "Needs pipeline
    support" and stop there.
-3. **Keep the class names and the structure.** Add new classes if you need
-   them. Do not rename or remove existing ones. The port back depends on them.
+3. **Redesign as much as you like, but keep the news elements findable.** You
+   may restructure the page completely: new layout, new navigation, new
+   components, new colors, a light theme, anything. The one constraint is that
+   the elements that carry news keep their existing class names, so the check
+   and the port back can find them: `story`, `headline`, `fact`, `fact-text`,
+   `chip status-verified` / `status-reported` / `status-disputed`, `src`,
+   `lean-tag`, `update-note`, `impact`. Wrap them, move them, restyle them,
+   add classes beside them. Just do not rename or drop those.
 4. **No frameworks, no build step, no npm.** Plain HTML, CSS and JS. Outside
    code only from cdnjs.cloudflare.com, cdn.jsdelivr.net/npm/ or Google Fonts,
    and only if you truly need it. No trackers, no analytics, no new forms.
@@ -62,8 +69,9 @@ presentation**. Every rule below exists to keep the diff portable.
    works. `sr-only` and `aria-` attributes stay.
 8. **Mobile first.** Most readers are on a phone. Check 375px width before you
    check desktop.
-9. **The paper is dark, by design.** There is no light theme and you do not add
-   one. Work within the dark palette in `:root` at the top of `style.css`.
+9. **Themes are open.** The page ships dark only. A light theme, a system
+   theme, or a whole new palette are all fair game. The colors live in `:root`
+   at the top of `style.css`.
 
 ## Branches and pull requests
 
