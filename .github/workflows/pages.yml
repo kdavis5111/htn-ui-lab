@@ -15,23 +15,25 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: collect the page files
+        run: |
+          mkdir -p site
+          cp index.html style.css app.js lab.css robots.txt favicon-*.png site/
       - name: publish main to the lab site
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./site
           keep_files: true
-          exclude_assets: '.github,.git,baseline,check.py,README.md,AGENTS.md,CLAUDE.md'
       - name: publish this PR to its own preview folder
         if: github.event_name == 'pull_request'
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
+          publish_dir: ./site
           destination_dir: pr/${{ github.event.number }}
           keep_files: true
-          exclude_assets: '.github,.git,baseline,check.py,README.md,AGENTS.md,CLAUDE.md'
       - name: post the preview link
         if: github.event_name == 'pull_request'
         uses: actions/github-script@v7
