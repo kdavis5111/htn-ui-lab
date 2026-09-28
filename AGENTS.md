@@ -39,6 +39,7 @@ presentation**. Every rule below exists to keep the diff portable.
 | `check.py` | the rules check | no |
 | `serve.py` | local server that opens the page in the human's browser | no |
 | `shot.py` | before/after screenshots for the PR | no |
+| `assets/` | the page's images, pulled out of the HTML | no |
 | `data/` | a real day's data file, so you can see what fields exist | no |
 
 ## Hard rules
@@ -83,7 +84,11 @@ presentation**. Every rule below exists to keep the diff portable.
   that branch and name it `firstname/short-idea-v2`. Say so in the PR.
 - Keep PRs small. One visual change per PR is ideal. A reviewer should be able
   to see the whole change in one screenshot pair.
+- Before you open a PR, merge `main` into your branch (`git merge main`) and
+  resolve any conflict in `style.css` by keeping both changes unless they
+  really collide. Most PRs touch that file.
 - Before every push run `python3 check.py`. It must pass.
+- On Windows `python3` may be spelled `python`. Same scripts.
 - The PR template asks for before and after screenshots. `python3 shot.py`
   makes them.
 
@@ -96,7 +101,7 @@ git checkout -b firstname/short-idea
 python3 check.py
 git add -A && git commit -m "Short description of the visual change"
 git push -u origin firstname/short-idea
-gh pr create --fill
+gh pr create --fill     # or open the PR on github.com if gh is not installed
 ```
 
 Every PR gets its own preview link, posted as a comment on the PR by a bot

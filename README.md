@@ -25,7 +25,10 @@ your AI must follow, are in [AGENTS.md](AGENTS.md).
 ## Getting started (humans)
 
 1. Accept the invite to this repo. You need to be a collaborator, not a fork.
-2. Install `git` and the GitHub CLI (`gh`), and sign in with `gh auth login`.
+2. Install `git`, Python 3, and the GitHub CLI (`gh`), then sign in with
+   `gh auth login`. On Windows, type `python` wherever these docs say
+   `python3`. If you skip `gh`, you can open pull requests on the GitHub
+   website instead: push your branch and click "Compare & pull request".
 3. Clone it:
 
    ```bash
@@ -66,6 +69,8 @@ My idea:
 - One idea, one branch, one PR. Name it `firstname/short-idea`.
 - Variation on someone's open idea? Branch from their branch, name it
   `firstname/short-idea-v2`, and say so in the PR.
+- Before you open a PR, merge `main` into your branch so it is up to date.
+  Most PRs touch `style.css`, so this avoids conflicts later.
 - `main` is the team's proposed version of the real site. A PR merges when the
   check passes, the team agrees it is better, and Kendrick approves. Only
   Kendrick merges.

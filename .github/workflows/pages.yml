@@ -18,7 +18,7 @@ jobs:
       - name: collect the page files
         run: |
           mkdir -p site
-          cp index.html style.css app.js lab.css robots.txt favicon-*.png site/
+          cp index.html style.css app.js lab.css robots.txt favicon-*.png site/ && cp -r assets site/
       - name: publish main to the lab site
         if: github.event_name == 'push'
         uses: peaceiris/actions-gh-pages@v4
