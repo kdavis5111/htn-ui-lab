@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 """Serve the lab page locally and open it in the human's own browser.
 
-    python3 serve.py
+    python3 serve.py            # opens the human's browser
+    python3 serve.py --no-open  # just serve; print the URL for the human
+    python3 serve.py 8080       # pick a port
 
 Leaves a server running at http://localhost:8000/ (or the next free port).
 Edit style.css / index.html / app.js, then refresh the browser. No caching,
@@ -31,7 +33,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
 
 def main():
-    port = int(sys.argv[1]) if len(sys.argv) > 1 else 8000
+    args = [a for a in sys.argv[1:] if not a.startswith("--")]
+    port = int(args[0]) if args else 8000
     for p in range(port, port + 20):
         try:
             httpd = socketserver.TCPServer(("127.0.0.1", p), Handler)
@@ -41,9 +44,9 @@ def main():
     else:
         sys.exit("no free port between %d and %d" % (port, port + 19))
     url = "http://localhost:%d/" % p
-    print("Lab page:      ", url)
-    print("Starting point:", url + "baseline/index.html")
-    print("Edit, then refresh the browser. Ctrl+C stops the server.")
+    print("Lab page:      ", url, flush=True)
+    print("Starting point:", url + "baseline/index.html", flush=True)
+    print("Edit, then refresh the browser. Ctrl+C stops the server.", flush=True)
     if "--no-open" not in sys.argv:
         threading.Timer(0.5, lambda: webbrowser.open(url)).start()
     try:

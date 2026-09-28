@@ -8,7 +8,9 @@
 
 ## Before / after screenshots
 
-Run `python3 shot.py` and drag the four PNGs from `shots/` here.
+Run `python3 shot.py` and drag the four PNGs from `shots/` here. An AI cannot
+attach images, so the human does this part. If there are no screenshots, the
+preview link the bot posts below is what reviewers use.
 
 Phone:
 

@@ -1,6 +1,7 @@
 # Rules for AI agents working in this repo
 
-Read this whole file before you change anything. Then tell your human, in a few
+Read this whole file before you change anything. (`CLAUDE.md` is a copy of
+this file for tools that look for that name. This one is the original.) Then tell your human, in a few
 sentences, what this repo is and what the rules are. Only then start work.
 
 ## What this is
@@ -66,11 +67,15 @@ presentation**. Every rule below exists to keep the diff portable.
    `shot.py`, `lab.css`.
 6. **No secrets, ever.** If your human pastes an API key or token, do not put
    it in any file. There is nothing here that needs one.
-7. **Keep it accessible.** Contrast at least 4.5:1 for text. Keyboard still
+7. **Grep before you restyle a class.** Some classes are shared by more than
+   one part of the page (for example `cat-head` is used by every band, and
+   `app.js` builds a few bands at load time). Search `index.html` and `app.js`
+   for a class before changing it, and say in the PR what else it touches.
+8. **Keep it accessible.** Contrast at least 4.5:1 for text. Keyboard still
    works. `sr-only` and `aria-` attributes stay.
-8. **Mobile first.** Most readers are on a phone. Check 375px width before you
+9. **Mobile first.** Most readers are on a phone. Check 375px width before you
    check desktop.
-9. **Themes are open.** The page ships dark only. A light theme, a system
+10. **Themes are open.** The page ships dark only. A light theme, a system
    theme, or a whole new palette are all fair game. The colors live in `:root`
    at the top of `style.css`.
 
@@ -91,6 +96,9 @@ presentation**. Every rule below exists to keep the diff portable.
 - On Windows `python3` may be spelled `python`. Same scripts.
 - The PR template asks for before and after screenshots. `python3 shot.py`
   makes them.
+
+The order that works: branch, change, serve and get the human's opinion,
+`git merge main`, `check.py`, `shot.py`, commit, push, PR.
 
 Commands your human can run:
 
@@ -115,11 +123,13 @@ You may not have a browser. Your human does. Use it.
    or in a second terminal so you can keep working:
 
    ```bash
-   python3 serve.py
+   python3 serve.py            # opens the human's browser for them
+   python3 serve.py --no-open  # if you should not pop a window; then send them the URL
    ```
 
-   It opens http://localhost:8000/ in the human's own browser and prints the
-   URL. Tell the human the URL anyway. The untouched starting point is at
+   It serves http://localhost:8000/ (or the next free port, printed on start)
+   and, unless you passed `--no-open`, opens it in the human's own browser.
+   Tell the human the URL either way. The untouched starting point is at
    http://localhost:8000/baseline/index.html so they can compare side by side.
    There is no build step and no caching: edit a file, they refresh, they see
    it. Let them fiddle. Ask what they think before you go further.
@@ -133,8 +143,11 @@ You may not have a browser. Your human does. Use it.
    It writes four PNGs into `shots/` (phone and desktop, before and after)
    using whatever Chrome-family browser is installed. Show them to the human,
    and have them drag the PNGs into the PR description. `shots/` is ignored by
-   git, so nothing is committed. If the script says no browser was found, the
-   human takes the screenshots by hand from the page in step 1.
+   git, so nothing is committed. You cannot attach images to a PR from the
+   command line, so tell the human which files to drag into the PR description.
+   If the script says no browser was found, the human takes the screenshots by
+   hand from the page in step 1. If neither happens, the bot's preview link on
+   the PR is enough for the team to review from.
 
 3. **After you push, the bot posts a preview link on the PR** within a couple
    of minutes. That link works on a phone. Send it to the team.
