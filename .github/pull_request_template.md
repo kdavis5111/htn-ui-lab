@@ -8,7 +8,9 @@
 
 ## Before / after screenshots
 
-Phone width (375px), dark and light:
+Run `python3 shot.py` and drag the four PNGs from `shots/` here.
+
+Phone:
 
 Desktop:
 
@@ -16,8 +18,8 @@ Desktop:
 
 - [ ] `python3 check.py` passes
 - [ ] News content untouched
-- [ ] Looked at it on a phone-width screen
-- [ ] Dark and light both fine
+- [ ] Looked at it in my own browser via `serve.py`
+- [ ] Looked at it at phone width
 
 ## Needs pipeline support? (leave blank if no)
 

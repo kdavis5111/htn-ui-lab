@@ -36,6 +36,8 @@ presentation**. Every rule below exists to keep the diff portable.
 | `lab.css` | the green lab banner only | no |
 | `baseline/` | untouched copy of the four files above | **never** |
 | `check.py` | the rules check | no |
+| `serve.py` | local server that opens the page in the human's browser | no |
+| `shot.py` | before/after screenshots for the PR | no |
 | `data/` | a real day's data file, so you can see what fields exist | no |
 
 ## Hard rules
@@ -52,15 +54,16 @@ presentation**. Every rule below exists to keep the diff portable.
 4. **No frameworks, no build step, no npm.** Plain HTML, CSS and JS. Outside
    code only from cdnjs.cloudflare.com, cdn.jsdelivr.net/npm/ or Google Fonts,
    and only if you truly need it. No trackers, no analytics, no new forms.
-5. **Never touch `baseline/`.** Never touch `.github/`, `check.py`, `lab.css`.
+5. **Never touch `baseline/`.** Never touch `.github/`, `check.py`, `serve.py`,
+   `shot.py`, `lab.css`.
 6. **No secrets, ever.** If your human pastes an API key or token, do not put
    it in any file. There is nothing here that needs one.
 7. **Keep it accessible.** Contrast at least 4.5:1 for text. Keyboard still
    works. `sr-only` and `aria-` attributes stay.
 8. **Mobile first.** Most readers are on a phone. Check 375px width before you
    check desktop.
-9. **Dark and light.** The site has both themes (`data-theme` on `<html>`).
-   Check both.
+9. **The paper is dark, by design.** There is no light theme and you do not add
+   one. Work within the dark palette in `:root` at the top of `style.css`.
 
 ## Branches and pull requests
 
@@ -73,7 +76,8 @@ presentation**. Every rule below exists to keep the diff portable.
 - Keep PRs small. One visual change per PR is ideal. A reviewer should be able
   to see the whole change in one screenshot pair.
 - Before every push run `python3 check.py`. It must pass.
-- The PR template asks for a before and after screenshot. Take them.
+- The PR template asks for before and after screenshots. `python3 shot.py`
+  makes them.
 
 Commands your human can run:
 
@@ -90,13 +94,40 @@ gh pr create --fill
 Every PR gets its own preview link, posted as a comment on the PR by a bot
 within a couple of minutes. `main` is published at the lab URL in the README.
 
-## How to preview locally
+## Show your human the change
 
-```bash
-python3 -m http.server 8000
-```
+You may not have a browser. Your human does. Use it.
 
-Then open http://localhost:8000/ . No build step.
+1. **Start the local server, and keep it running.** Run it in the background
+   or in a second terminal so you can keep working:
+
+   ```bash
+   python3 serve.py
+   ```
+
+   It opens http://localhost:8000/ in the human's own browser and prints the
+   URL. Tell the human the URL anyway. The untouched starting point is at
+   http://localhost:8000/baseline/index.html so they can compare side by side.
+   There is no build step and no caching: edit a file, they refresh, they see
+   it. Let them fiddle. Ask what they think before you go further.
+
+2. **Make the before/after pictures for the PR:**
+
+   ```bash
+   python3 shot.py
+   ```
+
+   It writes four PNGs into `shots/` (phone and desktop, before and after)
+   using whatever Chrome-family browser is installed. Show them to the human,
+   and have them drag the PNGs into the PR description. `shots/` is ignored by
+   git, so nothing is committed. If the script says no browser was found, the
+   human takes the screenshots by hand from the page in step 1.
+
+3. **After you push, the bot posts a preview link on the PR** within a couple
+   of minutes. That link works on a phone. Send it to the team.
+
+If you do have a browser tool, use it as well, but never instead of step 1.
+The human's own window is the review that counts.
 
 ## When to merge into `main`
 
