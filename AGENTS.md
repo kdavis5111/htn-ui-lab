@@ -38,6 +38,8 @@ presentation**. Every rule below exists to keep the diff portable.
 | `lab.css` | the green lab banner only | no |
 | `baseline/` | untouched copy of the four files above | **never** |
 | `check.py` | the rules check | no |
+| `DESIGN.md` | the design system: tokens, type, components, button ranks | read first; edit only when adding a component |
+| `styleguide.html` | every component once, built from the real classes | update when you add or restyle a component |
 | `serve.py` | local server that opens the page in the human's browser | no |
 | `shot.py` | before/after screenshots for the PR | no |
 | `assets/` | the page's images, pulled out of the HTML | no |
@@ -67,15 +69,21 @@ presentation**. Every rule below exists to keep the diff portable.
    `shot.py`, `lab.css`.
 6. **No secrets, ever.** If your human pastes an API key or token, do not put
    it in any file. There is nothing here that needs one.
-7. **Grep before you restyle a class.** Some classes are shared by more than
+7. **Build from the design system.** Read `DESIGN.md` before styling
+   anything. Use the tokens in `:root`, never a raw hex. Use an existing
+   component; there are four kinds of button and you pick one. A genuinely
+   new component is its own PR that also updates `styleguide.html` and the
+   table in `DESIGN.md`. Trying another design system is allowed as a token
+   swap in `:root` on a branch, not as a rebuild of the markup.
+8. **Grep before you restyle a class.** Some classes are shared by more than
    one part of the page (for example `cat-head` is used by every band, and
    `app.js` builds a few bands at load time). Search `index.html` and `app.js`
    for a class before changing it, and say in the PR what else it touches.
-8. **Keep it accessible.** Contrast at least 4.5:1 for text. Keyboard still
+9. **Keep it accessible.** Contrast at least 4.5:1 for text. Keyboard still
    works. `sr-only` and `aria-` attributes stay.
-9. **Mobile first.** Most readers are on a phone. Check 375px width before you
+10. **Mobile first.** Most readers are on a phone. Check 375px width before you
    check desktop.
-10. **Themes are open.** The page ships dark only. A light theme, a system
+11. **Themes are open.** The page ships dark only. A light theme, a system
    theme, or a whole new palette are all fair game. The colors live in `:root`
    at the top of `style.css`.
 
@@ -126,6 +134,9 @@ You may not have a browser. Your human does. Use it.
    python3 serve.py            # opens the human's browser for them
    python3 serve.py --no-open  # if you should not pop a window; then send them the URL
    ```
+
+   The style guide is at http://localhost:8000/styleguide.html, and it is the
+   fastest way to see whether a change broke a component.
 
    It serves http://localhost:8000/ (or the next free port, printed on start)
    and, unless you passed `--no-open`, opens it in the human's own browser.

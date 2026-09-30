@@ -6,6 +6,7 @@ updates. You change how it looks, from small polish to a full redesign. The
 news stays the same.
 
 **Lab site (main):** https://kdavis5111.github.io/htn-ui-lab/
+**Style guide:** https://kdavis5111.github.io/htn-ui-lab/styleguide.html
 **Every pull request gets its own preview link,** posted by a bot as a comment.
 
 ## Why a frozen copy
@@ -49,7 +50,8 @@ Paste this as your first message, then add your idea at the end.
 ```
 You are working in the HeresThe.News UI Lab repo, a frozen copy of a real news
 site that we are redesigning for a class project. Before doing anything else,
-read AGENTS.md in the repo root and follow it exactly. Then read README.md.
+read AGENTS.md in the repo root and follow it exactly. Then read README.md and
+DESIGN.md.
 Tell me in a few sentences what this repo is, what you are allowed to change,
 and what you must never change. Wait for my go-ahead.
 
@@ -83,6 +85,8 @@ My idea:
 | `index.html` | the frozen page |
 | `style.css` | all styles, this is where most work happens |
 | `app.js` | page script (theme, topics, share, collapsing bands) |
+| `DESIGN.md` | the design system: tokens, type, components, how to add one |
+| `styleguide.html` | every component on one page, for checking and for reference |
 | `lab.css` | the green lab banner, leave it |
 | `baseline/` | the untouched starting point, never edit |
 | `check.py` | the rules check, run it before every push |
