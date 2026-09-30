@@ -782,3 +782,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   .headline { font-size: 1.19rem; }
   .learn-card { padding: 18px 18px; }
 }
+
+/* --- UI Lab example change: a little more air between headline and body --- */
+.story .headline { margin-bottom: 0.35em; }
