@@ -72,6 +72,26 @@ const newsEl = document.getElementById('news');
 function lsGet(k) { try { return localStorage.getItem(k); } catch (e) { return null; } }
 function lsSet(k, v) { try { localStorage.setItem(k, v); return localStorage.getItem(k) === v; } catch (e) { return false; } }
 function lsDel(k) { try { localStorage.removeItem(k); } catch (e) {} }
+function showToast(message) {
+  let el = document.getElementById('lab-toast');
+  if (!el) {
+    el = document.createElement('div');
+    el.id = 'lab-toast';
+    el.setAttribute('role', 'status');
+    el.setAttribute('aria-live', 'polite');
+    document.body.appendChild(el);
+  }
+  el.textContent = message;
+  el.classList.add('show');
+  clearTimeout(showToast._t);
+  showToast._t = setTimeout(() => el.classList.remove('show'), 3200);
+}
+function tabUnder(root, e) {
+  return [...root.querySelectorAll('.bo-tab')].find(b => {
+    const r = b.getBoundingClientRect();
+    return e.clientX >= r.left && e.clientX <= r.right && e.clientY >= r.top && e.clientY <= r.bottom;
+  });
+}
 const SMOOTH = (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) ? 'auto' : 'smooth';
 window.pickedMode = false;
 function applyPicks(order) {
@@ -567,8 +587,12 @@ document.querySelectorAll('.bo-axes').forEach(ax => {
     }
   }
   ax.addEventListener('click', (e) => {
-    const btn = e.target.closest('.bo-tab');
-    if (!btn || btn.disabled) return;
+    const btn = e.target.closest('.bo-tab') || tabUnder(ax, e);
+    if (btn && btn.disabled) {
+      showToast(btn.getAttribute('title') || 'That view is not available.');
+      return;
+    }
+    if (!btn) return;
     if (btn.dataset.a) {
       ax.dataset.a = btn.dataset.a;
       if (btn.dataset.a !== 'gross') ax.dataset.b = 'dom';
@@ -908,6 +932,7 @@ function placeTopicsInvite() {
     lsSet('db-invite-dismissed', '1');
     lsSet('db-promo-paused', briefDate);
     card.remove();
+    showToast('Topics prompt hidden.');
   });
   card.appendChild(x);
   card.querySelector('.topics-go').addEventListener('click', showInterestSetup);
