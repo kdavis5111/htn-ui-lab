@@ -65,7 +65,26 @@ document.querySelectorAll('.navchip[data-filter]').forEach(chip => chip.addEvent
   show(chip.dataset.filter, chip.textContent);
   window.scrollTo({ top: 0, behavior: SMOOTH });
 }));
-// Theme: the paper is dark, always (Kendrick 2026-08-06). data-theme=dark is set on <html>.
+// Theme defaults to light; remember the reader's explicit choice when storage is available.
+const themeToggle = document.getElementById('theme-toggle');
+const themeToggleLabel = themeToggle && themeToggle.querySelector('.theme-switch-label');
+function setTheme(theme) {
+  document.documentElement.setAttribute('data-theme', theme);
+  if (themeToggle) {
+    themeToggle.setAttribute('aria-pressed', theme === 'dark' ? 'true' : 'false');
+    if (themeToggleLabel) themeToggleLabel.textContent = theme === 'dark' ? 'Light mode' : 'Dark mode';
+  }
+  try { localStorage.setItem('htn-theme', theme); } catch (e) {}
+}
+if (themeToggle) {
+  const currentTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+  themeToggle.setAttribute('aria-pressed', currentTheme === 'dark' ? 'true' : 'false');
+  if (themeToggleLabel) themeToggleLabel.textContent = currentTheme === 'dark' ? 'Light mode' : 'Dark mode';
+  themeToggle.addEventListener('click', () => {
+    const nextTheme = document.documentElement.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(nextTheme);
+  });
+}
 const wrapEl = document.querySelector('.wrap');
 const briefDate = wrapEl.dataset.date;
 const newsEl = document.getElementById('news');

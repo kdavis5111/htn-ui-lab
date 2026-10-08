@@ -1,9 +1,9 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <meta charset="utf-8">
-<script>document.documentElement.setAttribute("data-theme","dark");</script>
+<script>(function(){var t="light";try{var saved=localStorage.getItem("htn-theme");if(saved==="light"||saved==="dark")t=saved}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<style>html{background-color:#151815}</style>
+<style>html{background-color:#F7F9FC}</style>
 <title>HeresThe.News — UI Lab (frozen edition 2026-09-25)</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231E7A66'/><rect x='22' y='34' width='56' height='9' rx='4.5' fill='%23F6F7F4'/><rect x='22' y='56' width='38' height='9' rx='4.5' fill='%23F6F7F4'/><circle cx='71' cy='60.5' r='7' fill='%23D07A50'/></svg>">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
@@ -24,7 +24,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:image" content="https://heresthe.news/og.png">
 <link rel="apple-touch-icon" href="https://heresthe.news/apple-touch-icon.png">
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F3F0E8">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#F7F9FC">
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#151815">
 <meta name="apple-mobile-web-app-title" content="HeresThe.News">
 <meta name="mobile-web-app-capable" content="yes">
@@ -37,6 +37,10 @@
       <h1><span class="wm-a">HeresThe</span><span class="wm-dot">.</span><span class="wm-b">News</span></h1>
       <p class="motto">No ads. No bait. Just news.</p>
     </div>
+    <button class="theme-switch" id="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-switch-label">Dark mode</span>
+      <span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span>
+    </button>
   </header>
   
   <nav class="nav" aria-label="Pages">

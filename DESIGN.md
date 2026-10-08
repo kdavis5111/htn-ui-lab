@@ -67,6 +67,7 @@ Class names are the contract. Restyle freely; keep the names.
 |---|---|---|---|
 | Wordmark | `.wm-a` `.wm-dot` `.wm-b` | HeresThe . News | the dot is `--clay`; only use of that color |
 | Masthead | `.masthead` `.motto` | title and motto at the top | |
+| Theme switch | `.theme-switch` `.theme-switch-track` `.theme-switch-thumb` | toggle light and dark themes | placed at the masthead's top right; `aria-pressed` carries state and the label names the next theme |
 | Nav | `.nav` `.navchip` `.navchip.active` | page switcher pills | `aria-pressed` carries state |
 | Publish note | `.pub-note` `.ai-note` | when and how the paper was made | mono |
 | Band | `.cat-band` `.cat-head` `.cat-count` | a category section | `.picked-band` when it is one of the reader's topics |
