@@ -3,8 +3,8 @@
   --line: #DCD5C1; --rule: #DCD5C1; --accent: #0E6B53; --accent-tint: #D9E9DE; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --developing: #8C5A06; --blue: #2A5C99;
   --on-fill: #fff; --print-paper: #fff; --print-ink: #000; --print-muted: #333; --caption: #cfd5cf;
   --radius: 14px;
-  --elev: 0 1px 2px rgba(58, 48, 28, 0.06), 0 14px 34px -18px rgba(58, 48, 28, 0.30);
-  --elev-sm: 0 1px 2px rgba(58, 48, 28, 0.05), 0 6px 18px -12px rgba(58, 48, 28, 0.22);
+  --elev: 0 1px 2px rgba(16, 24, 40, 0.06), 0 14px 34px -18px rgba(16, 24, 40, 0.24);
+  --elev-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 18px -12px rgba(16, 24, 40, 0.18);
   --hairline: rgba(255, 255, 255, 0.65);
   --serif: "Source Serif 4", ui-serif, "New York", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -37,7 +37,7 @@
   --elev-sm: 0 1px 2px rgba(58, 48, 28, 0.05), 0 6px 18px -12px rgba(58, 48, 28, 0.22);
   --hairline: rgba(255, 255, 255, 0.65);
 }
-/* Color themes: each overrides only the accent pair; dark variants win via 2-attr specificity. */
+/* Optional accent variations retain readable theme-specific contrast. */
 :root[data-palette="blue"] { --accent: #2456C4; --accent-tint: #E4EAF8; }
 :root[data-theme="dark"][data-palette="blue"] { --accent: #82A9F5; --accent-tint: #1B2536; }
 @media (prefers-color-scheme: dark) { :root[data-palette="blue"]:not([data-theme="light"]) { --accent: #82A9F5; --accent-tint: #1B2536; } }
@@ -66,6 +66,16 @@ a:hover { text-decoration-color: var(--accent); }
 .int-chip:hover, .triage-btn:hover { border-color: var(--accent); }
 .masthead { padding: 36px 0 18px; display: flex; align-items: flex-start; justify-content: flex-start; gap: 12px; flex-wrap: wrap; }
 .mast-left { min-width: 0; }
+.theme-switch { position: absolute; top: 36px; right: 0; display: inline-flex; align-items: center; gap: 8px;
+  min-height: 40px; padding: 4px 0 4px 8px; border: 0; background: none; color: var(--ink-2);
+  font: 600 0.78rem/1 var(--sans); cursor: pointer; }
+.theme-switch:hover { color: var(--accent); }
+.theme-switch-track { display: inline-flex; align-items: center; width: 36px; height: 20px; padding: 2px;
+  box-sizing: border-box; border-radius: 999px; background: var(--line); transition: background-color 140ms ease; }
+.theme-switch[aria-pressed="true"] .theme-switch-track { background: var(--accent); }
+.theme-switch-thumb { display: block; width: 16px; height: 16px; border-radius: 50%; background: var(--paper);
+  box-shadow: var(--elev-sm); transition: transform 140ms ease; }
+.theme-switch[aria-pressed="true"] .theme-switch-thumb { transform: translateX(16px); }
 .masthead h1 { font-family: var(--serif); font-size: 1.875rem; font-weight: 600; letter-spacing: -0.01em; margin: 0; }
 .wm-a { color: var(--ink); }
 .wm-dot { color: var(--clay); }
@@ -776,6 +786,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 }
 @media (max-width: 480px) {
   .masthead { padding: 24px 0 10px; flex-direction: column; gap: 4px; }
+  .mast-left { max-width: calc(100% - 118px); }
+  .theme-switch { top: 24px; }
   .nav .navchip { flex: 1 1 0; text-align: center; padding: 8px 4px; font-size: 0.77rem; white-space: nowrap; }
   /* Ordering page: masthead is hidden, so spend the space on BIG grab targets
      while still fitting a modern phone screen without scrolling. */

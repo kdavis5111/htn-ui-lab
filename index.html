@@ -1,7 +1,7 @@
 <!doctype html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <meta charset="utf-8">
-<script>document.documentElement.setAttribute("data-theme","dark");</script>
+<script>(function(){var t="light";try{var saved=localStorage.getItem("htn-theme");if(saved==="light"||saved==="dark")t=saved}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>html{background-color:#141412}</style>
 <title>HeresThe.News — UI Lab (frozen edition 2026-09-25)</title>
@@ -38,6 +38,10 @@
       <h1><span class="wm-a">HeresThe</span><span class="wm-dot">.</span><span class="wm-b">News</span></h1>
       <p class="motto">No ads. No bait. Just news.</p>
     </div>
+    <button class="theme-switch" id="theme-toggle" type="button" aria-pressed="false">
+      <span class="theme-switch-label">Dark mode</span>
+      <span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span>
+    </button>
   </header>
   
   <nav class="nav" aria-label="Pages">
