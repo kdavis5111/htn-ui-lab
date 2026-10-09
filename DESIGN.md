@@ -88,6 +88,7 @@ Class names are the contract. Restyle freely; keep the names.
 | Score card | `.score-grid` `.score-card` `.sc-row` `.sc-win` `.sc-team` `.sc-pts` | one game result | sports band |
 | Box office row | `.bo-row` `.bo-rank` `.bo-title` `.bo-gross` `.bo-bar` `.bo-sub` | one film's take | |
 | Roster | `.lean-row` `.lean-band` `.roster-today` | the outlet list on About | |
+| Intro | `.intro` `.intro-stage` `.phone` `.intro-rest` `.intro-motto` `.proto-card` `.intro-go` | first-visit screens: phone, notification, labeled story, motto, prototype notice, one button | shown once per device; `?intro=1` replays, `?skip=1` hides; styles in `intro.css` |
 | Lab banner | `.lab-banner` | lab only, not on the real site | leave it |
 
 ## Buttons, ranked
