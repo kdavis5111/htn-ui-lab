@@ -7,6 +7,9 @@
   const stage = intro.querySelector('.intro-stage');
   const rest = intro.querySelector('.intro-rest');
   const top = intro.querySelector('.intro-top');
+  const title = intro.querySelector('.intro-title');
+  const start = intro.querySelector('.intro-start');
+  const skipTitle = intro.querySelector('.intro-skip-title');
   const skip = intro.querySelector('.intro-skip');
   const go = intro.querySelector('.intro-go');
   const replay = intro.querySelector('.intro-replay');
@@ -27,9 +30,14 @@
   }
   go.addEventListener('click', finish);
 
-  // No GSAP (offline)? Show the resting state right away.
+  // Title page first. Nothing moves until the reader presses a button.
+  top.style.visibility = 'hidden'; stage.style.visibility = 'hidden'; rest.style.visibility = 'hidden';
+  start.focus();
+
+  // No GSAP (offline)? The button goes straight to the resting state.
   if (typeof gsap === 'undefined') {
-    stage.style.display = 'none'; top.style.visibility = 'hidden'; rest.style.opacity = 1; return;
+    const end = () => { title.hidden = true; stage.style.display = 'none'; rest.style.visibility = 'visible'; rest.style.opacity = 1; go.focus(); };
+    start.addEventListener('click', end); skipTitle.addEventListener('click', end); return;
   }
 
   const tl = gsap.timeline({ defaults: { ease: 'power2.out' }, paused: true, onComplete: done });
@@ -48,18 +56,21 @@
     .from('.intro-motto .m2', { y: 12, autoAlpha: 0, duration: 0.5 }, '+=0.45')
     .from('.intro-motto .m3', { y: 12, autoAlpha: 0, duration: 0.5 }, '+=0.45')
     .to('.intro-motto', { autoAlpha: 0, y: -10, duration: 0.5 }, '+=1.1')
-    .from('.brand-big', { y: 12, autoAlpha: 0, duration: 0.7 }, '-=0.15')
-    .from(['.proto-card', '.intro-actions'], { y: 14, autoAlpha: 0, duration: 0.6, stagger: 0.2 }, '+=0.4');
+    .from('.intro-rest .brand-big', { y: 12, autoAlpha: 0, duration: 0.7 }, '-=0.15')
+    .from(['.proto-card', '.intro-rest .intro-actions'], { y: 14, autoAlpha: 0, duration: 0.6, stagger: 0.2 }, '+=0.4');
   tl.timeScale(1.5);
   window.__introTimeline = tl;
 
-  function done() { stage.style.pointerEvents = 'none'; go.focus(); }
-  function play() { stage.style.pointerEvents = ''; tl.restart(); skip.focus(); }
+  function leaveTitle() { title.hidden = true; top.style.visibility = ''; stage.style.visibility = ''; rest.style.visibility = ''; }
+  function done() { stage.style.pointerEvents = 'none'; top.style.visibility = 'hidden'; go.focus(); }
+  function play() { leaveTitle(); stage.style.pointerEvents = ''; top.style.visibility = ''; tl.restart(); skip.focus(); }
+  function toEnd() { leaveTitle(); tl.progress(1); done(); }
+
+  start.addEventListener('click', () => { if (reduce) toEnd(); else play(); });
+  skipTitle.addEventListener('click', toEnd);
+  skip.addEventListener('click', toEnd);
+  replay.addEventListener('click', play);
 
   const at = parseFloat(q.get('at'));           // ?at=2.5 pauses the intro at that second, for screenshots
-  if (!isNaN(at)) { tl.pause(at); }
-  else if (reduce) { tl.progress(1); done(); }
-  else { play(); }
-  skip.addEventListener('click', () => { tl.progress(1); done(); });
-  replay.addEventListener('click', play);
+  if (!isNaN(at)) { leaveTitle(); tl.pause(at); }
 })();
