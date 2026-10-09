@@ -1,6 +1,8 @@
 :root {
   --paper: #F7F9FC; --card: #FFFFFF; --ink: #1D2939; --ink-2: #475467; --ink-3: #667085;
   --line: #D0D5DD; --accent: #2456C4; --accent-tint: #EAF1FC; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2456C4;
+  --muted: var(--ink-3); --developing: var(--gold); --on-fill: #fff; --caption: #cfd5cf;
+  --print-paper: #fff; --print-ink: #000; --print-muted: #333;
   --radius: 14px;
   --elev: 0 1px 2px rgba(16, 24, 40, 0.06), 0 14px 34px -18px rgba(16, 24, 40, 0.24);
   --elev-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 18px -12px rgba(16, 24, 40, 0.18);
@@ -23,6 +25,7 @@
 :root[data-theme="light"] {
   --paper: #F7F9FC; --card: #FFFFFF; --ink: #1D2939; --ink-2: #475467; --ink-3: #667085;
   --line: #D0D5DD; --accent: #2456C4; --accent-tint: #EAF1FC; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2456C4;
+  --muted: var(--ink-3); --developing: var(--gold);
   --elev: 0 1px 2px rgba(16, 24, 40, 0.06), 0 14px 34px -18px rgba(16, 24, 40, 0.24);
   --elev-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 18px -12px rgba(16, 24, 40, 0.18);
   --hairline: rgba(255, 255, 255, 0.65);
@@ -219,15 +222,17 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   color: var(--ink-3); margin: 40px 0 4px; }
 .section-head .wm-a, .section-head .wm-dot, .section-head .wm-b { text-transform: none;
   font-family: var(--serif); letter-spacing: 0; }
-.cat-band { border: 1px solid var(--line); background: var(--card); border-radius: var(--radius);
-  padding: 10px 22px 8px; margin: 20px 0; box-shadow: var(--elev), inset 0 1px 0 var(--hairline); }
-.cat-head { font-family: var(--serif); font-size: 1.44rem; font-weight: 700; letter-spacing: -0.01em;
-  margin: 14px 0 2px; padding-bottom: 12px; border-bottom: 1px solid var(--line);
-  display: flex; align-items: center; gap: 12px; }
-.cat-head::before { content: ""; width: 16px; height: 16px; border-radius: 5px; background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAB4klEQVR42u2VPWsUURSG33M/ZncmG+OuwdLGyiaNIIIEFBIbQcRS0FLsRBAE/4aNXexEEQsRG4sIFtoEoiKCQUwhBNcgbnadyc7HfS22MZnd2ZnINrKnvXCfc+55zrly7O51TDIUJhxTwBTw72FGHYhIpYtIVgAokSTLWOV+qw0IguMBBMI4nm/MqtJFiMh2rysiVul9DJPPPUziO8sXr54+m6axYDyDYM3YN183bj55EKepEvU3w+xLJMmyVtC4sbgc1P0siUVUyQZcWDi18vbV6uePc/Ug4wgASav1z7B3//XLyhV8erf+bXPGq7m93Zb8NiXQT5JJ9QCAAIHn7eyGZHHiEEDABGLAutGOkrfogIOmlappI0r3tZ3XQm0iCsBSczBWUxHV3Q17Sdy05hY7Z9D/AnMPhzZh6qArBozVlIBW6ke3c+3Ryrn2xhUbbVEtog/s3EaLxRWU0VSA2GVH545cXjjZfLHW9fyUbhv6ONIW3C+I2ftSlTUdVNBubz19v3bCa17i7xRyGOlDzHyHauSe6CCaDnoQJYln7RKj84g+wHuMIMqlX6RpJwpHW0qttG+tI5/Bfw7fAT5ohmk0fJs60mhdvBwGEzsLDnJyQyUt+A/IUtvaTf/kKeA/APwBU9vyOGTbQk8AAAAASUVORK5CYII=) center/cover no-repeat; flex-shrink: 0; }
-:root[data-theme="light"] .cat-head::before { filter: hue-rotate(58deg) saturate(1.2) brightness(1.5); }
-.cat-count { font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
-  letter-spacing: 0.08em; color: var(--ink-3); font-weight: 400; margin-left: auto; font-variant-numeric: tabular-nums; }
+.cat-band { border: none; background: none; border-radius: 0; box-shadow: none;
+  padding: 0 0 var(--space-sm); margin: var(--space-lg) 0 0; border-top: 2px solid var(--ink); }
+.cat-band[data-category="boxoffice"],
+.cat-band.extras-band { border: none; border-top: none; background: var(--card); border-radius: var(--radius);
+  padding: var(--space-md); margin: var(--space-lg) 0 0; box-shadow: none; }
+.cat-head { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; margin: var(--space-sm) 0; padding-bottom: 0; border-bottom: none;
+  display: flex; align-items: center; gap: var(--space-sm); }
+.cat-head::before { content: none; }
+.cat-count { display: none; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-3); font-weight: 400; margin-left: 0; font-variant-numeric: tabular-nums; }
 .story { border-bottom: 1px solid var(--line); scroll-margin-top: 4.5rem; }
 .story:last-child { border-bottom: none; }
 .story-sum { list-style: none; cursor: pointer; padding: var(--space-sm) 0; margin: 0; border-radius: 10px;
