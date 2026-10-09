@@ -9,7 +9,6 @@
   const top = intro.querySelector('.intro-top');
   const title = intro.querySelector('.intro-title');
   const start = intro.querySelector('.intro-start');
-  const skipTitle = intro.querySelector('.intro-skip-title');
   const skip = intro.querySelector('.intro-skip');
   const go = intro.querySelector('.intro-go');
   const replay = intro.querySelector('.intro-replay');
@@ -37,7 +36,7 @@
   // No GSAP (offline)? The button goes straight to the resting state.
   if (typeof gsap === 'undefined') {
     const end = () => { title.hidden = true; stage.style.display = 'none'; rest.style.visibility = 'visible'; rest.style.opacity = 1; go.focus(); };
-    start.addEventListener('click', end); skipTitle.addEventListener('click', end); return;
+    start.addEventListener('click', end); return;
   }
 
   const tl = gsap.timeline({ defaults: { ease: 'power2.out' }, paused: true, onComplete: done });
@@ -67,7 +66,6 @@
   function toEnd() { leaveTitle(); tl.progress(1); done(); }
 
   start.addEventListener('click', () => { if (reduce) toEnd(); else play(); });
-  skipTitle.addEventListener('click', toEnd);
   skip.addEventListener('click', toEnd);
   replay.addEventListener('click', play);
 
