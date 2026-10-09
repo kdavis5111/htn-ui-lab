@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<meta charset="utf-8">
+<script>document.documentElement.setAttribute("data-theme","dark");</script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<style>html{background-color:#151815}</style>
+<title>HeresThe.News — style guide</title>
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="lab.css">
+<style>
+  /* Scaffolding for the guide itself. Not part of the design system. */
+  .sg-h { font: 500 11px/1 var(--mono); letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3);
+          margin: 40px 0 10px; padding-top: 14px; border-top: 1px solid var(--line); }
+  .sg-note { color: var(--ink-2); font-size: 0.92rem; margin: 0 0 14px; }
+  .sg-note code { font-family: var(--mono); font-size: 0.85em; color: var(--ink); }
+  .sg-swatches { display: grid; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); gap: 10px; margin: 0 0 8px; }
+  .sg-sw { border: 1px solid var(--line); border-radius: 8px; overflow: hidden; background: var(--card); }
+  .sg-sw i { display: block; height: 44px; }
+  .sg-sw span { display: block; padding: 6px 8px; font: 500 10px/1.3 var(--mono); color: var(--ink-2); }
+  .sg-row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin: 0 0 8px; }
+  .sg-type p { margin: 0 0 6px; }
+</style>
+
+<div class="lab-banner" role="note">Style guide for the <a href="index.html">UI Lab</a>. Every part of the page, once, built from the real classes. Rules and tokens are in DESIGN.md.</div>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="mast-left">
+      <h1><span class="wm-a">HeresThe</span><span class="wm-dot">.</span><span class="wm-b">News</span></h1>
+      <p class="motto">Style guide</p>
+    </div>
+    <button class="theme-switch" type="button" aria-pressed="true">
+      <span class="theme-switch-label">Light mode</span>
+      <span class="theme-switch-track" aria-hidden="true"><span class="theme-switch-thumb"></span></span>
+    </button>
+  </header>
+
+  <p class="sg-h">Tokens</p>
+  <p class="sg-note">Every color below is a CSS variable in <code>:root</code>. Use the variable, never the hex.</p>
+  <div class="sg-swatches">
+    <div class="sg-sw"><i style="background:var(--paper)"></i><span>--paper</span></div>
+    <div class="sg-sw"><i style="background:var(--card)"></i><span>--card</span></div>
+    <div class="sg-sw"><i style="background:var(--ink)"></i><span>--ink</span></div>
+    <div class="sg-sw"><i style="background:var(--ink-2)"></i><span>--ink-2</span></div>
+    <div class="sg-sw"><i style="background:var(--ink-3)"></i><span>--ink-3</span></div>
+    <div class="sg-sw"><i style="background:var(--line)"></i><span>--line</span></div>
+    <div class="sg-sw"><i style="background:var(--accent)"></i><span>--accent</span></div>
+    <div class="sg-sw"><i style="background:var(--accent-tint)"></i><span>--accent-tint</span></div>
+    <div class="sg-sw"><i style="background:var(--clay)"></i><span>--clay</span></div>
+    <div class="sg-sw"><i style="background:var(--red)"></i><span>--red</span></div>
+    <div class="sg-sw"><i style="background:var(--gold)"></i><span>--gold</span></div>
+    <div class="sg-sw"><i style="background:var(--blue)"></i><span>--blue</span></div>
+  </div>
+
+  <p class="sg-h">Type</p>
+  <p class="sg-note">Serif says news. Sans says app. Mono says metadata.</p>
+  <div class="sg-type">
+    <p style="font-family:var(--serif);font-size:1.44rem;font-weight:700">Serif, 1.44rem, 700. Band titles and headlines.</p>
+    <p style="font-family:var(--serif);font-size:1.1rem;font-weight:600">Serif, 1.1rem, 600. Story headlines in the list.</p>
+    <p style="font-family:var(--sans);font-size:1rem">Sans, 1rem. Body copy, impact paragraphs, notes, buttons.</p>
+    <p style="font-family:var(--sans);font-size:0.92rem;color:var(--ink-2)">Sans, 0.92rem, ink-2. Secondary copy and card subtitles.</p>
+    <p style="font-family:var(--mono);font-size:0.72rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3)">Mono, 0.72rem, uppercase, tracked. Labels, dates, counts.</p>
+  </div>
+
+  <p class="sg-h">Nav</p>
+  <nav class="nav" aria-label="Pages">
+    <button class="navchip active" aria-pressed="true">Feed</button>
+    <button class="navchip" aria-pressed="false">About</button>
+    <button class="navchip" aria-pressed="false">Donate</button>
+    <button class="navchip">My topics</button>
+  </nav>
+  <div class="legend-row">
+    <span class="pub-note">published Friday, September 25 &middot; 4:57 AM MT</span>
+  </div>
+  <p class="ai-note">Assembled by AI following strict human editorial rules. <a href="#">How it works</a></p>
+
+  <p class="sg-h">Band and story</p>
+  <p class="sg-note">A band is a category. A story is a native <code>&lt;details&gt;</code>, so it opens without JavaScript. The first story below is open.</p>
+  <section class="cat-band" data-category="weather">
+    <h2 class="cat-head">Weather<span class="cat-count">2 stories</span></h2>
+    <details class="story" open>
+      <summary class="story-sum"><span class="headline">Hurricane Polo regains Category 5 strength off Mexico's Pacific coast</span><span class="sum-meta"><span class="chip chip-upd" title="Category 4 -> Category 5">updated</span></span></summary>
+      <div class="story-body">
+        <p class="update-note"><span class="un-k">What changed</span> Category 4 -&gt; Category 5 (160 mph)</p>
+        <div class="impact-wrap"><figure class="impact-thumb"><img src="assets/img-9a42ef99.jpg" alt="NHC forecast cone map for Hurricane Polo" title="NOAA National Hurricane Center"><figcaption>NOAA National Hurricane Center</figcaption></figure><p class="impact"><span class="impact-label">Why it matters</span>Polo weakened to Category 4 on Sept. 23 and has now regained Category 5 strength, with 160 mph sustained winds as of 9:00 UTC Friday. The impact paragraph is sans, ink, and always present. The photo is optional.</p></div>
+        <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
+        <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
+        <ul class="facts">
+          <li class="fact"><span class="chip status-verified">verified</span><span class="fact-text">A verified fact: confirmed by a primary source or matched across independent outlets.<span class="corr"> — National Hurricane Center advisory.</span></span></li>
+          <li class="fact"><span class="chip status-reported">reported</span><span class="fact-text">A reported fact: one outlet says it, not yet matched elsewhere.<span class="corr"> — CBS News.</span></span></li>
+          <li class="fact"><span class="chip status-disputed">disputed</span><span class="fact-text">A disputed fact: outlets disagree, and the page says so instead of picking a side.<span class="corr"> — Reuters says 155 mph; NHC says 160 mph.</span></span></li>
+        </ul>
+        <p class="srcs-head">Read the full coverage</p>
+        <p class="source-links"><span class="src"><a href="#">NHC Pacific Advisory 12</a><span class="lean-tag">official</span></span><span class="src"><a href="#">CBS News</a><span class="lean-tag">center</span></span><span class="src"><a href="#">Yahoo News (AP/Reuters wire)</a><span class="lean-tag">wire</span></span><span class="src"><a href="#">Al Jazeera</a><span class="lean-tag">international</span></span><span class="src"><a href="#">The Hill</a><span class="lean-tag">center-right</span></span></p>
+      </div>
+    </details>
+    <details class="story">
+      <summary class="story-sum"><span class="headline">A second, closed story shows the resting state of the headline row</span><span class="sum-meta"></span></summary>
+      <div class="story-body"><p class="impact"><span class="impact-label">Why it matters</span>Closed by default. Tap to open.</p></div>
+    </details>
+    <div class="band-more" hidden></div>
+    <button type="button" class="band-more-btn">Show 4 more Weather stories</button>
+  </section>
+
+  <p class="sg-h">Chips and labels</p>
+  <p class="sg-note">Mono, uppercase, and always a word. Color is never the only signal.</p>
+  <div class="sg-row">
+    <span class="chip status-verified">verified</span>
+    <span class="chip status-reported">reported</span>
+    <span class="chip status-disputed">disputed</span>
+    <span class="chip chip-upd">updated</span>
+    <span class="lean-tag">left</span><span class="lean-tag">center-left</span><span class="lean-tag">center</span><span class="lean-tag">center-right</span><span class="lean-tag">right</span><span class="lean-tag">wire</span><span class="lean-tag">official</span><span class="lean-tag">international</span>
+  </div>
+  <p class="facts-head">The facts<span class="fcount fc-v"><i aria-hidden="true">&#9679;</i>3</span><span class="fcount fc-r"><i aria-hidden="true">&#9675;</i>2</span></p>
+
+  <p class="sg-h">Buttons, ranked</p>
+  <p class="sg-note">Primary, secondary, chip, icon. Pick the rank, use the class. One primary per view.</p>
+  <div class="sg-row">
+    <button type="button" class="signup-btn">Primary: signup-btn</button>
+    <button type="button" class="triage-btn primary">Primary: triage-btn primary</button>
+    <a class="pc-btn" href="#">Primary: pc-btn</a>
+  </div>
+  <div class="sg-row">
+    <button type="button" class="triage-btn">Secondary: triage-btn</button>
+    <button type="button" class="share-btn">Secondary: share-btn</button>
+    <button type="button" class="band-more-btn">Secondary: band-more-btn</button>
+  </div>
+  <div class="sg-row">
+    <button class="navchip active" aria-pressed="true">Chip: navchip active</button>
+    <button class="navchip" aria-pressed="false">Chip: navchip</button>
+    <button type="button" class="fh-info" aria-label="Icon: fh-info">&#9656;</button>
+  </div>
+
+  <p class="sg-h">Cards</p>
+  <p class="sg-note">One card style, three uses: signup, topics invite, install prompt.</p>
+  <section class="signup-card">
+    <p class="signup-head">Get the paper by email</p>
+    <p class="signup-sub">One email each morning. Unsubscribe any time.</p>
+    <form class="signup-form" onsubmit="return false"><input type="email" required placeholder="you@example.com" aria-label="Email address" class="signup-input"><button type="submit" class="signup-btn">Subscribe</button></form>
+  </section>
+  <section class="signup-card" id="topics-invite">
+    <p class="signup-head">Not interested in these headlines?</p>
+    <p class="signup-sub">Pick the topics you care about and the order they appear. Saved on this device &mdash; no account.</p>
+    <button type="button" class="signup-btn">Choose my topics</button>
+  </section>
+
+  <p class="sg-h">Support</p>
+  <h2 class="section-head">Support <span class="wm-a">HeresThe</span><span class="wm-dot">.</span><span class="wm-b">News</span></h2>
+  <div class="about-body">
+    <div class="dime-meter"><p class="dm-line"><b>50 Dime a Day</b> subscriptions would completely fund this paper.</p><span class="dm-bar" role="img" aria-label="4 of 50 dimes"><i style="width:8%"></i></span><span class="dm-count">4 of 50</span></div>
+    <div class="plan-groups"><div class="plan-group"><span class="pg-label">Monthly</span><div class="plan-cards"><div class="plan-card"><span class="pc-title">Dime a Day</span><span class="pc-price">$3</span><span class="pc-freq">per month</span><a class="pc-btn" href="#">Subscribe</a><span class="pc-stat">&nbsp;</span></div></div></div><div class="pg-divider" aria-hidden="true"></div><div class="plan-group"><span class="pg-label">One-time</span><div class="plan-cards"><div class="plan-card"><span class="pc-title">Tip Jar</span><span class="pc-price">$1+</span><span class="pc-freq">any amount</span><a class="pc-btn" href="#">Tip</a><span class="pc-stat">&nbsp;</span></div></div></div></div>
+  </div>
+
+  <p class="sg-h">Sports and box office</p>
+  <div class="score-grid">
+    <div class="score-card"><div class="sc-row sc-win"><span class="sc-team">Pirates<span class="sr-only"> (winner)</span></span><span class="sc-pts">2</span></div><div class="sc-row"><span class="sc-team">Cardinals</span><span class="sc-pts">1</span></div></div>
+    <div class="score-card"><div class="sc-row sc-win"><span class="sc-team">White Sox<span class="sr-only"> (winner)</span></span><span class="sc-pts">9</span></div><div class="sc-row"><span class="sc-team">Royals</span><span class="sc-pts">1</span></div></div>
+  </div>
+  <div class="bo-row"><div class="bo-line"><span class="bo-rank">1</span><span class="bo-title">Resident Evil</span><span class="bo-gross">$4.5m</span></div><span class="bo-bar"><i style="width:100%"></i></span><span class="bo-sub">Domestic $76.9m · day 6</span></div>
+  <div class="bo-row"><div class="bo-line"><span class="bo-rank">2</span><span class="bo-title">Practical Magic 2</span><span class="bo-gross">$971,854</span></div><span class="bo-bar"><i style="width:22%"></i></span><span class="bo-sub">Domestic $31.2m · day 13</span></div>
+
+  <p class="sg-h">Do and don't</p>
+  <p class="sg-note">Do: use a token, use an existing class, keep labels as words, check it at phone width.<br>Don't: hard-code a color, add a second kind of button, hide meaning behind hover, use red for anything but disputed.</p>
+
+</div>
+</html>
