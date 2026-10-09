@@ -31,7 +31,64 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="lab.css">
-<div class="lab-banner" role="note">UI Lab copy of <a href="https://heresthe.news/">HeresThe.News</a>. The news below is frozen from Friday 2026-09-25 and never updates. Edit the look, not the news.</div>
+<link rel="stylesheet" href="intro.css?v=4">
+<div class="lab-banner" role="note">Early prototype of a <a href="https://heresthe.news/">HeresThe.News</a> redesign. The news below is frozen from Friday 2026-09-25 and never updates. <a class="replay-link" href="?intro=1">Replay the intro</a></div>
+<section class="intro" id="intro" hidden role="dialog" aria-modal="true" aria-label="Welcome to the HeresThe.News prototype">
+  <div class="intro-inner">
+    <div class="intro-top">
+      <span class="intro-brand">HeresThe<span class="dot">.</span><em>News</em></span>
+      <button class="intro-skip" type="button">Skip intro</button>
+    </div>
+    <div class="intro-title">
+      <p class="brand-big">HeresThe<span class="dot">.</span><em>News</em></p>
+      <p class="intro-sub">A neutral daily news brief. Every fact checked. Every source cited.</p>
+      <div class="intro-actions">
+        <button class="intro-start" type="button">See how it works</button>
+      </div>
+    </div>
+    <div class="intro-stage" aria-hidden="true">
+      <div class="phone">
+        <div class="pscreen">
+          <div class="lock">
+            <p class="ldate">Friday, September 25</p>
+            <p class="ltime">7:00</p>
+            <div class="notif">
+              <span class="nb">HT<em>.</em></span>
+              <span class="nt"><b>HeresThe.News</b>Today's paper is ready.</span>
+            </div>
+          </div>
+          <div class="appview">
+            <p class="abrand">HeresThe<span class="dot">.</span><em>News</em></p>
+            <p class="aeyebrow">Today's paper</p>
+            <p class="ahead">Hurricane Polo regains Category 5 strength off Mexico's Pacific coast</p>
+            <ul class="pfacts">
+              <li><span class="pchip v">verified</span>160 mph winds as of 9:00 UTC Friday</li>
+              <li><span class="pchip v">verified</span>Core forecast to stay offshore</li>
+              <li><span class="pchip r">reported</span>15,000 security personnel deployed</li>
+            </ul>
+            <p class="psrc">— NHC · CBS News · AP/Reuters · Al Jazeera</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="intro-rest">
+      <div class="swap">
+        <h1 class="intro-motto"><span class="m1">No ads.</span> <span class="m2">No bait.</span> <span class="m3">Just news.</span></h1>
+        <p class="brand-big">HeresThe<span class="dot">.</span><em>News</em></p>
+      </div>
+      <div class="proto-card">
+        <span class="pc-k">Early prototype</span>
+        <p>This is a working prototype of a HeresThe.News redesign, built by a student team. The news is real but frozen from Friday, September 25. Some things are rough on purpose.</p>
+        <p><b>Try this:</b> find out what happened with Hurricane Polo and decide whether you trust it. Open the story, check each fact's label, see which outlets covered it. Or pick your own topics first. There is no wrong order.</p>
+      </div>
+      <div class="intro-actions">
+        <button class="intro-go" type="button">Read Today's News</button>
+        <button class="intro-replay" type="button">Replay intro</button>
+      </div>
+    </div>
+  </div>
+</section>
+
 <div class="wrap" data-date="2026-09-25">
   <header class="masthead">
     <div class="mast-left">
@@ -1138,5 +1195,7 @@
   </footer>
 </div>
 <script src="app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="intro.js?v=4"></script>
 
 </html>
