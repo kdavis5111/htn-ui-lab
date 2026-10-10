@@ -222,19 +222,18 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   color: var(--ink-3); margin: 40px 0 4px; }
 .section-head .wm-a, .section-head .wm-dot, .section-head .wm-b { text-transform: none;
   font-family: var(--serif); letter-spacing: 0; }
-.cat-band { border: none; background: none; border-radius: 0; box-shadow: none;
-  padding: 0 0 var(--space-sm); margin: var(--space-lg) 0 0; border-top: 2px solid var(--ink); }
-.cat-band[data-category="boxoffice"],
-.cat-band.extras-band { border: none; border-top: none; background: var(--card); border-radius: var(--radius);
-  padding: var(--space-md); margin: var(--space-lg) 0 0; box-shadow: none; }
+.cat-band { border: 1px solid var(--line); background: var(--card); border-radius: var(--radius); box-shadow: none;
+  padding: 0 var(--space-md) var(--space-xs); margin: var(--space-lg) 0 0; }
 .cat-head { font-family: var(--sans); font-size: 0.85rem; font-weight: 700; letter-spacing: 0.08em;
-  text-transform: uppercase; margin: var(--space-sm) 0; padding-bottom: 0; border-bottom: none;
+  text-transform: uppercase; margin: 0 calc(-1 * var(--space-md)) var(--space-xs); padding: var(--space-md);
+  background: var(--paper); border-bottom: 1px solid var(--line); border-radius: var(--radius) var(--radius) 0 0;
   display: flex; align-items: center; gap: var(--space-sm); }
 .cat-head::before { content: none; }
-.cat-count { display: none; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
-  letter-spacing: 0.08em; color: var(--ink-3); font-weight: 400; margin-left: 0; font-variant-numeric: tabular-nums; }
+.cat-count { display: inline; font-family: var(--mono); font-size: 0.68rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--ink-3); font-weight: 400; margin-left: auto; font-variant-numeric: tabular-nums; }
 .story { border-bottom: 1px solid var(--line); scroll-margin-top: 4.5rem; }
 .story:last-child { border-bottom: none; }
+.cat-band > .story:last-of-type { border-bottom: none; }
 .story-sum { list-style: none; cursor: pointer; padding: var(--space-sm) 0; margin: 0; border-radius: 10px;
   display: flex; align-items: baseline; gap: 8px 10px; flex-wrap: wrap; position: relative;
   transition: background-color 140ms ease;
