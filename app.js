@@ -1022,3 +1022,32 @@ document.querySelectorAll('.story').forEach(story => {
   el.innerHTML = parts.join(' \u00b7 ');
   meta.appendChild(el);
 });
+
+// Per-fact sources: each fact's note names the outlet it came from. Where that name matches an
+// outlet in the story's source list, link it under the fact. Derived from the page; nothing invented.
+document.querySelectorAll('.story').forEach(story => {
+  const srcs = [...story.querySelectorAll('.source-links .src')].map(el => {
+    const a = el.querySelector('a'); if (!a) return null;
+    const name = a.textContent.trim();
+    const lean = el.querySelector('.lean-tag'); 
+    const keys = [name.toLowerCase(), name.split(' (')[0].toLowerCase()];
+    const first = name.split(/\s+/)[0].toLowerCase();
+    if (first.length >= 4 && !['the', 'news', 'daily', 'times', 'post'].includes(first)) keys.push(first);
+    return { name, url: a.href, lean: lean ? lean.textContent.trim() : '', keys };
+  }).filter(Boolean);
+  if (!srcs.length) return;
+  story.querySelectorAll('.fact').forEach(fact => {
+    const corr = fact.querySelector('.corr'); const text = fact.querySelector('.fact-text');
+    if (!corr || !text || fact.querySelector('.fact-srcs')) return;
+    const note = corr.textContent.toLowerCase();
+    const hits = srcs.filter(s => s.keys.some(k => note.includes(k)));
+    if (!hits.length) return;
+    const wrap = document.createElement('span'); wrap.className = 'fact-srcs';
+    hits.forEach(s => {
+      const a = document.createElement('a'); a.href = s.url; a.target = '_blank'; a.rel = 'noopener'; a.textContent = s.name;
+      if (s.lean) { const l = document.createElement('span'); l.className = 'lean-tag'; l.textContent = s.lean; a.appendChild(l); }
+      wrap.appendChild(a);
+    });
+    text.appendChild(wrap);
+  });
+});
