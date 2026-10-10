@@ -1003,3 +1003,22 @@ if (mastheadEl && navBarEl) {
   paintNavScrolled();
 }
 openHashTarget();
+
+// Trust at a glance: count the fact labels inside each story and show them on the closed headline.
+// Derived from the page itself; nothing is invented.
+document.querySelectorAll('.story').forEach(story => {
+  let meta = story.querySelector('.sum-meta');
+  if (meta && meta.querySelector('.trust-glance')) return;
+  if (!meta) { const sum = story.querySelector('.story-sum'); if (!sum) return; meta = document.createElement('span'); meta.className = 'sum-meta'; sum.appendChild(meta); }
+  const n = cls => story.querySelectorAll('.facts .chip.' + cls).length;
+  const v = n('status-verified'), r = n('status-reported'), d = n('status-disputed');
+  if (!v && !r && !d) return;
+  const parts = [];
+  if (v) parts.push('<span class="tg-v">' + v + ' verified</span>');
+  if (r) parts.push(r + ' reported');
+  if (d) parts.push('<span class="tg-d">' + d + ' disputed</span>');
+  const el = document.createElement('span');
+  el.className = 'trust-glance';
+  el.innerHTML = parts.join(' \u00b7 ');
+  meta.appendChild(el);
+});

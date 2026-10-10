@@ -77,6 +77,7 @@ Class names are the contract. Restyle freely; keep the names.
 | Facts | `.facts-head` `.fcount` `.fc-v` `.fc-r` `.facts` `.fact` `.fact-text` `.corr` | the labeled claims | the heart of the product |
 | Status chip | `.chip.status-verified` `.status-reported` `.status-disputed` | the label on a fact | mono, colored by status |
 | Updated chip | `.chip.chip-upd` | "updated" in the headline row | |
+| Trust at a glance | `.trust-glance` `.tg-v` `.tg-d` | label counts on a closed headline, e.g. "3 verified · 1 disputed" | built by `app.js` from the facts; hidden when the story is open |
 | Sources | `.srcs-head` `.source-links` `.src` `.lean-tag` | outlets that covered it, with lean | lean is text, never color alone |
 | Share | `.share-row` `.share-btn` | share one story | |
 | Show more | `.band-more` `.band-more-btn` | reveals the rest of a band | |
