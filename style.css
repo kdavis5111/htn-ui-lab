@@ -275,7 +275,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .facts-legend .s-r { color: var(--ink-3); }
 .facts-legend .s-d { color: var(--red); }
 .facts-legend .s-g { color: var(--gold); }
-.chip.chip-upd { color: var(--muted); background: none; box-shadow: none; border-radius: 0;
+.chip.chip-upd { color: var(--blue); background: none; box-shadow: none; border-radius: 0;
   padding: 0; font-family: var(--sans); font-size: 0.75rem; font-weight: 400;
   text-transform: none; letter-spacing: 0; }
 .presumption { font-size: 0.8rem; font-style: italic; color: var(--ink-3); margin: 10px 0 0; }
@@ -812,3 +812,8 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .trust-glance .tg-g { color: var(--gold); }
 .story[open] .trust-glance { display: none; }
 @media (max-width: 480px) { .trust-glance { margin-left: 0; flex-basis: 100%; } }
+
+/* Per-fact sources: the outlets a fact's note names, linked. Built by app.js from the story's source list. */
+.fact-srcs { display: block; margin-top: 3px; font-family: var(--mono); font-size: 0.68rem; letter-spacing: 0.04em; color: var(--ink-3); }
+.fact-srcs a { color: var(--accent); text-decoration-color: color-mix(in srgb, var(--accent) 40%, transparent); margin-right: 8px; }
+.fact-srcs a .lean-tag { margin-left: 3px; }
