@@ -1,11 +1,11 @@
 :root {
-  --paper: #F7F9FC; --card: #FFFFFF; --ink: #1D2939; --ink-2: #475467; --ink-3: #667085;
-  --line: #D0D5DD; --accent: #2456C4; --accent-tint: #EAF1FC; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2456C4;
+  --paper: #EFEAE0; --card: #FDFBF5; --ink: #242A23; --ink-2: #49514A; --ink-3: #626C5C;
+  --line: #DCD5C1; --accent: #0E6B53; --accent-tint: #D9E9DE; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2A5C99;
   --muted: var(--ink-3); --developing: var(--gold); --on-fill: #fff; --caption: #cfd5cf;
   --print-paper: #fff; --print-ink: #000; --print-muted: #333;
   --radius: 14px;
-  --elev: 0 1px 2px rgba(16, 24, 40, 0.06), 0 14px 34px -18px rgba(16, 24, 40, 0.24);
-  --elev-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 18px -12px rgba(16, 24, 40, 0.18);
+  --elev: 0 1px 2px rgba(58, 48, 28, 0.06), 0 14px 34px -18px rgba(58, 48, 28, 0.30);
+  --elev-sm: 0 1px 2px rgba(58, 48, 28, 0.05), 0 6px 18px -12px rgba(58, 48, 28, 0.22);
   --hairline: rgba(255, 255, 255, 0.65);
   --serif: "Source Serif 4", ui-serif, "New York", Georgia, "Times New Roman", serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -23,11 +23,11 @@
   --hairline: rgba(255, 255, 255, 0.045);
 }
 :root[data-theme="light"] {
-  --paper: #F7F9FC; --card: #FFFFFF; --ink: #1D2939; --ink-2: #475467; --ink-3: #667085;
-  --line: #D0D5DD; --accent: #2456C4; --accent-tint: #EAF1FC; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2456C4;
+  --paper: #EFEAE0; --card: #FDFBF5; --ink: #242A23; --ink-2: #49514A; --ink-3: #626C5C;
+  --line: #DCD5C1; --accent: #0E6B53; --accent-tint: #D9E9DE; --clay: #9E4620; --red: #A82B2B; --gold: #8C5A06; --blue: #2A5C99;
   --muted: var(--ink-3); --developing: var(--gold);
-  --elev: 0 1px 2px rgba(16, 24, 40, 0.06), 0 14px 34px -18px rgba(16, 24, 40, 0.24);
-  --elev-sm: 0 1px 2px rgba(16, 24, 40, 0.05), 0 6px 18px -12px rgba(16, 24, 40, 0.18);
+  --elev: 0 1px 2px rgba(58, 48, 28, 0.06), 0 14px 34px -18px rgba(58, 48, 28, 0.30);
+  --elev-sm: 0 1px 2px rgba(58, 48, 28, 0.05), 0 6px 18px -12px rgba(58, 48, 28, 0.22);
   --hairline: rgba(255, 255, 255, 0.65);
 }
 /* Optional accent variations retain readable theme-specific contrast. */
@@ -803,3 +803,12 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   .headline { font-size: 1.19rem; }
   .learn-card { padding: 18px 18px; }
 }
+
+/* Trust at a glance: label counts on the closed headline, built by app.js from the facts below it. */
+.trust-glance { font-family: var(--mono); font-size: 0.66rem; letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--ink-3); margin-left: auto; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.trust-glance .tg-v { color: var(--accent); }
+.trust-glance .tg-d { color: var(--red); }
+.trust-glance .tg-g { color: var(--gold); }
+.story[open] .trust-glance { display: none; }
+@media (max-width: 480px) { .trust-glance { margin-left: 0; flex-basis: 100%; } }
