@@ -8,18 +8,23 @@ export class Room extends DurableObject {
   constructor(ctx, env) {
     super(ctx, env);
     this.sql = ctx.storage.sql;
-    this.sql.exec(`CREATE TABLE IF NOT EXISTS pts (s TEXT, w INTEGER, x INTEGER, y INTEGER, t INTEGER, k INTEGER)`);
+    this.sql.exec(`CREATE TABLE IF NOT EXISTS batches (s TEXT, w INTEGER, t INTEGER, n INTEGER, pts TEXT)`);
   }
+  // One row per batch (every ~2 s per person), not one row per point: keeps writes and reads
+  // far inside the free plan's daily row limits even with a full classroom.
   add(s, w, pts) {
-    for (const p of pts) this.sql.exec(`INSERT INTO pts (s, w, x, y, t, k) VALUES (?, ?, ?, ?, ?, ?)`, s, w, p[0], p[1], p[2], p[3]);
+    if (!pts.length) return 0;
+    this.sql.exec(`INSERT INTO batches (s, w, t, n, pts) VALUES (?, ?, ?, ?, ?)`, s, w, pts[0][2], pts.length, JSON.stringify(pts));
     return pts.length;
   }
   all() {
-    const rows = this.sql.exec(`SELECT s, w, x, y, t, k FROM pts ORDER BY t`).toArray();
+    const rows = this.sql.exec(`SELECT s, w, n, pts FROM batches ORDER BY t`).toArray();
     const sessions = new Set(rows.map(r => r.s)).size;
-    return { sessions, count: rows.length, points: rows.map(r => [r.x, r.y, r.t, r.k, r.w, r.s]) };
+    const points = [];
+    for (const r of rows) for (const p of JSON.parse(r.pts)) points.push([p[0], p[1], p[2], p[3], r.w, r.s]);
+    return { sessions, batches: rows.length, count: points.length, points };
   }
-  clear() { this.sql.exec(`DELETE FROM pts`); return true; }
+  clear() { this.sql.exec(`DELETE FROM batches`); return true; }
 }
 
 export default {
