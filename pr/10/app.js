@@ -1102,3 +1102,56 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
     });
   });
 })();
+
+// Asks out of the feed. One quiet line for topics under the first section; email, support and the
+// method note become three plain rows under "That's everything."
+(function () {
+  const news = document.getElementById('news');
+  const firstBand = news && news.querySelector('.cat-band');
+  if (firstBand && !document.querySelector('.topics-line')) {
+    const p = document.createElement('p'); p.className = 'topics-line';
+    p.innerHTML = 'Not your topics? <a href="#" id="topics-line-go">Choose yours</a>';
+    firstBand.insertAdjacentElement('afterend', p);
+    p.querySelector('a').addEventListener('click', e => { e.preventDefault(); showInterestSetup(); });
+  }
+  const endcap = document.querySelector('.endcap'); if (!endcap) return;
+  const rows = document.createElement('div'); rows.className = 'foot-rows';
+
+  // 1. email
+  const signup = document.getElementById('email-signup');
+  if (signup) {
+    const d = document.createElement('details'); d.className = 'foot-row';
+    d.innerHTML = '<summary><span>Get tomorrow\'s paper by email<span class="foot-sub">Free. Every morning with the sunrise. Unsubscribe anytime.</span></span></summary><div class="foot-body"></div>';
+    const body = d.querySelector('.foot-body');
+    const form = signup.querySelector('.signup-form');
+    if (form) {
+      body.appendChild(form);
+      form.addEventListener('submit', e => {            // user testing: nothing is sent; show the confirmation in place
+        e.preventDefault();
+        const done = document.createElement('p'); done.className = 'signup-sub';
+        done.innerHTML = '<b>Check your inbox to confirm.</b> See you tomorrow morning.';
+        form.replaceWith(done);
+      });
+    }
+    signup.classList.add('foot-moved'); signup.style.display = 'none';
+    rows.appendChild(d);
+  }
+  // 2. support: reuse the existing donate link so its behaviour stays
+  const donate = document.querySelector('#cost-strip-2 .js-support-jump') || document.querySelector('.js-support-jump');
+  if (donate) {
+    const a = document.createElement('a'); a.className = 'foot-link js-support-jump-foot'; a.href = '#';
+    a.innerHTML = '<span>Keep it ad-free for 10 cents a day<span class="foot-sub">Reader-funded. No ads, no tracking, no paywall.</span></span>';
+    a.addEventListener('click', e => { e.preventDefault(); donate.click(); });
+    const row = document.createElement('div'); row.className = 'foot-row'; row.appendChild(a); rows.appendChild(row);
+  }
+  // 3. how it was made
+  const tr = endcap.querySelector('.transparency');
+  if (tr) {
+    const d = document.createElement('details'); d.className = 'foot-row';
+    d.innerHTML = '<summary><span>How this edition was made<span class="foot-sub">Sources, labels, and what is still uncertain today.</span></span></summary><div class="foot-body"></div>';
+    d.querySelector('.foot-body').appendChild(tr);
+    rows.appendChild(d);
+  }
+  const nextEd = endcap.querySelector('.next-ed');
+  (nextEd || endcap.querySelector('.done') || endcap).insertAdjacentElement('afterend', rows);
+})();

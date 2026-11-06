@@ -996,3 +996,30 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
   font: 500 0.9rem/1.4 var(--sans); box-shadow: var(--elev); transition: opacity 200ms ease, transform 200ms ease; pointer-events: none; }
 .topics-toast.show { opacity: 1; transform: translate(-50%, 0); }
 @media (max-width: 480px) { .topics-toast { bottom: calc(88px + env(safe-area-inset-bottom)); } }
+
+/* ---- Asks out of the feed, into one quiet footer ---- */
+.signup-card.in-feed, #topics-invite-feed, #install-card, .support, #cost-strip, #cost-strip-2 { display: none !important; }
+.topics-line { font-size: var(--fs-xs); color: var(--ink-3); margin: var(--s2) 0 0; padding: 0 var(--s1); }
+.topics-line a { color: var(--ink-2); font-weight: 500; }
+.topics-line a:hover { color: var(--accent); }
+
+.endcap { padding: var(--s6) 0 0; border-top: 1px solid var(--hair); margin-top: var(--s6); }
+.endcap .done { font-family: var(--serif); font-size: var(--fs-l); font-weight: 500; color: var(--ink); margin: 0 0 var(--s1); }
+.endcap .next-ed { font-size: var(--fs-xs); color: var(--ink-3); margin: 0 0 var(--s3); }
+.foot-rows { border-top: 1px solid var(--hair); }
+.foot-row { border-bottom: 1px solid var(--hair); }
+.foot-row > summary, .foot-row > a.foot-link { display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
+  padding: var(--s2) 0; font-size: var(--fs-s); color: var(--ink); cursor: pointer; list-style: none; text-decoration: none; }
+.foot-row > summary::-webkit-details-marker { display: none; }
+.foot-row > summary::after, .foot-row > a.foot-link::after { content: "\203A"; color: var(--ink-3); font-size: 1.2em; line-height: 1; transition: transform 160ms ease; }
+.foot-row[open] > summary::after { transform: rotate(90deg); }
+.foot-row > summary:hover, .foot-row > a.foot-link:hover { color: var(--accent); }
+.foot-row .foot-sub { display: block; font-size: var(--fs-xs); color: var(--ink-3); font-weight: 400; margin-top: 2px; }
+.foot-body { padding: 0 0 var(--s3); }
+.foot-body .signup-form { display: flex; gap: var(--s1); max-width: 440px; margin: 0; }
+.foot-body .signup-form .signup-input { flex: 1; }
+.foot-body .signup-sub { font-size: var(--fs-xs); color: var(--ink-3); margin: var(--s1) 0 0; }
+.foot-body .transparency { margin: 0; }
+#email-signup.foot-moved { display: contents; }
+#email-signup.foot-moved .signup-head { display: none; }
+@media (max-width: 480px) { .foot-body .signup-form { flex-direction: column; } }
