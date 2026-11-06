@@ -180,8 +180,19 @@ document.getElementById('more-go').addEventListener('click', () => {
   document.getElementById('more-stories').style.display = '';
   document.getElementById('more-go').style.display = 'none';
 });
+function showTopicsToast(order) {
+  const label = {}; ALLCATS.forEach(p => { label[p[0]] = p[1]; });
+  const names = order.slice(0, 3).map(c => label[c] || c);
+  const more = order.length > 3 ? ' and ' + (order.length - 3) + ' more' : '';
+  const t = document.createElement('div'); t.className = 'topics-toast';
+  t.textContent = 'Topics saved. Showing ' + names.join(', ') + more + ' first.';
+  document.body.appendChild(t);
+  requestAnimationFrame(() => t.classList.add('show'));
+  setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 3200);
+}
 function finishSetup(order) {
   lsSet('db-extras-migrated', '1');
+  if (Array.isArray(order) && order.length) showTopicsToast(order);
   lsSet('db-interests', JSON.stringify(order.slice()));
   if (!lsGet('db-picks-' + briefDate)) lsSet('db-picks-' + briefDate, 'all');
   const t = document.getElementById('interests-setup');
@@ -431,13 +442,17 @@ function showInterestSetup() {
   }
   nextBtn.onclick = () => {
     if (!selected.length) return;
-    if (selected.length < 2) { clearDraft(); finishSetup(selected.slice()); return; }
+    if (selected.length < 2) {
+      clearDraft(); finishSetup(selected.slice());
+      history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // success URL, one-topic path
+      return;
+    }
     renderStep2();
   };
   document.getElementById('int-back').onclick = renderStep1;
   document.getElementById('int-done').onclick = () => {
     clearDraft();
-    finishSetup(order);
+    finishSetup(order.length ? order : selected.slice());
     history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // success URL for the topics task
   };
   const allBtn = document.getElementById('int-all');

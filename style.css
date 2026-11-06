@@ -978,3 +978,21 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
   .fact .chip { min-width: 0; margin-right: 8px; }
 }
 .fact .chip { min-width: 68px; }
+
+/* Team feedback: bigger phone nav, labeled theme toggle */
+.theme-switch-label { display: inline; }
+.theme-switch { opacity: 0.8; }
+@media (max-width: 480px) {
+  .nav { padding: 10px 10px calc(10px + env(safe-area-inset-bottom)); gap: 6px; }
+  .nav .navchip { font-size: 0.84rem; font-weight: 500; padding: 12px 6px; min-height: 46px; }
+  .nav #nav-topics { flex: 1.6 1 0; }
+  body { padding-bottom: calc(78px + env(safe-area-inset-bottom)); }
+  #interests-setup .triage-actions { bottom: calc(78px + env(safe-area-inset-bottom)); }
+}
+
+/* Confirmation after saving topics */
+.topics-toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 12px); opacity: 0; z-index: 60;
+  max-width: calc(100% - 32px); padding: 12px 18px; border-radius: 12px; background: var(--ink); color: var(--paper);
+  font: 500 0.9rem/1.4 var(--sans); box-shadow: var(--elev); transition: opacity 200ms ease, transform 200ms ease; pointer-events: none; }
+.topics-toast.show { opacity: 1; transform: translate(-50%, 0); }
+@media (max-width: 480px) { .topics-toast { bottom: calc(88px + env(safe-area-inset-bottom)); } }
