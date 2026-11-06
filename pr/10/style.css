@@ -864,3 +864,117 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .update-note { margin: 0 0 14px; }
 .impact-wrap { margin-bottom: 4px; }
 .srcs-head { margin-top: 4px; }
+
+/* =====================================================================
+   PREMIUM PASS (rollback: git tag pre-premium)
+   One type scale, 8px rhythm, one accent, borderless cards, quiet chrome.
+   Everything here is an override; nothing in the markup changed.
+   ===================================================================== */
+:root {
+  --fs-xl: 2rem; --fs-l: 1.375rem; --fs-m: 1.0625rem; --fs-s: 0.9375rem; --fs-xs: 0.8125rem; --fs-xxs: 0.75rem;
+  --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px; --s6: 48px;
+  --hair: color-mix(in srgb, var(--ink) 10%, transparent);
+  --elev-card: 0 1px 2px rgba(30, 24, 10, 0.04), 0 12px 32px -20px rgba(30, 24, 10, 0.25);
+}
+:root[data-theme="dark"] { --hair: color-mix(in srgb, var(--ink) 12%, transparent); --elev-card: 0 1px 2px rgba(0,0,0,.4), 0 14px 36px -22px rgba(0,0,0,.8); }
+body { font-size: var(--fs-m); -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; font-kerning: normal; }
+.wrap { padding: 0 var(--s3) 96px; }
+
+/* Masthead: air above, motto in small caps, date on the right, nothing else */
+.masthead { padding: var(--s6) 0 var(--s3); align-items: baseline; }
+.masthead h1 { font-size: var(--fs-xl); font-weight: 600; letter-spacing: -0.02em; }
+.motto { font-family: var(--sans); font-size: var(--fs-xxs); font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); margin: var(--s1) 0 0; }
+.theme-switch { top: var(--s6); opacity: 0.55; transition: opacity 120ms ease; }
+.theme-switch:hover { opacity: 1; }
+.theme-switch-label { display: none; }
+.ai-note { display: none; }                               /* moved out of the first screen; About still explains it */
+.legend-row { margin: 0 0 var(--s1); }
+.pub-note { font-size: var(--fs-xxs); letter-spacing: 0.02em; color: var(--ink-3); padding: 0; }
+.pub-note::before { width: 6px; height: 6px; }
+
+/* Nav: lighter chips, one active */
+.nav { padding: var(--s2) 0; border-bottom: 1px solid var(--hair); gap: var(--s1); }
+.navchip { font-size: var(--fs-xs); font-weight: 500; padding: 9px 14px; min-height: 36px; border-color: transparent; background: color-mix(in srgb, var(--ink) 5%, transparent); color: var(--ink-2); }
+.navchip:hover { background: color-mix(in srgb, var(--ink) 9%, transparent); color: var(--ink); border-color: transparent; }
+.navchip.active { background: var(--ink); color: var(--paper); }
+#nav-topics { border-color: transparent; background: var(--accent-tint); color: var(--accent); }
+#nav-topics:hover { background: color-mix(in srgb, var(--accent) 18%, transparent); }
+
+/* Cards that barely exist */
+.cat-band { border: 0; box-shadow: var(--elev-card); border-radius: 16px; padding: 0 var(--s3) var(--s1); margin: var(--s4) 0 0; }
+.cat-head { font-size: var(--fs-xxs); font-weight: 600; letter-spacing: 0.12em; margin: 0 calc(-1 * var(--s3)) 0; padding: var(--s2) var(--s3); background: none; border-bottom: 1px solid var(--hair); border-radius: 0; color: var(--ink-3); }
+.cat-count { font-size: var(--fs-xxs); letter-spacing: 0.08em; color: var(--ink-3); }
+.story { border-bottom: 1px solid var(--hair); }
+.story-sum { padding: var(--s2) 0; border-radius: 0; gap: 6px 12px; }
+.story-sum:hover { background: none; }
+.story-sum:hover .headline { color: var(--accent); }
+.headline { font-size: var(--fs-l); line-height: 1.3; font-weight: 500; letter-spacing: -0.01em; }
+.story[open] > .story-sum .headline { font-size: var(--fs-l); font-weight: 600; }
+.band-more-btn { font-size: var(--fs-xs); font-weight: 500; color: var(--ink-2); padding: var(--s2) 0; text-align: left; }
+.band-more-btn:hover { color: var(--accent); text-decoration: none; }
+
+/* Labels: one quiet system. A dot carries the color; the text stays grey. */
+.chip { font-family: var(--sans); font-size: var(--fs-xxs); font-weight: 500; letter-spacing: 0.02em; text-transform: none;
+  padding: 2px 0; border-radius: 0; background: none !important; box-shadow: none !important; color: var(--ink-3) !important; }
+.chip::before { content: ""; display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 6px; vertical-align: 1px; background: var(--ink-3); }
+.chip.status-verified::before { background: var(--accent); }
+.chip.status-reported::before { background: color-mix(in srgb, var(--ink-3) 70%, transparent); }
+.chip.status-disputed::before { background: var(--red); }
+.chip.status-early::before { background: var(--gold); }
+.chip.chip-upd { color: var(--ink-3) !important; }
+.chip.chip-upd::before { background: var(--blue); }
+.fact .chip { margin-right: 10px; min-width: 76px; }
+.trust-glance { font-family: var(--sans); font-size: var(--fs-xxs); letter-spacing: 0.02em; text-transform: none; color: var(--ink-3); }
+.trust-glance .tg-v, .trust-glance .tg-d { color: var(--ink-3); }
+.lean-tag, .fact-srcs, .psrc { font-family: var(--sans); font-size: var(--fs-xxs); letter-spacing: 0.02em; text-transform: none; }
+
+/* Inside a story: a clear ladder */
+.story-body { padding: 0 0 var(--s3); }
+.story-body > *:first-child { margin-top: var(--s1); }
+.update-note { font-size: var(--fs-s); border-left: 2px solid var(--hair); padding-left: 12px; margin: 0 0 var(--s2); }
+.un-k { font-family: var(--sans); font-size: var(--fs-xxs); letter-spacing: 0.08em; color: var(--ink-3); }
+.impact-label, .facts-head, .srcs-head { font-family: var(--sans); font-size: var(--fs-xxs); font-weight: 600; letter-spacing: 0.1em; color: var(--ink-3); margin: 0 0 var(--s1); }
+.impact { font-size: var(--fs-m); line-height: 1.6; margin: 0 0 var(--s3); }
+.impact-wrap { display: flex; gap: var(--s2); align-items: flex-start; margin-bottom: var(--s1); }
+.impact-thumb { flex: none; width: 96px; margin: 2px 0 0; order: 2; }
+.impact-thumb img { width: 96px; height: 96px; border-radius: 12px; }
+.impact-thumb figcaption { display: none; }
+.facts { gap: var(--s2); margin-bottom: var(--s3); }
+.fact-text { font-size: var(--fs-s); line-height: 1.55; }
+.fact .corr { font-size: var(--fs-xs); }
+.source-links { gap: var(--s1) var(--s2); }
+.source-links a { font-size: var(--fs-xs); }
+
+/* Signup and invite cards match the bands */
+.signup-card { border: 0; box-shadow: var(--elev-card); border-radius: 16px; padding: var(--s3); }
+.signup-head { font-size: var(--fs-l); font-weight: 500; letter-spacing: -0.01em; }
+.signup-sub { font-size: var(--fs-s); }
+.signup-btn, .triage-btn.primary, .intro-go, .pc-btn { border-radius: 10px; font-weight: 600; }
+
+/* A confident ending */
+.endcap { padding: var(--s6) 0 var(--s1); border-top: 1px solid var(--hair); margin-top: var(--s6); }
+.endcap .done { font-size: var(--fs-l); font-style: normal; font-weight: 500; color: var(--ink); margin: 0 0 var(--s1); }
+.transparency { font-size: var(--fs-xs); line-height: 1.6; }
+
+/* Motion: hover only, short, no bounce */
+a, button, .navchip, .headline { transition: color 120ms ease, background-color 120ms ease, border-color 120ms ease; }
+
+@media (max-width: 480px) {
+  .wrap { padding-left: var(--s2); padding-right: var(--s2); }
+  .masthead { padding: var(--s2) 0 var(--s1); }
+  .masthead h1 { font-size: 1.5rem; }
+  .theme-switch { top: var(--s2); right: var(--s2); }
+  .cat-band { padding: 0 var(--s2) var(--s1); border-radius: 14px; margin-top: var(--s3); }
+  .cat-head { margin: 0 calc(-1 * var(--s2)); padding: 12px var(--s2); }
+  .headline { font-size: 1.1875rem; }
+  .navchip { font-size: var(--fs-xxs); padding: 9px 6px; }
+}
+@media (max-width: 480px) {
+  /* premium pass, phone fixes: masthead bleed matches the new 16px gutter; nav chips fit four across */
+  .masthead { margin: 0 calc(-1 * var(--s2)); padding-left: var(--s2); padding-right: var(--s2); }
+  .nav { padding: var(--s1) var(--s1) calc(var(--s1) + env(safe-area-inset-bottom)); gap: 4px; }
+  .nav .navchip { font-size: 0.72rem; padding: 9px 4px; min-height: 36px; letter-spacing: 0; }
+  .nav #nav-topics { flex: 1.5 1 0; }
+  .fact .chip { min-width: 0; margin-right: 8px; }
+}
+.fact .chip { min-width: 68px; }
