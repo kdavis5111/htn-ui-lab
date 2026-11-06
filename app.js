@@ -1062,3 +1062,28 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
     history.replaceState(null, '', location.pathname + location.search);
   }
 }));
+
+// Smooth open and close for stories. <details> jumps by default; this slides the body in and out.
+(function () {
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  document.querySelectorAll('.story').forEach(st => {
+    const sum = st.querySelector(':scope > .story-sum'); const body = st.querySelector(':scope > .story-body');
+    if (!sum || !body) return;
+    let busy = false;
+    sum.addEventListener('click', e => {
+      if (e.target.closest('a, button')) return;
+      e.preventDefault(); if (busy) return; busy = true;
+      if (!st.open) {
+        st.open = true;
+        const h = body.scrollHeight;
+        body.animate([{ height: '0px', opacity: 0 }, { height: h + 'px', opacity: 1 }], { duration: 260, easing: 'cubic-bezier(.2,.7,.2,1)' })
+          .onfinish = () => { busy = false; };
+      } else {
+        const h = body.scrollHeight;
+        body.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 200, easing: 'cubic-bezier(.4,0,.6,1)' })
+          .onfinish = () => { st.open = false; busy = false; };
+      }
+    });
+  });
+})();
