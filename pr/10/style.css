@@ -851,3 +851,16 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
   #nav-topics-m { display: none !important; }
   #interests-setup .triage-actions { bottom: calc(68px + env(safe-area-inset-bottom)); }
 }
+
+/* ---- Cleaner open story ---- */
+.story[open]:not(.pinned) > .story-sum { background: none; }
+.story[open]:not(.pinned) > .story-sum .headline { color: var(--ink); }
+.story[open] > .story-sum { padding-bottom: 2px; }
+.story-body { padding: 0 0 20px; overflow: hidden; }
+.story-body > *:first-child { margin-top: 6px; }
+.share-row { display: none; }
+.story[open] .fcount, .story[open] .fh-info { display: none; }   /* counts already sit on the closed headline */
+.facts-head { margin: 0 0 8px; }
+.update-note { margin: 0 0 14px; }
+.impact-wrap { margin-bottom: 4px; }
+.srcs-head { margin-top: 4px; }
