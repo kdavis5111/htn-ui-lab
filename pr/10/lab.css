@@ -1,0 +1,6 @@
+.lab-banner {
+  position: sticky; top: 0; z-index: 9999;
+  padding: 8px 14px; font: 500 13px/1.4 system-ui, sans-serif; text-align: center;
+  background: #1E7A66; color: #fff;
+}
+.lab-banner a { color: #fff; text-decoration: underline; }
