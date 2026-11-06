@@ -1051,3 +1051,14 @@ document.querySelectorAll('.story').forEach(story => {
     text.appendChild(wrap);
   });
 });
+
+// User testing: put the open story in the URL so a testing tool can count "reached the right place".
+// The scores panel gets a readable hash; every other story uses its id.
+document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', () => {
+  if (st.open) {
+    const tag = st.classList.contains('scorefold') ? 'scores-open' : st.id;
+    history.replaceState(null, '', location.pathname + location.search + '#' + tag);
+  } else if (location.hash === '#scores-open' && st.classList.contains('scorefold') || location.hash === '#' + st.id) {
+    history.replaceState(null, '', location.pathname + location.search);
+  }
+}));
