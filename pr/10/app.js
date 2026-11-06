@@ -1110,7 +1110,7 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   const firstBand = news && news.querySelector('.cat-band');
   if (firstBand && !document.querySelector('.topics-line')) {
     const p = document.createElement('p'); p.className = 'topics-line';
-    p.innerHTML = 'Not your topics? <a href="#" id="topics-line-go">Choose yours</a>';
+    p.innerHTML = 'Want a different mix? <a href="#" id="topics-line-go">Choose your topics</a>';
     firstBand.insertAdjacentElement('afterend', p);
     p.querySelector('a').addEventListener('click', e => { e.preventDefault(); showInterestSetup(); });
   }
