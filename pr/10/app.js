@@ -438,6 +438,7 @@ function showInterestSetup() {
   document.getElementById('int-done').onclick = () => {
     clearDraft();
     finishSetup(order);
+    history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // success URL for the topics task
   };
   const allBtn = document.getElementById('int-all');
   allBtn.onclick = () => {
@@ -842,11 +843,10 @@ function markSubscribed(card) {
 function wireSignupForm(card) {
   const form = card.querySelector('.signup-form');
   if (!form) return;
-  form.addEventListener('submit', () => {
-    // the form posts to Buttondown in a new tab; this page swaps to a confirmation
-    setTimeout(() => {
-      document.querySelectorAll('.signup-card').forEach(c => markSubscribed(c));
-    }, 60);
+  form.addEventListener('submit', e => {
+    // user testing: never send anything to the real mailing list; just show the confirmation
+    e.preventDefault();
+    document.querySelectorAll('.signup-card').forEach(c => markSubscribed(c));
   });
 }
 function placeFeedSignup() {
@@ -1057,9 +1057,9 @@ document.querySelectorAll('.story').forEach(story => {
 document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', () => {
   if (st.open) {
     const tag = st.classList.contains('scorefold') ? 'scores-open' : st.id;
-    history.replaceState(null, '', location.pathname + location.search + '#' + tag);
+    history.replaceState(null, '', location.pathname + '?opened=' + tag + '#' + tag);
   } else if (location.hash === '#scores-open' && st.classList.contains('scorefold') || location.hash === '#' + st.id) {
-    history.replaceState(null, '', location.pathname + location.search);
+    history.replaceState(null, '', location.pathname);
   }
 }));
 
