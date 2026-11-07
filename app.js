@@ -180,8 +180,21 @@ document.getElementById('more-go').addEventListener('click', () => {
   document.getElementById('more-stories').style.display = '';
   document.getElementById('more-go').style.display = 'none';
 });
+function showTopicsToast(order) {
+  const label = {}; ALLCATS.forEach(p => { label[p[0]] = p[1]; });
+  const names = order.slice(0, 3).map(c => label[c] || c);
+  const more = order.length > 3 ? ' and ' + (order.length - 3) + ' more' : '';
+  const everything = ALLCATS.every(p => order.indexOf(p[0]) >= 0);
+  const t = document.createElement('div'); t.className = 'topics-toast';
+  t.textContent = everything ? 'Saved. Showing everything, in the usual order.'
+                             : 'Topics saved. Showing ' + names.join(', ') + more + ' first.';
+  document.body.appendChild(t);
+  requestAnimationFrame(() => t.classList.add('show'));
+  setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 3200);
+}
 function finishSetup(order) {
   lsSet('db-extras-migrated', '1');
+  if (Array.isArray(order) && order.length) showTopicsToast(order);
   lsSet('db-interests', JSON.stringify(order.slice()));
   if (!lsGet('db-picks-' + briefDate)) lsSet('db-picks-' + briefDate, 'all');
   const t = document.getElementById('interests-setup');
@@ -431,18 +444,24 @@ function showInterestSetup() {
   }
   nextBtn.onclick = () => {
     if (!selected.length) return;
-    if (selected.length < 2) { clearDraft(); finishSetup(selected.slice()); return; }
+    if (selected.length < 2) {
+      clearDraft(); finishSetup(selected.slice());
+      history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // success URL, one-topic path
+      return;
+    }
     renderStep2();
   };
   document.getElementById('int-back').onclick = renderStep1;
   document.getElementById('int-done').onclick = () => {
     clearDraft();
-    finishSetup(order);
+    finishSetup(order.length ? order : selected.slice());
+    history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // success URL for the topics task
   };
   const allBtn = document.getElementById('int-all');
   allBtn.onclick = () => {
     clearDraft();
     finishSetup(ALLCATS.map(pair => pair[0]));
+    history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // same success URL as the other paths
   };
   document.getElementById('int-back1').onclick = exitInterestSetup;
   renderStep1();
@@ -842,11 +861,10 @@ function markSubscribed(card) {
 function wireSignupForm(card) {
   const form = card.querySelector('.signup-form');
   if (!form) return;
-  form.addEventListener('submit', () => {
-    // the form posts to Buttondown in a new tab; this page swaps to a confirmation
-    setTimeout(() => {
-      document.querySelectorAll('.signup-card').forEach(c => markSubscribed(c));
-    }, 60);
+  form.addEventListener('submit', e => {
+    // user testing: never send anything to the real mailing list; just show the confirmation
+    e.preventDefault();
+    document.querySelectorAll('.signup-card').forEach(c => markSubscribed(c));
   });
 }
 function placeFeedSignup() {
@@ -1051,3 +1069,92 @@ document.querySelectorAll('.story').forEach(story => {
     text.appendChild(wrap);
   });
 });
+
+// User testing: put the open story in the URL so a testing tool can count "reached the right place".
+// The scores panel gets a readable hash; every other story uses its id.
+document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', () => {
+  if (st.open) {
+    const tag = st.classList.contains('scorefold') ? 'scores-open' : st.id;
+    history.replaceState(null, '', location.pathname + '?opened=' + tag + '#' + tag);
+  } else if (location.hash === '#scores-open' && st.classList.contains('scorefold') || location.hash === '#' + st.id) {
+    history.replaceState(null, '', location.pathname);
+  }
+}));
+
+// Smooth open and close for stories. <details> jumps by default; this slides the body in and out.
+(function () {
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduce) return;
+  document.querySelectorAll('.story').forEach(st => {
+    const sum = st.querySelector(':scope > .story-sum'); const body = st.querySelector(':scope > .story-body');
+    if (!sum || !body) return;
+    let busy = false;
+    sum.addEventListener('click', e => {
+      if (e.target.closest('a, button')) return;
+      e.preventDefault(); if (busy) return; busy = true;
+      if (!st.open) {
+        st.open = true;
+        const h = body.scrollHeight;
+        body.animate([{ height: '0px', opacity: 0 }, { height: h + 'px', opacity: 1 }], { duration: 260, easing: 'cubic-bezier(.2,.7,.2,1)' })
+          .onfinish = () => { busy = false; };
+      } else {
+        const h = body.scrollHeight;
+        body.animate([{ height: h + 'px', opacity: 1 }, { height: '0px', opacity: 0 }], { duration: 200, easing: 'cubic-bezier(.4,0,.6,1)' })
+          .onfinish = () => { st.open = false; busy = false; };
+      }
+    });
+  });
+})();
+
+// Asks out of the feed. One quiet line for topics under the first section; email, support and the
+// method note become three plain rows under "That's everything."
+(function () {
+  const news = document.getElementById('news');
+  const firstBand = news && news.querySelector('.cat-band');
+  if (firstBand && !document.querySelector('.topics-line')) {
+    const p = document.createElement('p'); p.className = 'topics-line';
+    p.innerHTML = 'Want a different mix? <a href="#" id="topics-line-go">Choose your topics</a>';
+    firstBand.insertAdjacentElement('afterend', p);
+    p.querySelector('a').addEventListener('click', e => { e.preventDefault(); showInterestSetup(); });
+  }
+  const endcap = document.querySelector('.endcap'); if (!endcap) return;
+  const rows = document.createElement('div'); rows.className = 'foot-rows';
+
+  // 1. email
+  const signup = document.getElementById('email-signup');
+  if (signup) {
+    const d = document.createElement('details'); d.className = 'foot-row';
+    d.innerHTML = '<summary><span>Get tomorrow\'s paper by email<span class="foot-sub">Free. Every morning with the sunrise. Unsubscribe anytime.</span></span></summary><div class="foot-body"></div>';
+    const body = d.querySelector('.foot-body');
+    const form = signup.querySelector('.signup-form');
+    if (form) {
+      body.appendChild(form);
+      form.addEventListener('submit', e => {            // user testing: nothing is sent; show the confirmation in place
+        e.preventDefault();
+        const done = document.createElement('p'); done.className = 'signup-sub';
+        done.innerHTML = '<b>Check your inbox to confirm.</b> See you tomorrow morning.';
+        form.replaceWith(done);
+      });
+    }
+    signup.classList.add('foot-moved'); signup.style.display = 'none';
+    rows.appendChild(d);
+  }
+  // 2. support: reuse the existing donate link so its behaviour stays
+  const donate = document.querySelector('#cost-strip-2 .js-support-jump') || document.querySelector('.js-support-jump');
+  if (donate) {
+    const a = document.createElement('a'); a.className = 'foot-link js-support-jump-foot'; a.href = '#';
+    a.innerHTML = '<span>Keep it ad-free for 10 cents a day<span class="foot-sub">Reader-funded. No ads, no tracking, no paywall.</span></span>';
+    a.addEventListener('click', e => { e.preventDefault(); donate.click(); });
+    const row = document.createElement('div'); row.className = 'foot-row'; row.appendChild(a); rows.appendChild(row);
+  }
+  // 3. how it was made
+  const tr = endcap.querySelector('.transparency');
+  if (tr) {
+    const d = document.createElement('details'); d.className = 'foot-row';
+    d.innerHTML = '<summary><span>How this edition was made<span class="foot-sub">Sources, labels, and what is still uncertain today.</span></span></summary><div class="foot-body"></div>';
+    d.querySelector('.foot-body').appendChild(tr);
+    rows.appendChild(d);
+  }
+  const nextEd = endcap.querySelector('.next-ed');
+  (nextEd || endcap.querySelector('.done') || endcap).insertAdjacentElement('afterend', rows);
+})();

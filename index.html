@@ -4,7 +4,7 @@
 <script>(function(){var t="light";try{var saved=localStorage.getItem("htn-theme");if(saved==="light"||saved==="dark")t=saved}catch(e){}document.documentElement.setAttribute("data-theme",t)})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>html{background-color:#EFEAE0}</style>
-<title>HeresThe.News — UI Lab (frozen edition 2026-09-25)</title>
+<title>HeresThe.News — No ads. No bait. Just news.</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%231E7A66'/><rect x='22' y='34' width='56' height='9' rx='4.5' fill='%23F6F7F4'/><rect x='22' y='56' width='38' height='9' rx='4.5' fill='%23F6F7F4'/><circle cx='71' cy='60.5' r='7' fill='%23D07A50'/></svg>">
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96.png">
 <link rel="icon" type="image/png" sizes="48x48" href="favicon-48.png">
@@ -29,65 +29,11 @@
 <meta name="apple-mobile-web-app-title" content="HeresThe.News">
 <meta name="mobile-web-app-capable" content="yes">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;600&family=Inter:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css?v=20261106c">
 <link rel="stylesheet" href="lab.css">
-<link rel="stylesheet" href="intro.css?v=4">
-<div class="lab-banner" role="note">Early prototype of a <a href="https://heresthe.news/">HeresThe.News</a> redesign. The news below is frozen from Friday 2026-09-25 and never updates. <a class="replay-link" href="?intro=1">Replay the intro</a></div>
-<section class="intro" id="intro" hidden role="dialog" aria-modal="true" aria-label="Welcome to the HeresThe.News prototype">
-  <div class="intro-inner">
-    <div class="intro-top">
-      <span class="intro-brand">HeresThe<span class="dot">.</span><em>News</em></span>
-      <button class="intro-skip" type="button">Skip intro</button>
-    </div>
-    <div class="intro-title">
-      <p class="brand-big">HeresThe<span class="dot">.</span><em>News</em></p>
-      <p class="intro-sub">A neutral daily news brief. Every fact checked. Every source cited.</p>
-      <div class="intro-actions">
-        <button class="intro-start" type="button">See how it works</button>
-      </div>
-    </div>
-    <div class="intro-stage" aria-hidden="true">
-      <div class="phone">
-        <div class="pscreen">
-          <div class="lock">
-            <p class="ldate">Friday, September 25</p>
-            <p class="ltime">7:00</p>
-            <div class="notif">
-              <span class="nb">HT<em>.</em></span>
-              <span class="nt"><b>HeresThe.News</b>Today's paper is ready.</span>
-            </div>
-          </div>
-          <div class="appview">
-            <p class="abrand">HeresThe<span class="dot">.</span><em>News</em></p>
-            <p class="aeyebrow">Today's paper</p>
-            <p class="ahead">Hurricane Polo regains Category 5 strength off Mexico's Pacific coast</p>
-            <ul class="pfacts">
-              <li><span class="pchip v">verified</span>160 mph winds as of 9:00 UTC Friday</li>
-              <li><span class="pchip v">verified</span>Core forecast to stay offshore</li>
-              <li><span class="pchip r">reported</span>15,000 security personnel deployed</li>
-            </ul>
-            <p class="psrc">— NHC · CBS News · AP/Reuters · Al Jazeera</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="intro-rest">
-      <div class="swap">
-        <h1 class="intro-motto"><span class="m1">No ads.</span> <span class="m2">No bait.</span> <span class="m3">Just news.</span></h1>
-        <p class="brand-big">HeresThe<span class="dot">.</span><em>News</em></p>
-      </div>
-      <div class="proto-card">
-        <span class="pc-k">Early prototype</span>
-        <p>This is a working prototype of a HeresThe.News redesign, built by a student team. The news is real but frozen from Friday, September 25. Some things are rough on purpose.</p>
-        <p><b>Try this:</b> find out what happened with Hurricane Polo and decide whether you trust it. Open the story, check each fact's label, see which outlets covered it. Or pick your own topics first. There is no wrong order.</p>
-      </div>
-      <div class="intro-actions">
-        <button class="intro-go" type="button">Read Today's News</button>
-        <button class="intro-replay" type="button">Replay intro</button>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- UXtweak session recording, user test only; remove before merge -->
+<script type="text/javascript">(function(u,x,t,w,e,a,k,s){a=function(v){try{u.setItem(t+e,v)}catch(e){}v=JSON.parse(v);for(k=0;k<v.length;k++){s=x.createElement("script");s.text="(function(u,x,t,w,e,a,k){a=u[e]=function(){a.q.push(arguments)};a.q=[];a.t=+new Date;a.c=w;k=x.createElement('script');k.async=1;k.src=t;x.getElementsByTagName('head')[0].appendChild(k)})(window,document,'"+v[k].u+"',"+JSON.stringify(v[k].c)+",'"+v[k].g+"')";x.getElementsByTagName("head")[0].appendChild(s)}};try{k=u.getItem(t+e)}catch(e){}if(k){return a(k)}k=new XMLHttpRequest;k.onreadystatechange=function(){if(k.readyState==4&&k.status==200)a(k.responseText)};k.open("POST",w+e);k.send(x.URL)})(sessionStorage,document,"uxt:","//api.uxtweak.com/snippet/","a5827e58-8f3c-446f-a609-fbf39cef9c2a");</script>
+<div class="lab-banner" hidden></div><!-- banner hidden during user testing -->
 
 <div class="wrap" data-date="2026-09-25">
   <header class="masthead">
@@ -106,10 +52,10 @@
     <button class="navchip active" data-filter="all" aria-pressed="true">Feed</button>
     <button class="navchip" data-filter="about" aria-pressed="false">About</button>
     <button class="navchip" data-filter="support" aria-pressed="false">Donate</button>
-    <button class="navchip" id="nav-topics">My topics</button>
+    <button class="navchip" id="nav-topics">Select my topics</button>
   </nav>
   <div class="legend-row">
-  <button class="navchip" id="nav-topics-m">My topics</button>
+  <button class="navchip" id="nav-topics-m">Select my topics</button>
   <span class="pub-note">published Friday, September 25 &middot; 4:57 AM MT</span>
   </div>
   <p class="ai-note">Assembled by AI following strict human editorial rules. <a href="#" class="js-about-jump">How it works</a></p>
@@ -143,7 +89,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Category 4 -&gt; Category 5 (160 mph)</p>
   <div class="impact-wrap"><figure class="impact-thumb"><img src="assets/img-9a42ef99.jpg" alt="NHC forecast cone map showing Hurricane Polo&#x27;s projected track off Mexico&#x27;s Pacific coast toward Baja California Sur" title="NOAA National Hurricane Center"><figcaption>NOAA National Hurricane Center</figcaption></figure><p class="impact"><span class="impact-label">Why it matters</span>Polo weakened to Category 4 on Sept. 23 and has now regained Category 5 strength, with 160 mph sustained winds as of 9:00 UTC Friday. The National Hurricane Center forecasts the core to stay offshore of mainland Mexico and weakening to begin Saturday. CBS News, citing the Weather Prediction Center, reports 2 to 4 more inches of rain, up to 6 inches in spots, for Michoacan, Colima, Jalisco and Nayarit, and 1 to 2 inches along coastal Jalisco and Guerrero.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -161,7 +106,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The National Hurricane Center forecasts 15 to 30 inches of rain for the Big Island&#x27;s southern and eastern slopes, with isolated totals up to 35 inches, and warns of catastrophic and life-threatening flash flooding and mudslides. Al Jazeera reports Hawaii&#x27;s governor issued an emergency proclamation, activated more than 230 National Guard members, and that schools are closed statewide for the week.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -180,7 +124,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> 1-3 in -&gt; 3-5 in</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The rainfall forecast has firmed from an early-week estimate of roughly 1 to 3 inches to the National Weather Service&#x27;s 3 to 5 inches, which CNN described as up to a month&#x27;s worth of rain for parts of the area. The NWS forecasts coastal wind gusts of 45 to 60 mph and has a Coastal Flood Warning in effect for the Massachusetts south coast, with the event running from Friday into Monday.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -203,7 +146,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Previewed visit -&gt; visit held; CBS reports tariff truce extended 2 months</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>A visit that earlier coverage only previewed has now taken place. CBS News reports the two governments agreed to extend their existing tariff truce by two months, which would leave current tariff rates in place for now; UPI and CBS both report that no major policy breakthroughs were announced, and no agreements on Taiwan, Iran or Ukraine were disclosed.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -221,7 +163,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> New: 7-day Hormuz reopening offer; uranium dilution offer</p>
   <div class="impact-wrap"><figure class="impact-thumb"><img src="assets/img-b6d5793a.jpg" alt="Locator map of the Strait of Hormuz between Iran and the Arabian Peninsula, connecting the Persian Gulf to the Gulf of Oman." title="Kleptosquirrel / Wikimedia Commons, CC BY-SA 3.0"><figcaption>Kleptosquirrel / Wikimedia Commons, CC BY-SA 3.0</figcaption></figure><p class="impact"><span class="impact-label">Why it matters</span>Earlier coverage reported only that sidelines talks had resumed; Iran&#x27;s foreign minister has now attached a seven-day timeline to reopening the Strait of Hormuz and restarting nuclear talks, contingent on conditions he tied to the June memorandum. The strait normally carries about a fifth of global oil supply, and preliminary ship-tracking data cited by CNBC counted nine vessel transits on Sept. 25.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="1 verified"><i aria-hidden="true">&#9679;</i>1<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="4 reported"><i aria-hidden="true">&#9675;</i>4<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -240,7 +181,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Nepal&#x27;s disaster authority reports 1,453 people killed, about 5,500 still missing and 13,795 rescued. Al Jazeera reports the government&#x27;s preliminary damage estimate at $5 billion, a $20 million request from the UN loss-and-damage fund as a grant rather than a loan, and a separate $31 million US pledge for recovery.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -258,7 +198,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Localized clashes -&gt; multi-front offensive; army casualty claims disputed between wires</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Fighting previously reported as localized clashes is now described in wire reporting as a coordinated offensive into the Afar and Amhara regions, with three airports taken on Sept. 23. Ethiopia&#x27;s army says it repelled the offensive; one wire account cites 272 fighters killed and about 260 wounded, another cites more than 500 killed, wounded or captured, and neither outlet could verify the figures. NetBlocks recorded a network disruption in northern Ethiopia on Sept. 24-25 and said it could not determine the cause.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="1 verified"><i aria-hidden="true">&#9679;</i>1<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><span class="fcount fc-d" title="1 disputed"><i aria-hidden="true">&#9680;</i>1<span class="sr-only"> disputed</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -276,7 +215,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Dozens of delegates left the hall as Netanyahu began speaking, and he and New York&#x27;s mayor exchanged public accusations through the podium and a written statement. No policy announcement or change accompanied the speech.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -294,7 +232,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The visit runs Friday through Monday across Paris, Lourdes and Metz. Scheduled events include a speech on artificial intelligence at UNESCO, a prayer vigil for about 80,000 young people at the Stade de France on Friday evening, and a private meeting in Lourdes on Sunday with survivors of clergy sexual abuse.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -317,7 +254,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Appeals-court block -&gt; emergency application at Supreme Court</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>An appeals-court block reported earlier has moved to the Supreme Court, where the solicitor general asked the justices on Sept. 24 to let third-country deportations resume immediately. The AP reports the block forced cancellation of a flight carrying 70 people from Louisiana to Burundi, Rwanda and the Central African Republic. The Court&#x27;s decision will determine whether DHS can remove people to countries other than the one named in their removal order without advance notice.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -335,7 +271,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Riverside County election officials are set to regain custody of the more than 650,000 ballots held by the sheriff&#x27;s office since February. The court ordered the materials returned immediately, and Bianco said he will comply.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -354,7 +289,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Passes restored WH-wide by 9:45 a.m. -&gt; CNN, MS NOW reporters barred that evening from Xi dinner</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>A federal judge&#x27;s order restoring CNN, MS NOW and Politico&#x27;s White House passes did not end the access dispute. The White House told the court that passes were restored by 9:45 a.m. Thursday, but CNN and MS NOW journalists were turned away that evening from the Xi state dinner arrival. Four broadcast networks had pulled their pool coverage earlier in the day and had not resumed it, leaving no live network feed of the arrival.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -372,7 +306,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Families connected to the Lincoln strike group now have an official Navy account: eight suicide attempts and no deaths by suicide during a deployment that ran nearly nine months without a scheduled port call. Navy Times reports sailors described waits of several weeks for routine mental health appointments unless they reported suicidal thoughts.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -390,7 +323,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Copenhaver is the second person shot at the July 2024 Butler rally to die; volunteer firefighter Corey Comperatore was killed that day. Pennsylvania&#x27;s attorney general attributes the death to complications of the wounds, while ABC News reports the county medical examiner had not finalized a cause of death as of Sept. 25. UPI reports the negligence lawsuit he and his wife filed against the federal government remains pending.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -413,7 +345,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The resolution&#x27;s defeat leaves U.S. military action against Iran in place without a congressional directive to end it. AP reports the war has killed 19 U.S. service members over more than 200 days and cost about $40 billion; those figures come from AP alone.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -431,7 +362,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Without Senate action, current federal rules for approving energy and infrastructure projects stay in place at least until after the Nov. 3 midterms. The House-passed bill on data-center electricity costs, which passed 417-3, remains without a Senate vote.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -450,7 +380,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The bill has no legal effect unless Congress passes it, so AI development in the US is unchanged for now. If enacted, it would bar companies from building or deploying AI systems that exceed human cognitive performance, with prison terms of up to 20 years and corporate dissolution as penalties.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -468,7 +397,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Local media reports cited by CNBC say draft rolls show roughly 130 million voters deleted; if that figure holds, those voters would need to verify or re-register to vote. CJP says it will begin nationwide protests on Oct. 2 if the chief election commissioner does not resign by Sept. 26.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -491,7 +419,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> Freddie Mac 30-year: 6.95% -&gt; 7.03%</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Freddie Mac&#x27;s weekly average rose from 6.95% to 7.03%, a fifth straight weekly increase and the first reading at or above 7% since the week ending Jan. 16, 2025. Rates remain below the 25-year high of 7.79% set in October 2023. CNN, citing Mortgage Bankers Association data, reports purchase applications were down 11% from a year earlier.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -509,7 +436,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> 10-year 4.94% -&gt; 5.18%; 30-year 5.29% -&gt; 5.47% (week to Sept. 24)</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The 30-year Treasury yield closed at 5.47% and the 10-year at 5.18% on Sept. 24, up from 5.29% and 4.94% a week earlier. Treasury yields are the benchmark used to price many mortgages and other long-term loans.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -528,7 +454,6 @@
   <div class="story-body">
   <p class="update-note"><span class="un-k">What changed</span> $6.285 -&gt; $6.529/gal (EIA, week of 9/21)</p>
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The national average diesel price rose from $6.285 to $6.529 a gallon in the week ending Sept. 21, per EIA data. EIA figures put that about 74% above a year earlier; AAA&#x27;s series, cited by NPR, puts the increase at 80%. NPR reports fertilizer prices are up about 15% year over year, citing the American Farm Bureau Federation.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="1 verified"><i aria-hidden="true">&#9679;</i>1<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="4 reported"><i aria-hidden="true">&#9675;</i>4<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -546,7 +471,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The rules would set the requirements for how Fed-supervised banks can issue dollar-pegged stablecoins, including full backing by permitted reserve assets such as short-term Treasury bills. Banks, issuers and the public have 60 days after Federal Register publication to file comments before the rules are finalized.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -564,7 +488,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The order permanently blocks Brown from working at or with any FDIC-insured bank or bank holding company unless the Fed grants written approval. Customers of Sandy Spring Bank, now part of Atlantic Union Bank, do not need to take any action.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="5 verified"><i aria-hidden="true">&#9679;</i>5<span class="sr-only"> verified</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -587,7 +510,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The two governments discussed setting up a &quot;U.S.-China AI Dialogue,&quot; with the U.S. proposing a system for notifying each other of serious AI incidents. No agreement was announced, so nothing changes yet for AI products or the people who use them.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -605,7 +527,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Muse Charm lets a user start Meta&#x27;s AI assistant with a fingerprint press instead of picking up a phone. Meta has not said what the device will cost when it ships in December. The Muse app stays free, and Meta says it plans to earn money by taking a fee on transactions the assistant completes for users.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -624,7 +545,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>US Pixel 11 owners with a paid Gemini subscription and enrollment in the Phone by Google Public Beta can have the assistant place calls to businesses, and can take over the call at any point. The feature is an early preview and is not available on other phones or to free users.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -641,7 +561,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>This is an engineering test rather than a commercial service, so it does not change AI pricing or availability for users. Google says the results will inform the two custom satellites it still plans to launch in 2027.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -664,7 +583,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The CDC&#x27;s national page lists one 2026 measles death; Pennsylvania&#x27;s health department reports four measles-associated deaths in the state since Aug. 25. Neither agency has said which death the federal count reflects, and the two use different definitions. The CDC counted 3,471 confirmed cases nationally as of Sept. 17, about 95% of them linked to identified outbreaks.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -682,7 +600,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The hearing is a step toward confirming the next FDA commissioner, who oversees U.S. regulation of vaccines, prescription drugs including mifepristone, and medical devices. Overton affirmed the safety of the MMR vaccine and said mifepristone has met FDA standards, without committing to any action on the drug&#x27;s status.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -701,7 +618,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>For the 10% to 15% of patients who see little or no weight loss on GLP-1 drugs, doctors cannot yet predict in advance who will respond. Researchers are examining sex, menopausal hormone therapy and genetics as possible explanations; no test exists to match a patient to the treatment most likely to work.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -719,7 +635,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The study reports that children diagnosed with ADHD or autism in Denmark in 2020-2022 resembled the general population more closely, on birth weight and household income, than those diagnosed a decade earlier. The authors say part of the rise in diagnoses may reflect changes in who gets identified rather than only a change in how common the conditions are.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -741,7 +656,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The structures are free and public, letting researchers anywhere - including labs without expensive imaging equipment - examine the predicted shapes of proteins from viruses including those causing mpox, measles and hepatitis B. The data are predictions: EMBL-EBI says they cannot show the effect of mutations, and any practical use still has to be confirmed in a laboratory.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -759,7 +673,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The study documents a chemical route cells can use to make cysteine when their usual system is disabled. Schmidt&#x27;s suggestion that blocking the pathway could make cancer treatments more effective is a hypothesis stated in the university&#x27;s press materials, not a tested result; any therapy would require further research and clinical testing.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -778,7 +691,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The finding has no effect on daily life. It documents a white dwarf driving a long-lasting outflow that the known mechanisms do not account for, which the authors say will direct follow-up observations of similar stellar remnants.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="5 verified"><i aria-hidden="true">&#9679;</i>5<span class="sr-only"> verified</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -796,7 +708,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The measurement gives modelers a figure for the magnetic field strength present as the Solar System formed, which the authors say should be included alongside gravity when simulating how stars and planets take shape.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -813,7 +724,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><figure class="impact-thumb"><img src="assets/img-b0d2747d.jpg" alt="Mosaic of Uranus&#x27;s moon Ariel photographed by Voyager 2 in 1986, showing its cratered, fractured surface." title="NASA/JPL"><figcaption>NASA/JPL</figcaption></figure><p class="impact"><span class="impact-label">Why it matters</span>The finding is a modeled inference from surface geology and orbital mechanics, not a direct detection; no spacecraft has visited Ariel since Voyager 2&#x27;s 1986 flyby. It adds Ariel to the list of icy moons thought to have held hidden oceans, one factor scientists weigh when planning future missions.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="3 verified"><i aria-hidden="true">&#9679;</i>3<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -843,7 +753,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The White Sox will play in the American League wild-card round, one year after completing a three-season stretch of 324 losses that included a 121-loss season, the post-1900 record.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -860,7 +769,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Crow-Armstrong finished the season with 45 home runs and 40 stolen bases, the seventh 40-40 season in MLB history. ESPN reports the Cubs clinched a playoff berth the same day.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -878,7 +786,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The Falcons won their first game of the season, having scored 16 combined points in their first two games, in Penix&#x27;s first appearance since he tore an ACL in Week 11 last season.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="4 verified"><i aria-hidden="true">&#9679;</i>4<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="1 reported"><i aria-hidden="true">&#9675;</i>1<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -901,7 +808,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Four new tracks are now available as part of &quot;The Life of a Showgirl: The Encore.&quot; Pitchfork reports a video for &quot;Patient Zero,&quot; featuring Colin Farrell and Dakota Johnson, is set to premiere at the MTV Video Music Awards on Sept. 28.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="1 verified"><i aria-hidden="true">&#9679;</i>1<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -918,7 +824,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>U2&#x27;s 16th studio album arrives Nov. 13, nine years after &quot;Songs of Experience.&quot; Pitchfork and Billboard report the closing track &quot;Torn&quot; carries what the band describes as Dolly Parton&#x27;s last recorded vocal performance.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -937,7 +842,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The group&#x27;s original lineup - Mutya Buena, Keisha Buchanan and Siobhan Donaghy - has recorded a full album together for the first time in 26 years. Pitchfork reports it is due in 2027; the first single, &quot;Ghost,&quot; is out now.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="1 verified"><i aria-hidden="true">&#9679;</i>1<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -953,7 +857,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>The judging panel and host are set for season 25, which Billboard reports will premiere on ABC in 2027 with no date announced yet. Applications for auditions close Oct. 9.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="3 reported"><i aria-hidden="true">&#9675;</i>3<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -982,7 +885,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Deadline reports Thursday preview grosses of $3 million or more for Avengers: Endgame: Encore, $2-3 million for Primetime, about $1.8 million for Heart of the Beast and $800,000 to $1 million for Forgotten Island. Every opening-weekend figure in this story is a Deadline projection rather than a result; actual weekend totals are reported Sunday.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-r" title="5 reported"><i aria-hidden="true">&#9675;</i>5<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -1001,7 +903,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>&quot;The Lost Children of Tuam&quot; opens in Ireland this week and in the UK next month. The Guardian reports forensic archaeologists have recovered the remains of 99 babies and children since excavation began last year at the site where 796 infants are believed to be buried.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-r" title="5 reported"><i aria-hidden="true">&#9675;</i>5<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -1019,7 +920,6 @@
   <div class="story-body">
   
   <div class="impact-wrap"><p class="impact"><span class="impact-label">Why it matters</span>Denmark&#x27;s entry goes into the pool of national submissions from which the Academy will pick nominees for Best International Feature at the 99th Academy Awards. Nominees have not been announced.</p></div>
-  <div class="share-row"><button type="button" class="share-btn">Share this story</button></div>
   
   
   <p class="facts-head">The facts<span class="fcount fc-v" title="2 verified"><i aria-hidden="true">&#9679;</i>2<span class="sr-only"> verified</span></span><span class="fcount fc-r" title="2 reported"><i aria-hidden="true">&#9675;</i>2<span class="sr-only"> reported</span></span><button type="button" class="fh-info" aria-expanded="false" aria-label="What these symbols mean">&#9656;</button></p>
@@ -1194,8 +1094,6 @@
     <p class="sf-links"><a href="https://heresthe.news/privacy/">Privacy</a> &middot; <a href="mailto:editor@heresthe.news">Contact</a> &middot; <a href="https://heresthe.news/editions/">Past editions</a></p>
   </footer>
 </div>
-<script src="app.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-<script src="intro.js?v=4"></script>
+<script src="app.js?v=20261107a"></script>
 
 </html>
