@@ -184,8 +184,10 @@ function showTopicsToast(order) {
   const label = {}; ALLCATS.forEach(p => { label[p[0]] = p[1]; });
   const names = order.slice(0, 3).map(c => label[c] || c);
   const more = order.length > 3 ? ' and ' + (order.length - 3) + ' more' : '';
+  const everything = ALLCATS.every(p => order.indexOf(p[0]) >= 0);
   const t = document.createElement('div'); t.className = 'topics-toast';
-  t.textContent = 'Topics saved. Showing ' + names.join(', ') + more + ' first.';
+  t.textContent = everything ? 'Saved. Showing everything, in the usual order.'
+                             : 'Topics saved. Showing ' + names.join(', ') + more + ' first.';
   document.body.appendChild(t);
   requestAnimationFrame(() => t.classList.add('show'));
   setTimeout(() => { t.classList.remove('show'); setTimeout(() => t.remove(), 300); }, 3200);
@@ -459,6 +461,7 @@ function showInterestSetup() {
   allBtn.onclick = () => {
     clearDraft();
     finishSetup(ALLCATS.map(pair => pair[0]));
+    history.replaceState(null, '', location.pathname + '?done=topics#topics-saved');   // same success URL as the other paths
   };
   document.getElementById('int-back1').onclick = exitInterestSetup;
   renderStep1();
