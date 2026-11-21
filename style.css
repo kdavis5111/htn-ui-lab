@@ -979,6 +979,211 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
 }
 .fact .chip { min-width: 68px; }
 
+/* Satisfaction revision: give each story a distinct, calm reading surface. */
+.cat-band {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+}
+.cat-head {
+  margin: 0 0 var(--s2);
+  padding: 0 0 var(--s1);
+  background: transparent;
+  border-bottom: 1px solid var(--hair);
+}
+.story {
+  border: 1px solid var(--hair);
+  border-radius: var(--radius);
+  background: var(--card);
+  box-shadow: var(--elev-card);
+  margin: 0 0 var(--s2);
+  padding: 0 var(--s2);
+  scroll-margin-top: 5rem;
+  transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+.story:hover {
+  border-color: color-mix(in srgb, var(--accent) 28%, var(--hair));
+}
+.story-sum {
+  padding: var(--s2) 0;
+  gap: var(--s1) var(--s2);
+}
+.story-sum:focus-visible {
+  outline-offset: 4px;
+}
+.headline {
+  font-size: var(--fs-l);
+  line-height: 1.35;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+}
+.story[open] > .story-sum .headline {
+  font-weight: 600;
+}
+.story-body {
+  padding: 0 0 var(--s2);
+}
+.story-body > *:first-child {
+  margin-top: var(--s1);
+}
+.impact-label, .facts-head, .srcs-head {
+  margin-bottom: var(--s1);
+}
+.impact {
+  line-height: 1.65;
+}
+.facts {
+  gap: var(--s2);
+}
+.source-links {
+  padding-top: 2px;
+}
+@media (max-width: 480px) {
+  .cat-band { padding: 0; margin-top: var(--s3); }
+  .cat-head { margin: 0 0 var(--s1); padding: 0 0 var(--s1); }
+  .story { padding: 0 14px; margin-bottom: 12px; }
+  .story-sum { padding: 14px 0; }
+  .headline { font-size: 1.125rem; }
+  .story-body { padding-bottom: 14px; }
+}
+
+/* Grouping refinement: keep the heading, stories and show-more control inside
+   one section bounded by quiet rules. */
+.cat-band {
+  border-top: 1px solid var(--hair);
+  border-bottom: 1px solid var(--hair);
+  margin-top: var(--s3);
+  padding: var(--s2) 0 var(--s1);
+}
+.cat-head {
+  align-items: baseline;
+  margin: 0 0 var(--s2);
+  padding: 0 0 var(--s2);
+  border: 0;
+  font-family: var(--sans);
+  font-size: 1.625rem;
+  font-weight: 650;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+  color: var(--ink);
+}
+.cat-count {
+  font-size: var(--fs-xs);
+  letter-spacing: 0.04em;
+}
+.band-more-btn {
+  border-top: 0;
+  padding: var(--s2) 8px;
+  margin-top: 2px;
+}
+@media (max-width: 480px) {
+  .cat-band { margin-top: var(--s2); padding: var(--s2) 0 var(--s1); }
+  .cat-head { margin-bottom: var(--s1); padding-bottom: var(--s1); font-size: 1.5rem; }
+  .band-more-btn { padding: 12px 6px; }
+}
+
+/* Refined reading scale and article scan paths. */
+.headline,
+.story[open] > .story-sum .headline {
+  font-size: 1.1875rem;
+  line-height: 1.35;
+}
+.story-sum { padding-top: 14px; padding-bottom: 14px; }
+.story-body {
+  border-top: 1px solid var(--hair);
+  padding-top: var(--s2);
+  padding-bottom: var(--s2);
+}
+.story-body > *:first-child { margin-top: 0; }
+.impact-wrap { gap: var(--s2); margin-bottom: var(--s2); }
+.impact {
+  flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--accent-tint) 34%, var(--card));
+  font-size: var(--fs-s);
+  line-height: 1.6;
+}
+.impact-label { color: var(--accent); }
+.fact-text { display: block; font-size: 0.875rem; line-height: 1.55; }
+.fact .corr { font-size: var(--fs-xs); }
+.facts { gap: 0; margin-bottom: var(--s2); }
+.fact {
+  display: grid;
+  grid-template-columns: 68px minmax(0, 1fr);
+  gap: var(--s1);
+  align-items: start;
+  padding: 10px 0;
+}
+.fact + .fact { border-top: 1px solid var(--hair); }
+.fact .chip { min-width: 0; margin: 1px 0 0; }
+.srcs-head { margin-top: var(--s2); }
+.source-links a { font-size: var(--fs-xs); }
+@media (max-width: 480px) {
+  .headline,
+  .story[open] > .story-sum .headline { font-size: 1.0625rem; line-height: 1.4; }
+  .story-sum { padding-top: 12px; padding-bottom: 12px; }
+  .story-body { padding-top: 12px; padding-bottom: 12px; }
+  .impact-wrap { flex-direction: column; gap: 10px; }
+  .impact-thumb { align-self: flex-end; width: 78px; }
+  .impact-thumb img { width: 78px; height: 78px; }
+  .impact { width: 100%; padding: 10px 12px; font-size: 0.9375rem; }
+  .fact { grid-template-columns: 64px minmax(0, 1fr); gap: 8px; }
+  .fact-text { font-size: 0.875rem; }
+}
+
+/* Make the show-more control read as an action, not another line of copy. */
+.band-more-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--s2);
+  width: 100%;
+  min-height: 46px;
+  margin-top: var(--s1);
+  padding: 11px 16px;
+  border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: 10px;
+  background: var(--accent-tint);
+  color: var(--accent);
+  font-size: var(--fs-s);
+  font-weight: 600;
+  text-align: left;
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+.band-more-btn::after {
+  content: "";
+  flex: none;
+  width: 8px;
+  height: 8px;
+  margin: -4px 2px 0 0;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: rotate(45deg);
+  transition: transform 140ms ease;
+}
+.band-more:not([hidden]) + .band-more-btn::after {
+  margin-top: 4px;
+  transform: rotate(225deg);
+}
+.band-more-btn:hover {
+  border-color: var(--accent);
+  background: color-mix(in srgb, var(--accent-tint) 72%, var(--accent) 12%);
+  color: var(--accent);
+  text-decoration: none;
+}
+.band-more-btn:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+@media (max-width: 480px) {
+  .band-more-btn { min-height: 48px; padding: 11px 14px; }
+}
+
 /* Team feedback: bigger phone nav, labeled theme toggle */
 .theme-switch-label { display: inline; }
 .theme-switch { opacity: 0.8; }
