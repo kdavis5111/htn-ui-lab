@@ -1158,3 +1158,49 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   const nextEd = endcap.querySelector('.next-ed');
   (nextEd || endcap.querySelector('.done') || endcap).insertAdjacentElement('afterend', rows);
 })();
+
+// Jump row (Round 2, ease of finding): one link per section at the top of the feed, in the
+// reader's own order. Rebuilds itself whenever the sections are reordered or revealed.
+(function () {
+  const news = document.getElementById('news'); if (!news) return;
+  const more = document.getElementById('more-stories');
+  const row = document.createElement('nav');
+  row.className = 'jump-row'; row.setAttribute('aria-label', 'Jump to a section');
+  news.insertBefore(row, news.firstChild);
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const label = {}; ALLCATS.forEach(p => { label[p[0]] = p[1]; });
+  function bands() {
+    const shown = [...news.querySelectorAll(':scope > .cat-band')];
+    const later = more ? [...more.querySelectorAll(':scope > .cat-band')] : [];
+    return shown.concat(later).filter(b => b.style.display !== 'none');
+  }
+  function go(band) {
+    if (more && more.contains(band) && more.style.display === 'none') {
+      const btn = document.getElementById('more-go'); if (btn) btn.click();      // section sits behind "Keep reading"
+    }
+    band.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    const h = band.querySelector('.cat-head');
+    if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
+  }
+  function build() {
+    const list = bands();
+    row.innerHTML = '';
+    row.hidden = list.length < 2;
+    if (row.hidden) return;
+    const k = document.createElement('span'); k.className = 'jump-k'; k.textContent = 'Jump to';
+    row.appendChild(k);
+    list.forEach(band => {
+      if (!band.id) band.id = 'cat-' + band.dataset.category;
+      const a = document.createElement('a');
+      a.className = 'jump-link'; a.href = '#' + band.id;
+      a.textContent = label[band.dataset.category] || band.dataset.category;
+      a.addEventListener('click', e => { e.preventDefault(); go(band); });
+      row.appendChild(a);
+    });
+  }
+  let queued = false;
+  const queue = () => { if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; build(); }); };
+  new MutationObserver(queue).observe(news, { childList: true });
+  if (more) new MutationObserver(queue).observe(more, { childList: true });
+  build();
+})();

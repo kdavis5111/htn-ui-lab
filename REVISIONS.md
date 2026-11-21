@@ -16,7 +16,7 @@ same facts in the "Why" part of your pull request.
 
 | Change | From whose analysis | Finding it answers | PR |
 |---|---|---|---|
-| _(none merged yet)_ | | | |
+| Jump links to every section at the top of the feed | Kendrick (ease of finding) | Ease of finding matched people's current source but did not beat it (5.58 vs. 5.42, p = 0.67). Low ratings were about navigation: "i must find the subject long time", "not intuitive to navigate". | [#12](https://github.com/kdavis5111/htn-ui-lab/pull/12) |
 
 ## Who owes what
 
