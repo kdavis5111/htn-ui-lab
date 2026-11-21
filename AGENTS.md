@@ -178,6 +178,27 @@ when:
 A merged PR is not yet live. It is a candidate. The owner ports it to the real
 site on his own schedule, and may ask for changes first.
 
+## Round 2: revisions from the user test (November 2026)
+
+`main` is now the version participants tested. The untouched tested copy is
+the git tag `user-test-v1`, live at https://kdavis5111.github.io/htn-ui-lab/pr/10/.
+Never edit or rebuild that copy. All new work goes into `main` through pull
+requests, exactly as before.
+
+For this round, every change must come from a finding in the user test:
+
+- Branch from `main`. Name it `firstname/fix-short-name`.
+- One change per pull request. Each teammate makes at least the change their
+  own analysis called for.
+- In the pull request's "Why" section, write three things: whose analysis it
+  came from, the finding (a number or a participant quote), and how this
+  change answers it. Example: "From Kendrick's ease-of-finding analysis. One
+  participant said there is no search bar. This adds search to the top of the
+  feed."
+- Do not add the UXtweak script, the intro screens, or the visible lab banner
+  back. Leave `<div class="lab-banner" hidden></div>` as it is.
+- Do not edit `REVISIONS.md`. Kendrick adds your row when he merges.
+
 ## Good first ideas
 
 The team's research found these needs. They are suggestions, not orders.
