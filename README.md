@@ -9,6 +9,15 @@ news stays the same.
 **Style guide:** https://kdavis5111.github.io/htn-ui-lab/styleguide.html
 **Every pull request gets its own preview link,** posted by a bot as a comment.
 
+## Round 2: revisions from the user test
+
+`main` is now the version participants tested, and it is the revised prototype
+we submit. Make the change your analysis called for on a branch named
+`firstname/fix-short-name`, open a pull request, and say in "Why" whose analysis
+it came from and what finding it answers. The tested version stays frozen at
+https://kdavis5111.github.io/htn-ui-lab/pr/10/. The running list of changes is
+[REVISIONS.md](REVISIONS.md).
+
 ## Why a frozen copy
 
 The real site is built every morning by a private script on Kendrick's server.
@@ -93,6 +102,7 @@ My idea:
 | `serve.py` | opens the page in your browser from a local server |
 | `shot.py` | makes before/after screenshots for a PR |
 | `data/` | a real day's data file, read-only, so you can see what fields exist |
+| `REVISIONS.md` | the list of changes made after the user test, and whose analysis each came from |
 
 ## Review checklist (for whoever looks at a PR)
 
