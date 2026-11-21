@@ -1023,3 +1023,24 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
 #email-signup.foot-moved { display: contents; }
 #email-signup.foot-moved .signup-head { display: none; }
 @media (max-width: 480px) { .foot-body .signup-form { flex-direction: column; } }
+
+/* ---- Jump row: links to every section, at the top of the feed (Round 2, ease of finding) ---- */
+.jump-row { display: flex; flex-wrap: wrap; align-items: center; gap: var(--s1); margin: var(--s2) 0 0; }
+.jump-row[hidden] { display: none; }
+.jump-k { font-family: var(--mono); font-size: var(--fs-xxs); letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--ink-3); margin-right: 4px; white-space: nowrap; }
+.jump-link { display: inline-flex; align-items: center; box-sizing: border-box; min-height: 36px; padding: 8px 14px;
+  font-family: var(--sans); font-size: var(--fs-xs); font-weight: 500; color: var(--ink-2); text-decoration: none; white-space: nowrap;
+  border: 1px solid var(--line); border-radius: 999px; transition: border-color 140ms ease, color 140ms ease; }
+.jump-link:hover { border-color: var(--accent); color: var(--accent); }
+.cat-band { scroll-margin-top: 4.5rem; }
+@media (max-width: 480px) {
+  /* phones: one row you swipe sideways; the faded right edge shows there is more */
+  .jump-row { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: var(--s1) calc(-1 * var(--s2)) 0; padding: 2px var(--s2);
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 44px), transparent);
+            mask-image: linear-gradient(to right, #000 calc(100% - 44px), transparent); }
+  .jump-row::-webkit-scrollbar { display: none; }
+  .jump-k, .jump-link { flex: none; }
+  .jump-link { min-height: 44px; padding: 10px 16px; }
+  .cat-band { scroll-margin-top: 4.25rem; }
+}
