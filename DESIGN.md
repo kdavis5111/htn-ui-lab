@@ -70,6 +70,7 @@ Class names are the contract. Restyle freely; keep the names.
 | Theme switch | `.theme-switch` `.theme-switch-track` `.theme-switch-thumb` | toggle light and dark themes | placed at the masthead's top right; `aria-pressed` carries state and the label names the next theme |
 | Nav | `.nav` `.navchip` `.navchip.active` | page switcher pills | `aria-pressed` carries state |
 | Publish note | `.pub-note` `.ai-note` | when and how the paper was made | mono |
+| Search | `.search-row` `.search-input` `.search-clear` `.search-status` | filter today's stories by a word | built by `app.js`; adds `body.searching`, `.search-hit` on matching stories and `.search-empty` on sections with none; clears when the reader leaves the feed |
 | Jump row | `.jump-row` `.jump-k` `.jump-link` | links to every section, at the top of the feed | built by `app.js` from the bands on the page, so it follows the reader's topic order; links, not toggles; one swipeable row on phones |
 | Band | `.cat-band` `.cat-head` `.cat-count` | a category section | `.picked-band` when it is one of the reader's topics |
 | Story | `.story` `.story-sum` `.headline` `.sum-meta` `.story-body` | one collapsible story | native `<details>`; no JS needed to open |

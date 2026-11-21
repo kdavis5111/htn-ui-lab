@@ -1204,3 +1204,53 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   if (more) new MutationObserver(queue).observe(more, { childList: true });
   build();
 })();
+
+// Search (Round 2, ease of finding): type a word, see only the stories that mention it.
+// Looks in headlines, facts, the why-it-matters text, scores and source names.
+(function () {
+  const news = document.getElementById('news'); if (!news) return;
+  const moreCats = document.getElementById('more-cats');
+  const box = document.createElement('div'); box.className = 'search-row'; box.setAttribute('role', 'search');
+  box.innerHTML = '<input type="search" class="search-input" id="feed-search" placeholder="Search today’s stories" ' +
+    'aria-label="Search today’s stories" autocomplete="off" enterkeyhint="search">' +
+    '<button type="button" class="search-clear" aria-label="Clear search" hidden>Clear</button>';
+  const status = document.createElement('p'); status.className = 'search-status'; status.setAttribute('aria-live', 'polite'); status.hidden = true;
+  news.insertBefore(status, news.firstChild); news.insertBefore(box, status);
+  const input = box.querySelector('input'), clear = box.querySelector('.search-clear');
+  const cache = new Map();
+  function textOf(st) {
+    if (!cache.has(st)) {
+      const c = st.cloneNode(true);
+      c.querySelectorAll('.chip, .lean-tag, .trust-glance, .fcount, .fh-info, .facts-head, .srcs-head').forEach(el => el.remove());   // labels, not content
+      cache.set(st, c.textContent.toLowerCase().replace(/\s+/g, ' '));
+    }
+    return cache.get(st);
+  }
+  const allStories = () => [...document.querySelectorAll('#news .story, #more-stories .story')];
+  const allBands = () => [...document.querySelectorAll('#news .cat-band, #more-stories .cat-band')];
+  function run() {
+    const raw = input.value.trim(), terms = raw.toLowerCase().split(/\s+/).filter(Boolean);
+    const on = raw.length >= 2;
+    clear.hidden = !input.value;
+    document.body.classList.toggle('searching', on);
+    if (!on) {
+      status.hidden = true;
+      document.querySelectorAll('.search-hit, .search-empty').forEach(el => el.classList.remove('search-hit', 'search-empty'));
+      if (moreCats) moreCats.classList.remove('search-open');
+      return;
+    }
+    let n = 0;
+    allStories().forEach(st => { const hit = terms.every(t => textOf(st).includes(t)); st.classList.toggle('search-hit', hit); if (hit) n++; });
+    allBands().forEach(b => b.classList.toggle('search-empty', !b.querySelector('.story.search-hit')));
+    if (moreCats) moreCats.classList.toggle('search-open', !!moreCats.querySelector('.story.search-hit'));
+    status.hidden = false;
+    status.textContent = n ? n + (n === 1 ? ' story mentions ' : ' stories mention ') + '“' + raw + '”'
+                           : 'No stories mention “' + raw + '”. Try a shorter word.';
+  }
+  function reset() { if (!input.value) return; input.value = ''; run(); }
+  input.addEventListener('input', run);
+  input.addEventListener('keydown', e => { if (e.key === 'Escape') reset(); });
+  clear.addEventListener('click', () => { reset(); input.focus(); });
+  // leaving the feed (About, Donate, the topics picker) ends the search, so nothing stays filtered out of sight
+  document.addEventListener('click', e => { if (e.target.closest('.navchip, #topics-line-go, #edit-topics-2')) reset(); }, true);
+})();
