@@ -1159,64 +1159,36 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   (nextEd || endcap.querySelector('.done') || endcap).insertAdjacentElement('afterend', rows);
 })();
 
-// Jump row (Round 2, ease of finding): one link per section at the top of the feed, in the
-// reader's own order. Rebuilds itself whenever the sections are reordered or revealed.
+// Search, in the header (Round 2, ease of finding). A magnifier button sits at the top right. Pressing it
+// opens a field that slides out; typing shows only the stories that mention the words, across every
+// section. Looks in headlines, facts, the why-it-matters text, scores and source names.
 (function () {
-  const news = document.getElementById('news'); if (!news) return;
-  const more = document.getElementById('more-stories');
-  const row = document.createElement('nav');
-  row.className = 'jump-row'; row.setAttribute('aria-label', 'Jump to a section');
-  news.insertBefore(row, news.firstChild);
-  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const label = {}; ALLCATS.forEach(p => { label[p[0]] = p[1]; });
-  function bands() {
-    const shown = [...news.querySelectorAll(':scope > .cat-band')];
-    const later = more ? [...more.querySelectorAll(':scope > .cat-band')] : [];
-    return shown.concat(later).filter(b => b.style.display !== 'none');
-  }
-  function go(band) {
-    if (more && more.contains(band) && more.style.display === 'none') {
-      const btn = document.getElementById('more-go'); if (btn) btn.click();      // section sits behind "Keep reading"
-    }
-    band.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-    const h = band.querySelector('.cat-head');
-    if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: true }); }
-  }
-  function build() {
-    const list = bands();
-    row.innerHTML = '';
-    row.hidden = list.length < 2;
-    if (row.hidden) return;
-    const k = document.createElement('span'); k.className = 'jump-k'; k.textContent = 'Jump to';
-    row.appendChild(k);
-    list.forEach(band => {
-      if (!band.id) band.id = 'cat-' + band.dataset.category;
-      const a = document.createElement('a');
-      a.className = 'jump-link'; a.href = '#' + band.id;
-      a.textContent = label[band.dataset.category] || band.dataset.category;
-      a.addEventListener('click', e => { e.preventDefault(); go(band); });
-      row.appendChild(a);
-    });
-  }
-  let queued = false;
-  const queue = () => { if (queued) return; queued = true; requestAnimationFrame(() => { queued = false; build(); }); };
-  new MutationObserver(queue).observe(news, { childList: true });
-  if (more) new MutationObserver(queue).observe(more, { childList: true });
-  build();
-})();
-
-// Search (Round 2, ease of finding): type a word, see only the stories that mention it.
-// Looks in headlines, facts, the why-it-matters text, scores and source names.
-(function () {
-  const news = document.getElementById('news'); if (!news) return;
+  const news = document.getElementById('news'), mast = document.querySelector('.masthead');
+  if (!news || !mast) return;
   const moreCats = document.getElementById('more-cats');
-  const box = document.createElement('div'); box.className = 'search-row'; box.setAttribute('role', 'search');
-  box.innerHTML = '<input type="search" class="search-input" id="feed-search" placeholder="Search today’s stories" ' +
-    'aria-label="Search today’s stories" autocomplete="off" enterkeyhint="search">' +
+  const wrap = document.createElement('div'); wrap.className = 'hsearch'; wrap.setAttribute('role', 'search');
+  wrap.innerHTML =
+    '<button type="button" class="hsearch-btn" aria-label="Search today’s stories" aria-expanded="false" aria-controls="feed-search"></button>' +
+    '<input type="search" class="search-input" id="feed-search" placeholder="Search today’s stories" ' +
+      'aria-label="Search today’s stories" autocomplete="off" enterkeyhint="search" tabindex="-1">' +
     '<button type="button" class="search-clear" aria-label="Clear search" hidden>Clear</button>';
+  mast.appendChild(wrap);
   const status = document.createElement('p'); status.className = 'search-status'; status.setAttribute('aria-live', 'polite'); status.hidden = true;
-  news.insertBefore(status, news.firstChild); news.insertBefore(box, status);
-  const input = box.querySelector('input'), clear = box.querySelector('.search-clear');
+  news.insertBefore(status, news.firstChild);
+  const btn = wrap.querySelector('.hsearch-btn'), input = wrap.querySelector('input'), clear = wrap.querySelector('.search-clear');
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const isOpen = () => wrap.classList.contains('open');
+  function open() {
+    wrap.classList.add('open'); mast.classList.add('search-open');
+    btn.setAttribute('aria-expanded', 'true'); input.tabIndex = 0;
+    input.focus({ preventScroll: true });
+  }
+  function close() {
+    wrap.classList.remove('open'); mast.classList.remove('search-open');
+    btn.setAttribute('aria-expanded', 'false'); input.tabIndex = -1;
+  }
+
   const cache = new Map();
   function textOf(st) {
     if (!cache.has(st)) {
@@ -1228,6 +1200,7 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   }
   const allStories = () => [...document.querySelectorAll('#news .story, #more-stories .story')];
   const allBands = () => [...document.querySelectorAll('#news .cat-band, #more-stories .cat-band')];
+  let wasOn = false;
   function run() {
     const raw = input.value.trim(), terms = raw.toLowerCase().split(/\s+/).filter(Boolean);
     const on = raw.length >= 2;
@@ -1237,6 +1210,7 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
       status.hidden = true;
       document.querySelectorAll('.search-hit, .search-empty').forEach(el => el.classList.remove('search-hit', 'search-empty'));
       if (moreCats) moreCats.classList.remove('search-open');
+      wasOn = false;
       return;
     }
     let n = 0;
@@ -1246,11 +1220,21 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
     status.hidden = false;
     status.textContent = n ? n + (n === 1 ? ' story mentions ' : ' stories mention ') + '“' + raw + '”'
                            : 'No stories mention “' + raw + '”. Try a shorter word.';
+    // results start at the top of the feed; bring them into view (the header stays put on phones)
+    if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: (wasOn || reduce) ? 'auto' : 'smooth' });
+    wasOn = true;
   }
-  function reset() { if (!input.value) return; input.value = ''; run(); }
+  function reset() { if (input.value) { input.value = ''; run(); } }
+
+  btn.addEventListener('click', () => {
+    if (!isOpen()) open();
+    else if (input.value) input.focus();
+    else close();
+  });
   input.addEventListener('input', run);
-  input.addEventListener('keydown', e => { if (e.key === 'Escape') reset(); });
+  input.addEventListener('keydown', e => { if (e.key === 'Escape') { reset(); close(); btn.focus(); } });
+  input.addEventListener('blur', () => setTimeout(() => { if (!input.value && !wrap.contains(document.activeElement)) close(); }, 120));
   clear.addEventListener('click', () => { reset(); input.focus(); });
   // leaving the feed (About, Donate, the topics picker) ends the search, so nothing stays filtered out of sight
-  document.addEventListener('click', e => { if (e.target.closest('.navchip, #topics-line-go, #edit-topics-2')) reset(); }, true);
+  document.addEventListener('click', e => { if (e.target.closest('.navchip, #topics-line-go, #edit-topics-2')) { reset(); close(); } }, true);
 })();

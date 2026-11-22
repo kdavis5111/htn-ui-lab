@@ -16,9 +16,12 @@ same facts in the "Why" part of your pull request.
 
 | Change | From whose analysis | Finding it answers | PR |
 |---|---|---|---|
-| Jump links to every section at the top of the feed | Kendrick (ease of finding) | Ease of finding matched people's current source but did not beat it (5.58 vs. 5.42, p = 0.67). Low ratings were about navigation: "i must find the subject long time", "not intuitive to navigate". | [#12](https://github.com/kdavis5111/htn-ui-lab/pull/12) |
-| Search box at the top of the feed that filters today's stories by a word | Kendrick (ease of finding) | Same analysis. One participant wrote: "there is no search bar on the homepage... it seems a little inconvenient when looking for a specific news article." | [#13](https://github.com/kdavis5111/htn-ui-lab/pull/13) |
+| Search in the header: a magnifier at the top right opens a field, and typing shows only the stories that mention the words | Kendrick (ease of finding) and Ben (draw your own conclusions) | Kendrick: finding things was rated about the same as people's current source (5.58 vs. 5.42 out of 7, p = 0.67), so we matched it but did not beat it. Participants said "there is no search bar on the homepage... a little inconvenient when looking for a specific news article" and "i must find the subject long time". Ben: his analysis found no specific problem to fix; a search bar was the one addition it pointed to. | [#13](https://github.com/kdavis5111/htn-ui-lab/pull/13), [#15](https://github.com/kdavis5111/htn-ui-lab/pull/15) |
 | Each story is its own card, section headings are larger, the "why it matters" text sits in a highlighted box, facts line up in a clean grid, and "show more" is a real button | Josh (satisfaction) | Many participants commented on the lack of visual satisfaction: "it is really plain and the UI is not that easy to follow", "it looks like website from the '90s", "many things have a bland design". | [#14](https://github.com/kdavis5111/htn-ui-lab/pull/14) |
+
+## Tried and removed
+
+A "Jump to" row of section links at the top of the feed (#12). It worked, but it added clutter to the top of the page, so search took its place (#15).
 
 ## Who owes what
 

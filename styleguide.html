@@ -77,22 +77,16 @@
   <p class="ai-note">Assembled by AI following strict human editorial rules. <a href="#">How it works</a></p>
 
   <p class="sg-h">Search</p>
-  <p class="sg-note">One field at the top of the feed. Typing two or more letters shows only the stories that mention the words, across every section, with a count underneath. Leaving the feed clears it.</p>
-  <div class="search-row" role="search">
-    <input type="search" class="search-input" placeholder="Search today&rsquo;s stories" aria-label="Search today&rsquo;s stories (example)" value="hurricane">
-    <button type="button" class="search-clear" aria-label="Clear search">Clear</button>
+  <p class="sg-note">A magnifier at the top right of the header. Pressing it slides a field out; on phones the field takes over the header row. Typing two or more letters shows only the stories that mention the words, across every section, with a count at the top of the feed. Escape, Clear, or leaving the feed ends the search.</p>
+  <div class="sg-row">
+    <div class="hsearch" role="search" style="position:static"><button type="button" class="hsearch-btn" aria-label="Search (closed example)"></button></div>
+    <div class="hsearch open" role="search" style="position:static">
+      <button type="button" class="hsearch-btn" aria-label="Search (open example)"></button>
+      <input type="search" class="search-input" aria-label="Search today&rsquo;s stories (example)" value="hurricane">
+      <button type="button" class="search-clear" aria-label="Clear search">Clear</button>
+    </div>
   </div>
   <p class="search-status">3 stories mention &ldquo;hurricane&rdquo;</p>
-
-  <p class="sg-h">Jump row</p>
-  <p class="sg-note">One link per section, at the top of the feed, in the reader's own order. Links, not toggles: they scroll to a section and carry no state. On phones it becomes one row you swipe sideways.</p>
-  <nav class="jump-row" aria-label="Jump to a section">
-    <span class="jump-k">Jump to</span>
-    <a class="jump-link" href="#">World</a>
-    <a class="jump-link" href="#">National</a>
-    <a class="jump-link" href="#">Weather</a>
-    <a class="jump-link" href="#">Sports</a>
-  </nav>
 
   <p class="sg-h">Band and story</p>
   <p class="sg-note">Each category heading, story card and show-more control sits inside top and bottom divider rules. A story is a native <code>&lt;details&gt;</code>, so it opens without JavaScript. The first story below is open.</p>
