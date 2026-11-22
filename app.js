@@ -1161,34 +1161,63 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
   (nextEd || endcap.querySelector('.done') || endcap).insertAdjacentElement('afterend', rows);
 })();
 
-// Search, in the header (Round 2, ease of finding). A magnifier button sits at the top right. Pressing it
-// opens a field that slides out; typing shows only the stories that mention the words, across every
-// section. Looks in headlines, facts, the why-it-matters text, scores and source names.
+// Search, in the nav (Round 2, ease of finding). A magnifier sits at the end of the nav row. Pressing it
+// slides a field open; typing shows only the stories that mention the words, across every section.
+// Looks in headlines, facts, the why-it-matters text, scores and source names.
+// Phones: the nav is the bar at the bottom, so its magnifier opens the field in the top bar, above the keyboard.
 (function () {
-  const news = document.getElementById('news'), mast = document.querySelector('.masthead');
-  if (!news || !mast) return;
+  const news = document.getElementById('news'), mast = document.querySelector('.masthead'), nav = document.querySelector('.nav');
+  if (!news || !mast || !nav) return;
   const moreCats = document.getElementById('more-cats');
+  const phone = window.matchMedia('(max-width: 480px)');
+  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const OPEN_W = 300;
+
   const wrap = document.createElement('div'); wrap.className = 'hsearch'; wrap.setAttribute('role', 'search');
   wrap.innerHTML =
     '<button type="button" class="hsearch-btn" aria-label="Search today’s stories" aria-expanded="false" aria-controls="feed-search"></button>' +
     '<input type="search" class="search-input" id="feed-search" placeholder="Search today’s stories" ' +
       'aria-label="Search today’s stories" autocomplete="off" enterkeyhint="search" tabindex="-1">' +
     '<button type="button" class="search-clear" aria-label="Clear search" hidden>Clear</button>';
-  mast.appendChild(wrap);
+  const navBtn = document.createElement('button');            // phones only: the magnifier in the bottom bar
+  navBtn.type = 'button'; navBtn.className = 'nav-search';
+  navBtn.setAttribute('aria-label', 'Search today’s stories'); navBtn.setAttribute('aria-expanded', 'false');
+  nav.appendChild(navBtn);
   const status = document.createElement('p'); status.className = 'search-status'; status.setAttribute('aria-live', 'polite'); status.hidden = true;
   news.insertBefore(status, news.firstChild);
   const btn = wrap.querySelector('.hsearch-btn'), input = wrap.querySelector('input'), clear = wrap.querySelector('.search-clear');
-  const reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const isOpen = () => wrap.classList.contains('open');
+  // wide screens: fade any nav item the open field would sit on top of
+  function fit() {
+    const items = nav.querySelectorAll('.navchip, .nav-brand');
+    items.forEach(el => el.classList.remove('under-search'));
+    if (!isOpen() || phone.matches) return;
+    const edge = nav.getBoundingClientRect().right - OPEN_W - 10;
+    items.forEach(el => { if (el.offsetParent && el.getBoundingClientRect().right > edge) el.classList.add('under-search'); });
+  }
+  function place() { (phone.matches ? mast : nav).appendChild(wrap); fit(); }
+  if (phone.addEventListener) phone.addEventListener('change', place); else phone.addListener(place);
+  place();
+
   function open() {
-    wrap.classList.add('open'); mast.classList.add('search-open');
-    btn.setAttribute('aria-expanded', 'true'); input.tabIndex = 0;
+    if (news.style.display === 'none') {                      // search lives on the feed; go there first
+      const feed = nav.querySelector('.navchip[data-filter="all"]'); if (feed) feed.click();
+    }
+    wrap.classList.add('open'); mast.classList.add('search-open'); nav.classList.add('search-open');
+    btn.setAttribute('aria-expanded', 'true'); navBtn.setAttribute('aria-expanded', 'true'); input.tabIndex = 0;
     input.focus({ preventScroll: true });
+    fit();
   }
   function close() {
-    wrap.classList.remove('open'); mast.classList.remove('search-open');
-    btn.setAttribute('aria-expanded', 'false'); input.tabIndex = -1;
+    wrap.classList.remove('open'); mast.classList.remove('search-open'); nav.classList.remove('search-open');
+    btn.setAttribute('aria-expanded', 'false'); navBtn.setAttribute('aria-expanded', 'false'); input.tabIndex = -1;
+    fit();
+  }
+  function toggle() {
+    if (!isOpen()) open();
+    else if (input.value) input.focus();
+    else close();
   }
 
   const cache = new Map();
@@ -1222,21 +1251,25 @@ document.querySelectorAll('.story').forEach(st => st.addEventListener('toggle', 
     status.hidden = false;
     status.textContent = n ? n + (n === 1 ? ' story mentions ' : ' stories mention ') + '“' + raw + '”'
                            : 'No stories mention “' + raw + '”. Try a shorter word.';
-    // results start at the top of the feed; bring them into view (the header stays put on phones)
+    // results start at the top of the feed; bring them into view
     if (window.scrollY > 0) window.scrollTo({ top: 0, behavior: (wasOn || reduce) ? 'auto' : 'smooth' });
     wasOn = true;
   }
   function reset() { if (input.value) { input.value = ''; run(); } }
 
-  btn.addEventListener('click', () => {
-    if (!isOpen()) open();
-    else if (input.value) input.focus();
-    else close();
+  let pressing = false;                                       // a press on a magnifier must not also count as "clicked away"
+  [btn, navBtn].forEach(b => {
+    b.addEventListener('pointerdown', () => { pressing = true; });
+    b.addEventListener('click', () => { pressing = false; toggle(); });
   });
   input.addEventListener('input', run);
-  input.addEventListener('keydown', e => { if (e.key === 'Escape') { reset(); close(); btn.focus(); } });
-  input.addEventListener('blur', () => setTimeout(() => { if (!input.value && !wrap.contains(document.activeElement)) close(); }, 120));
+  input.addEventListener('keydown', e => { if (e.key === 'Escape') { reset(); close(); (phone.matches ? navBtn : btn).focus(); } });
+  input.addEventListener('blur', () => setTimeout(() => {
+    if (!pressing && !input.value && !wrap.contains(document.activeElement)) close();
+  }, 120));
   clear.addEventListener('click', () => { reset(); input.focus(); });
   // leaving the feed (About, Donate, the topics picker) ends the search, so nothing stays filtered out of sight
   document.addEventListener('click', e => { if (e.target.closest('.navchip, #topics-line-go, #edit-topics-2')) { reset(); close(); } }, true);
+  window.addEventListener('scroll', () => { if (isOpen() && !phone.matches) requestAnimationFrame(fit); }, { passive: true });
+  window.addEventListener('resize', () => { if (isOpen()) fit(); });
 })();

@@ -70,7 +70,7 @@ Class names are the contract. Restyle freely; keep the names.
 | Theme switch | `.theme-switch` `.theme-switch-track` `.theme-switch-thumb` | toggle light and dark themes | placed at the masthead's top right; `aria-pressed` carries state and the label names the next theme |
 | Nav | `.nav` `.navchip` `.navchip.active` | page switcher pills | `aria-pressed` carries state |
 | Publish note | `.pub-note` `.ai-note` | when and how the paper was made | mono |
-| Search | `.hsearch` `.hsearch-btn` `.search-input` `.search-clear` `.search-status` | find today's stories by a word | a magnifier in the masthead, top right; built by `app.js`; opens into a field (`.hsearch.open`, `.masthead.search-open`), adds `body.searching`, `.search-hit` on matching stories and `.search-empty` on sections with none; clears when the reader leaves the feed |
+| Search | `.hsearch` `.hsearch-btn` `.nav-search` `.search-input` `.search-clear` `.search-status` | find today's stories by a word | a magnifier at the right end of the nav row; built by `app.js`; opens into a field (`.hsearch.open`, `.nav.search-open`); on phones `.nav-search` in the bottom bar opens the field in the masthead (`.masthead.search-open`); adds `body.searching`, `.search-hit` on matching stories and `.search-empty` on sections with none; clears when the reader leaves the feed |
 | Band | `.cat-band` `.cat-head` `.cat-count` | a category section | `.picked-band` when it is one of the reader's topics |
 | Story | `.story` `.story-sum` `.headline` `.sum-meta` `.story-body` | one collapsible story | native `<details>`; no JS needed to open |
 | Update note | `.update-note` `.un-k` | what changed since yesterday | only when there is a change |
