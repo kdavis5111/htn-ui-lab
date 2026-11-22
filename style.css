@@ -1296,11 +1296,29 @@ body.searching #more-head, body.searching #more-hint, body.searching .more-row, 
 body.searching .band-more { display: block !important; }
 #more-cats.search-open, #more-cats.search-open #more-stories { display: block !important; }
 
-/* ---- Label key, restyled to match the site (review of Ryan's key) ----
-   Same four definitions, shown with the same dot-and-word labels the stories use, as one quiet aligned list. */
-.read-key { display: grid; gap: 3px; margin: var(--s2) 0 0; padding: 2px 0 2px 12px; border-left: 2px solid var(--line);
-  font-family: var(--sans); font-size: var(--fs-xs); line-height: 1.45; color: var(--ink-3); }
-.read-key p { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: baseline; margin: 0; }
-.read-key .chip { min-width: 0; margin: 0; padding: 0; white-space: nowrap; }
-.read-key .rk-def { color: var(--ink-3); }
-@media (max-width: 480px) { .read-key { margin-top: var(--s1); } }
+/* ---- Label key: closed by default, opens in place (review of Ryan's key) ----
+   One tinted bar above the feed, the same look as the "Show more" buttons. Pressing it opens the four
+   definitions, shown with the same dot-and-word labels the stories use. A native <details>, so no script. */
+.read-key { display: block; margin: var(--s2) 0 0; padding: 0; border: 1px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-radius: 10px; background: var(--accent-tint); font-family: var(--sans); transition: border-color 140ms ease; }
+.read-key:hover { border-color: var(--accent); }
+.rk-sum { display: flex; align-items: center; justify-content: space-between; gap: var(--s2); box-sizing: border-box; min-height: 46px;
+  padding: 11px 16px; list-style: none; cursor: pointer; border-radius: 10px;
+  font-size: var(--fs-s); font-weight: 600; line-height: 1.3; color: var(--accent); user-select: none; -webkit-user-select: none; }
+.rk-sum::-webkit-details-marker { display: none; }
+.rk-sum::after { content: ""; flex: none; width: 8px; height: 8px; margin: -4px 2px 0 0; border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor; transform: rotate(45deg); transition: transform 140ms ease; }
+.read-key[open] > .rk-sum::after { margin-top: 4px; transform: rotate(225deg); }
+.rk-sum:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.rk-list { display: grid; gap: 5px; padding: 2px 16px 14px; font-size: var(--fs-xs); line-height: 1.45; }
+.read-key[open] > .rk-list { animation: rk-in 200ms ease; }
+@keyframes rk-in { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
+.rk-list p { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: baseline; margin: 0; }
+.read-key .chip { min-width: 0; margin: 0; padding: 0; white-space: nowrap; color: var(--ink-2) !important; }
+.read-key .rk-def { color: var(--ink-2); }
+@media (max-width: 480px) {
+  .read-key { margin-top: var(--s1); }
+  .rk-sum { min-height: 48px; padding: 11px 14px; }
+  .rk-list { padding: 2px 14px 12px; }
+}
+@media (prefers-reduced-motion: reduce) { .read-key[open] > .rk-list { animation: none; } }
