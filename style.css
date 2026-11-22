@@ -1242,48 +1242,56 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
 #email-signup.foot-moved .signup-head { display: none; }
 @media (max-width: 480px) { .foot-body .signup-form { flex-direction: column; } }
 
-/* ---- Search, in the header (Round 2, ease of finding) ----
-   A magnifier at the top right. Pressing it slides a field out to the left; on phones the field takes
-   over the header row. Typing filters the feed to the stories that mention the words. */
-.theme-switch { right: 52px; }
-.hsearch { position: absolute; top: var(--s6); right: 0; z-index: 2; display: flex; align-items: center; box-sizing: border-box;
-  width: 40px; height: 40px; overflow: hidden; border: 1px solid transparent; border-radius: 999px;
+/* ---- Search, in the nav (Round 2, ease of finding) ----
+   Wide screens: a magnifier at the right end of the nav row; pressing it slides a field out to the left.
+   Phones: the magnifier is the last item in the bottom bar, and the field opens in the top bar. */
+.hsearch { position: absolute; top: 50%; margin-top: -18px; right: 0; z-index: 2; display: flex; align-items: center; box-sizing: border-box;
+  width: 36px; height: 36px; overflow: hidden; border: 1px solid transparent; border-radius: 999px;
   background: color-mix(in srgb, var(--ink) 5%, transparent);
   transition: width 280ms cubic-bezier(0.22, 1, 0.36, 1), background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease; }
 .hsearch:hover { background: color-mix(in srgb, var(--ink) 9%, transparent); }
 .hsearch.open { width: 300px; background: var(--card); border-color: var(--line); box-shadow: var(--elev-sm); }
 .hsearch.open:focus-within { border-color: var(--accent); }
-.hsearch-btn { flex: none; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 0; border-radius: 999px;
+.hsearch-btn, .nav-search { flex: none; display: grid; place-items: center; padding: 0; border: 0; border-radius: 999px;
   background: none; color: var(--ink-2); cursor: pointer; }
+.hsearch-btn { width: 34px; height: 34px; }
 .hsearch-btn:hover { color: var(--ink); }
-.hsearch-btn::before { content: ""; width: 16px; height: 16px; background: currentColor;
+.hsearch-btn::before, .nav-search::before { content: ""; width: 16px; height: 16px; background: currentColor;
   -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5L21 21'/%3E%3C/svg%3E") center / contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.4' stroke-linecap='round'%3E%3Ccircle cx='10.5' cy='10.5' r='6.5'/%3E%3Cpath d='M15.5 15.5L21 21'/%3E%3C/svg%3E") center / contain no-repeat; }
-.hsearch .search-input { flex: 1; min-width: 0; height: 38px; padding: 0; border: 0; outline: 0; background: none;
+.hsearch .search-input { flex: 1; min-width: 0; height: 34px; padding: 0; border: 0; outline: 0; background: none;
   -webkit-appearance: none; appearance: none; font-family: var(--sans); font-size: 1rem; color: var(--ink);
   opacity: 0; visibility: hidden; transition: opacity 160ms ease, visibility 0s linear 160ms; }
 .hsearch.open .search-input { opacity: 1; visibility: visible; transition: opacity 160ms ease 90ms, visibility 0s; }
 .hsearch .search-input:focus-visible { outline: 0; }
 .search-input::placeholder { color: var(--ink-3); opacity: 1; }
 .search-input::-webkit-search-cancel-button { display: none; }
-.search-clear { flex: none; height: 30px; margin-right: 4px; padding: 0 10px; border: 0; border-radius: 999px; background: none; cursor: pointer;
+.search-clear { flex: none; height: 28px; margin-right: 4px; padding: 0 10px; border: 0; border-radius: 999px; background: none; cursor: pointer;
   font-family: var(--sans); font-size: var(--fs-xs); font-weight: 500; color: var(--ink-2); }
 .search-clear:hover { color: var(--accent); }
 .search-clear[hidden] { display: none; }
-.masthead.search-open .theme-switch { opacity: 0; pointer-events: none; }
+.nav-search { display: none; }
+.nav .navchip, .nav .nav-brand { transition: opacity 160ms ease, color 120ms ease, background-color 120ms ease, border-color 120ms ease; }
+.nav .under-search { opacity: 0; pointer-events: none; }
 .search-status { font-size: var(--fs-xs); color: var(--ink-2); margin: var(--s2) 0 0; }
 .search-status[hidden] { display: none; }
 @media (max-width: 480px) {
-  .theme-switch { right: calc(var(--s2) + 48px); }
-  .hsearch { top: var(--s2); right: var(--s2); }
-  .hsearch.open { width: calc(100% - 2 * var(--s2)); }
-  .mast-left { transition: opacity 160ms ease; }
-  .masthead.search-open .mast-left { opacity: 0; }
+  .nav-search { display: grid; flex: 0 0 46px; height: 46px; background: color-mix(in srgb, var(--ink) 5%, transparent); }
+  .nav.search-open .nav-search { background: var(--ink); color: var(--paper); }
+  /* the field itself: in the top bar, over the wordmark, only while open */
+  .hsearch { top: var(--s2); margin-top: 0; left: var(--s2); right: var(--s2); width: auto; height: 40px; background: var(--card); border-color: var(--line);
+    opacity: 0; visibility: hidden; transform: translateY(-8px);
+    transition: opacity 200ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s linear 260ms; }
+  .hsearch.open { width: auto; opacity: 1; visibility: visible; transform: none;
+    transition: opacity 200ms ease, transform 260ms cubic-bezier(0.22, 1, 0.36, 1), visibility 0s; }
+  .hsearch-btn { width: 38px; height: 38px; }
+  .hsearch .search-input { height: 38px; }
+  .mast-left, .masthead .theme-switch { transition: opacity 160ms ease; }
+  .masthead.search-open .mast-left, .masthead.search-open .theme-switch { opacity: 0; pointer-events: none; }
 }
-@media (max-width: 350px) { .theme-switch-label { display: none; } }
-@media (prefers-reduced-motion: reduce) { .hsearch, .hsearch .search-input, .mast-left, .theme-switch { transition: none; } }
+@media (prefers-reduced-motion: reduce) { .hsearch, .hsearch.open, .hsearch .search-input, .mast-left, .theme-switch, .nav .navchip { transition: none; } }
 /* while searching: only matching stories, no section chrome */
 body.searching #news .story:not(.search-hit), body.searching #more-stories .story:not(.search-hit),
-body.searching .cat-band.search-empty, body.searching .band-more-btn, body.searching .topics-line,
+body.searching .cat-band.search-empty, body.searching .band-more-btn, body.searching .topics-line, body.searching .read-key,
 body.searching #more-head, body.searching #more-hint, body.searching .more-row, body.searching .cat-count { display: none !important; }
 body.searching .band-more { display: block !important; }
 #more-cats.search-open, #more-cats.search-open #more-stories { display: block !important; }
