@@ -18,6 +18,7 @@ same facts in the "Why" part of your pull request.
 |---|---|---|---|
 | Jump links to every section at the top of the feed | Kendrick (ease of finding) | Ease of finding matched people's current source but did not beat it (5.58 vs. 5.42, p = 0.67). Low ratings were about navigation: "i must find the subject long time", "not intuitive to navigate". | [#12](https://github.com/kdavis5111/htn-ui-lab/pull/12) |
 | Search box at the top of the feed that filters today's stories by a word | Kendrick (ease of finding) | Same analysis. One participant wrote: "there is no search bar on the homepage... it seems a little inconvenient when looking for a specific news article." | [#13](https://github.com/kdavis5111/htn-ui-lab/pull/13) |
+| Each story is its own card, section headings are larger, the "why it matters" text sits in a highlighted box, facts line up in a clean grid, and "show more" is a real button | Josh (satisfaction) | Many participants commented on the lack of visual satisfaction: "it is really plain and the UI is not that easy to follow", "it looks like website from the '90s", "many things have a bland design". | [#14](https://github.com/kdavis5111/htn-ui-lab/pull/14) |
 
 ## Who owes what
 

@@ -1184,6 +1184,11 @@ a, button, .navchip, .headline { transition: color 120ms ease, background-color 
   .band-more-btn { min-height: 48px; padding: 11px 14px; }
 }
 
+/* Review fixes on the satisfaction revision (Kendrick): the why-it-matters box was wider than its card on
+   phones and its text was cut off; the section rules curled at the ends from the old rounded corner. */
+.impact { box-sizing: border-box; }
+.cat-band { border-radius: 0; }
+
 /* Team feedback: bigger phone nav, labeled theme toggle */
 .theme-switch-label { display: inline; }
 .theme-switch { opacity: 0.8; }
