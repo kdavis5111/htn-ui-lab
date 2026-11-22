@@ -46,6 +46,8 @@ function show(f, label) {
   sections.legend.style.display = inNews ? '' : 'none';
   const aiN = document.querySelector('.ai-note');
   if (aiN) aiN.style.display = inNews ? '' : 'none';
+  const readKey = document.getElementById('read-key');
+  if (readKey) readKey.style.display = inNews ? '' : 'none';
   if (sections.topicsCard) sections.topicsCard.style.display = inNews ? '' : 'none';
   const endcapEl = document.querySelector('.endcap');
   if (endcapEl) endcapEl.style.display = inNews ? '' : 'none';
@@ -200,7 +202,7 @@ function finishSetup(order) {
   const t = document.getElementById('interests-setup');
   if (t) t.style.display = 'none';
   [sections.news, sections.learn, sections.legend,
-   document.querySelector('.ai-note'),
+   document.querySelector('.ai-note'), document.getElementById('read-key'),
    document.getElementById('more-cats'), document.querySelector('.masthead'),
    document.getElementById('topics-card'), document.getElementById('cost-strip'),
    document.querySelector('.nav'), document.getElementById('cost-strip-2'),
@@ -224,7 +226,7 @@ function exitInterestSetup() {
   const t = document.getElementById('interests-setup');
   if (t) t.style.display = 'none';
   [sections.news, sections.learn, sections.legend,
-   document.querySelector('.ai-note'),
+   document.querySelector('.ai-note'), document.getElementById('read-key'),
    document.getElementById('more-cats'), document.querySelector('.masthead'),
    document.getElementById('topics-card'), document.getElementById('cost-strip'),
    document.querySelector('.nav'), document.getElementById('cost-strip-2'),
@@ -239,7 +241,7 @@ function showInterestSetup() {
   wizardReturnFilter = (active && active.dataset.filter) || 'all';
   const t = document.getElementById('interests-setup');
   [sections.news, sections.learn, sections.legend, sections.about, sections.support,
-   document.querySelector('.ai-note'),
+   document.querySelector('.ai-note'), document.getElementById('read-key'),
    document.getElementById('more-cats'), document.querySelector('.masthead'),
    document.getElementById('topics-card'), document.getElementById('cost-strip'),
    document.querySelector('.nav'), document.getElementById('cost-strip-2'),
