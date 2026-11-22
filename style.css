@@ -1322,3 +1322,7 @@ body.searching .band-more { display: block !important; }
   .rk-list { padding: 2px 14px 12px; }
 }
 @media (prefers-reduced-motion: reduce) { .read-key[open] > .rk-list { animation: none; } }
+
+/* ---- Top-of-feed spacing (Kendrick): air under the nav rule; no rule between the label key and the first section ---- */
+@media (min-width: 481px) { .legend-row { margin-top: 12px; } }
+#news > .cat-band:first-of-type { border-top: 0; padding-top: var(--s1); }
