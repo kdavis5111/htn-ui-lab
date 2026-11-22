@@ -1295,3 +1295,12 @@ body.searching .cat-band.search-empty, body.searching .band-more-btn, body.searc
 body.searching #more-head, body.searching #more-hint, body.searching .more-row, body.searching .cat-count { display: none !important; }
 body.searching .band-more { display: block !important; }
 #more-cats.search-open, #more-cats.search-open #more-stories { display: block !important; }
+
+/* ---- Label key, restyled to match the site (review of Ryan's key) ----
+   Same four definitions, shown with the same dot-and-word labels the stories use, as one quiet aligned list. */
+.read-key { display: grid; gap: 3px; margin: var(--s2) 0 0; padding: 2px 0 2px 12px; border-left: 2px solid var(--line);
+  font-family: var(--sans); font-size: var(--fs-xs); line-height: 1.45; color: var(--ink-3); }
+.read-key p { display: grid; grid-template-columns: 104px minmax(0, 1fr); align-items: baseline; margin: 0; }
+.read-key .chip { min-width: 0; margin: 0; padding: 0; white-space: nowrap; }
+.read-key .rk-def { color: var(--ink-3); }
+@media (max-width: 480px) { .read-key { margin-top: var(--s1); } }
